@@ -29,5 +29,10 @@ namespace HitApp
         {
             MessageBox.Show("Button Clicked");
         }
+
+        private void NavigateToSecondPage(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new SecondPage());
+        }
     }
 }
