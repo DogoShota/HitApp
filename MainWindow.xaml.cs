@@ -24,15 +24,5 @@ namespace HitApp
         {
             InitializeComponent();
         }
-
-        private void Button1_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Button Clicked");
-        }
-
-        private void NavigateToSecondPage(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(new SecondPage());
-        }
     }
 }
