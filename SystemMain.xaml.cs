@@ -16,28 +16,18 @@ using System.Windows.Shapes;
 namespace HitApp
 {
     /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
+    /// MedicalMain.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SystemMain : Page
     {
-        public MainWindow()
+        public SystemMain()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.MainWindow.Content = new StartWindow();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Application.Current.MainWindow.Content = new MedicalMain();
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Application.Current.MainWindow.Content = new TechnoMain();
+            Application.Current.MainWindow.Content = new MainWindow();
         }
     }
 }
