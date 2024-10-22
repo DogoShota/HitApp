@@ -58,6 +58,9 @@
     <Compile Include="MedicalMain.xaml.cs">
       <DependentUpon>MedicalMain.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Medical_Q.xaml.cs">
+      <DependentUpon>Medical_Q.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StartWindow.xaml.cs">
       <DependentUpon>StartWindow.xaml</DependentUpon>
     </Compile>
@@ -74,6 +77,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MedicalMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Medical_Q.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
