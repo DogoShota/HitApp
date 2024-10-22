@@ -58,6 +58,18 @@
     <Compile Include="ResultWindow.xaml.cs">
       <DependentUpon>ResultWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SystemMain.xaml.cs">
+      <DependentUpon>SystemMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TechnoMain.xaml.cs">
+      <DependentUpon>TechnoMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalMain.xaml.cs">
+      <DependentUpon>MedicalMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Medical_Q.xaml.cs">
+      <DependentUpon>Medical_Q.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StartWindow.xaml.cs">
       <DependentUpon>StartWindow.xaml</DependentUpon>
     </Compile>
@@ -74,6 +86,22 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ResultWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SystemMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="TechnoMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MedicalMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Medical_Q.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

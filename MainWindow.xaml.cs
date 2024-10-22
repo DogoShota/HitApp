@@ -29,5 +29,20 @@ namespace HitApp
         {
             Application.Current.MainWindow.Content = new StartWindow();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Content = new MedicalMain();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Content = new TechnoMain();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Content = new SystemMain();
+        }
     }
 }
