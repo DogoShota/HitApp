@@ -16,18 +16,18 @@ using System.Windows.Shapes;
 namespace HitApp
 {
     /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
+    /// StartWindow.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StartWindow : Page
     {
-        public MainWindow()
+        public StartWindow()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.MainWindow.Content = new StartWindow();
+            Application.Current.MainWindow.Content = new MainWindow();
         }
     }
 }
