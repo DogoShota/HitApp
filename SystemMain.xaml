@@ -1,4 +1,4 @@
-﻿<Page x:Class="HitApp.MedicalMain"
+﻿<Page x:Class="HitApp.SystemMain"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,11 +6,11 @@
       xmlns:local="clr-namespace:HitApp"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="MedicalMain">
+      Title="SystemMain">
 
     <Grid>
         <StackPanel>
-            <TextBlock Text="医学・医療系" FontSize="24" FontWeight="Bold" Margin="10"/>
+            <TextBlock Text="医療情報システム系" FontSize="24" FontWeight="Bold" Margin="10"/>
             <ListBox Width="740">
                 <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
                     <Button Content="問1" Width="50" Height="25" Margin="10"/>
@@ -71,6 +71,18 @@
                     <Button Content="問48" Width="50" Height="25" Margin="10"/>
                     <Button Content="問49" Width="50" Height="25" Margin="10"/>
                     <Button Content="問50" Width="50" Height="25" Margin="10"/>
+                </StackPanel>
+                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
+                    <Button Content="問51" Width="50" Height="25" Margin="10"/>
+                    <Button Content="問52" Width="50" Height="25" Margin="10"/>
+                    <Button Content="問53" Width="50" Height="25" Margin="10"/>
+                    <Button Content="問54" Width="50" Height="25" Margin="10"/>
+                    <Button Content="問55" Width="50" Height="25" Margin="10"/>
+                    <Button Content="問56" Width="50" Height="25" Margin="10"/>
+                    <Button Content="問57" Width="50" Height="25" Margin="10"/>
+                    <Button Content="問58" Width="50" Height="25" Margin="10"/>
+                    <Button Content="問59" Width="50" Height="25" Margin="10"/>
+                    <Button Content="問60" Width="50" Height="25" Margin="10"/>
                 </StackPanel>
             </ListBox>
             <Button Content="科目選択に戻る" Width="150" Margin="10" Click="Button_Click"/>
