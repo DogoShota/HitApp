@@ -23,15 +23,15 @@ namespace HitApp
         public ResultWindow()
         {
             InitializeComponent();
-            test();
+            dataSet();
         }
 
-        private void test ()
+        private void dataSet ()
         {
             List<DataGridItems> items = new List<DataGridItems>();
-            items.Add(new DataGridItems("000", "111", "222"));
-            items.Add(new DataGridItems("aaa", "bbb", "ccc"));
-            items.Add(new DataGridItems("AAA", "BBB", "CCC"));
+            items.Add(new DataGridItems("0", "○", "222"));
+            items.Add(new DataGridItems("1", "○", "ccc"));
+            items.Add(new DataGridItems("2", "×", "CCC"));
 
             DataGridName.ItemsSource = items;
 
@@ -40,15 +40,15 @@ namespace HitApp
 
     public class DataGridItems
     {
-        public DataGridItems(string items0, string items1, string items2)
+        public DataGridItems(string item0, string item1, string item2)
         {
-            this.No = items0;
-            this.正解 = items1;
-            this.解説 = items2;
+            this.item0 = item0;
+            this.item1 = item1;
+            this.item2 = item2;
         }
 
-        public string No { get; set; }
-        public string 正解 { get; set; }
-        public string 解説 { get; set; }
+        public string item0 { get; set; }
+        public string item1 { get; set; }
+        public string item2 { get; set; }
     }
 }
