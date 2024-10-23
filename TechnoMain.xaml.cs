@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace HitApp
 {
     /// <summary>
-    /// MedicalMain.xaml の相互作用ロジック
+    /// TechnoMain.xaml の相互作用ロジック
     /// </summary>
     public partial class TechnoMain : Page
     {

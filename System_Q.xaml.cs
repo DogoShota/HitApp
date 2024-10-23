@@ -16,23 +16,30 @@ using System.Windows.Shapes;
 namespace HitApp
 {
     /// <summary>
-    /// MedicalMain.xaml の相互作用ロジック
+    /// System_Q.xaml の相互作用ロジック
     /// </summary>
-    public partial class MedicalMain : Page
+    public partial class System_Q : Page
     {
-        public MedicalMain()
+        public System_Q() => InitializeComponent();
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            InitializeComponent();
+
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+           
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.MainWindow.Content = new MainWindow();
+
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
         {
-            Application.Current.MainWindow.Content = new Medical_Q();
+
         }
     }
 }

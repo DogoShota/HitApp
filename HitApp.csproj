@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Techno_Q .xaml.cs">
+      <DependentUpon>Techno_Q .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="System_Q.xaml.cs">
+      <DependentUpon>System_Q.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SystemMain.xaml.cs">
       <DependentUpon>SystemMain.xaml</DependentUpon>
     </Compile>
@@ -82,6 +88,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Techno_Q .xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="System_Q.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="SystemMain.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
