@@ -27,7 +27,8 @@ namespace HitApp
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.MainWindow.Content = new MainWindow();
+            var selectMain = new SelectMain();
+            NavigationService.Navigate(selectMain);
         }
     }
 }

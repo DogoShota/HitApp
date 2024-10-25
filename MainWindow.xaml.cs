@@ -18,31 +18,11 @@ namespace HitApp
     /// <summary>
     /// MainWindow.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : NavigationWindow
     {
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.MainWindow.Content = new StartWindow();
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Application.Current.MainWindow.Content = new MedicalMain();
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Application.Current.MainWindow.Content = new TechnoMain();
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            Application.Current.MainWindow.Content = new SystemMain();
         }
     }
 }
