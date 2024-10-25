@@ -31,8 +31,8 @@
                 <DataGridTextColumn Header="解説" Width="*" Binding="{Binding item2}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="最初に戻る" Width="100" Margin="73,213,627,213" Click="Button_Click"/>
-        <Button Content="もう一度" Width="100" Margin="205,213,495,213" Click="Button_Click"/>
+        <Button Content="最初に戻る" Width="100" Margin="73,213,627,213"/>
+        <Button Content="もう一度" Width="100" Margin="205,213,495,213"/>
         <Label Content="60問中40問正解" HorizontalAlignment="Left" FontSize="12" Margin="105,91,0,0" VerticalAlignment="Top" Width="104"/>
     </Grid>
 </Page>
