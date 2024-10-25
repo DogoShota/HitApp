@@ -10,8 +10,9 @@
 
     <Grid>
         <StackPanel>
-            <TextBlock Text="医療情報技師" FontSize="50" Background="White" TextAlignment="Center"></TextBlock>
-            <Button Content="はじめる" Width="125" Height="25" Margin="10" Click="Button_Click"></Button>
+            <TextBlock Text="医療情報技師" FontSize="50" Background="White" TextAlignment="Center" Margin="0,150,0,0"/>
+            <Button Content="はじめる" Width="125" Height="25" Background="LightPink" Margin="10" Click="Button_Click"></Button>
+            <Image Height="159" Width="137" Margin="600,0,0,0"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -11,11 +11,11 @@
 
     <Grid Height="450">
         <Grid.RowDefinitions>
-            <RowDefinition Height="383*"/>
-            <RowDefinition Height="179*"/>
-            <RowDefinition Height="156*"/>
+            <RowDefinition Height="102*"/>
+            <RowDefinition Height="74*"/>
+            <RowDefinition Height="49*"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.RowSpan="3" Width="800" Height="450">
+        <StackPanel Grid.RowSpan="3">
             <TextBlock Text="医療情報技師試験対策アプリ" FontSize="24" FontWeight="Bold" Margin="10"/>
             <ListBox Height="300">
                 <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
