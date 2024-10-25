@@ -10,9 +10,9 @@
       Title="ResultWindow">
 
     <Grid>
-        <Label Content="2023年度　医療情報システム" Grid.ColumnSpan="2" FontSize="28" HorizontalAlignment="Left" Margin="27,41,0,0" VerticalAlignment="Top"/>
-        <Label Content="正答率：65%" HorizontalAlignment="Left"  FontSize="30" Margin="112,147,0,0" VerticalAlignment="Top"/>
-        <DataGrid Name="DataGridName" Margin="430,20,70,20" FontSize="20" AutoGenerateColumns="False">
+        <Label Content="2023年度　医療情報システム" FontSize="28" HorizontalAlignment="Left" Margin="29,20,0,0" VerticalAlignment="Top"/>
+        <Label Content="正答率：65%" HorizontalAlignment="Left"  FontSize="30" Margin="105,109,0,0" VerticalAlignment="Top" Height="46"/>
+        <DataGrid Name="DataGridName" Margin="413,20,56,20" FontSize="20" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="No" Width="40" Binding="{Binding item0}">
                     <DataGridTextColumn.ElementStyle>
@@ -31,5 +31,8 @@
                 <DataGridTextColumn Header="解説" Width="*" Binding="{Binding item2}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Content="最初に戻る" Width="100" Margin="73,213,627,213" Click="Button_Click"/>
+        <Button Content="もう一度" Width="100" Margin="205,213,495,213" Click="Button_Click"/>
+        <Label Content="60問中40問正解" HorizontalAlignment="Left" FontSize="12" Margin="105,91,0,0" VerticalAlignment="Top" Width="104"/>
     </Grid>
 </Page>
