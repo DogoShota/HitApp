@@ -29,5 +29,6 @@ namespace HitApp
         {
             Application.Current.MainWindow.Content = new MainWindow();
         }
+
     }
 }

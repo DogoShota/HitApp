@@ -30,9 +30,5 @@ namespace HitApp
             Application.Current.MainWindow.Content = new MainWindow();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Application.Current.MainWindow.Content = new Medical_Q();
-        }
     }
 }

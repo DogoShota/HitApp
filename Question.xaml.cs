@@ -16,11 +16,14 @@ using System.Windows.Shapes;
 namespace HitApp
 {
     /// <summary>
-    /// System_Q.xaml の相互作用ロジック
+    /// Medical_Q.xaml の相互作用ロジック
     /// </summary>
-    public partial class System_Q : Page
+    public partial class Question : Page
     {
-        public System_Q() => InitializeComponent();
+        public Question()
+        {
+            InitializeComponent();
+        }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
