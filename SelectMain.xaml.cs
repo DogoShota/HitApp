@@ -30,22 +30,42 @@ namespace HitApp
             NavigationService.Navigate(startPage);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            var medicalMain = new MedicalMain();
-            NavigationService.Navigate(medicalMain);
-        }
+        //private void Button_Click_1(object sender, RoutedEventArgs e)
+        //{
+        //    var medicalMain = new MedicalMain();
+        //    NavigationService.Navigate(medicalMain);
+        //}
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            var technoMain = new TechnoMain();
-            NavigationService.Navigate(technoMain);
-        }
+        //private void Button_Click_2(object sender, RoutedEventArgs e)
+        //{
+        //    var technoMain = new TechnoMain();
+        //    NavigationService.Navigate(technoMain);
+        //}
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        //private void Button_Click_3(object sender, RoutedEventArgs e)
+        //{
+        //    var systemMain = new SystemMain();
+        //    NavigationService.Navigate(systemMain);
+        //}
+        private void Button_Click_2024(object sender, RoutedEventArgs e)
         {
-            var systemMain = new SystemMain();
-            NavigationService.Navigate(systemMain);
+            Button btn = (Button)sender;
+
+            switch (btn.Content.ToString())
+            {
+                case "情報処理技術系":
+                    var Qwindow = new Question();
+                    NavigationService.Navigate(Qwindow);
+                    break;
+
+                case "医療情報システム系":
+
+                    break;
+
+                case "医学・医療系":
+
+                    break;
+            }
         }
     }
 }
