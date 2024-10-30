@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
         <TextBlock HorizontalAlignment="Left" Margin="34,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" Height="33" FontSize="25" Grid.Row="1"><Run Text="問１"/><LineBreak/><Run/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="38,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="586" FontSize="15" Grid.Row="1"><Run Text="第二次予防にあたるのはどれですか。"/><LineBreak/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-        <TextBlock x:Name="title" HorizontalAlignment="Right" Margin="0,19,60,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" FontSize="20" Height="26" Grid.Row="1"><Run Text="2023年度・医学医療"/></TextBlock>
+        <TextBlock x:Name="title" HorizontalAlignment="Right" Margin="0,19,100,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" FontSize="20" Height="26" Grid.Row="1"><Run Text="2023年度・医学医療"/></TextBlock>
         <Button Content="ア" HorizontalAlignment="Left" Margin="42,94,0,0"  VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="1"/>
         <Button Content="イ" HorizontalAlignment="Left" Margin="42,147,0,0" VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="1"/>
         <Button Content="ウ" HorizontalAlignment="Left" Margin="42,197,0,0" VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="1"/>
