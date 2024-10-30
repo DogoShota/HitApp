@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,17 @@ namespace HitApp
         {
             InitializeComponent();
             title.Text = year + "年度・" + bunnya;
+
+            getText();
+        }
+
+        private void getText ()
+        {
+            StreamReader csv = new StreamReader(@"../../csv/2019JS.csv");
+            string line = csv.ReadLine();
+            string[] values = line.Split(',');
+
+            monndai.Text = values[0];
         }
     }
 }
