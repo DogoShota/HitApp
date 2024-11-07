@@ -107,5 +107,26 @@ namespace HitApp
             var QWindow = new Question("2013", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
+
+        private void Button_Click_2012(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            var QWindow = new Question("2013", btn.Content.ToString());
+            NavigationService.Navigate(QWindow);
+        }
+
+        private void Button_Click_2011(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            var QWindow = new Question("2013", btn.Content.ToString());
+            NavigationService.Navigate(QWindow);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
