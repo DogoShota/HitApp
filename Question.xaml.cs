@@ -24,9 +24,11 @@ namespace HitApp
     public partial class Question : Page
     {
         // 問題分、選択肢を格納するリスト
+        List<string> AnsList = new List<string>();
+        // 解答を格納するリスト
         List<string> QList = new List<string>();
         // 解いている問題が何問目か(0が一問目)
-        int QCount = 48;
+        int QCount = 0;
         // 正解数
         int rightCount = 0;
 
@@ -35,11 +37,12 @@ namespace HitApp
             InitializeComponent();
             title.Text = year + "年度・" + bunnya;
 
-            getText();
+            getQuestionText();
+            getQustionAnswer();
             display();
         }
 
-        private void getText ()
+        private void getQuestionText ()
         {
             StreamReader csv = new StreamReader(@"../../csv/2019JS.csv");
 
@@ -71,6 +74,20 @@ namespace HitApp
             }
         }
 
+        private void getQustionAnswer()
+        {
+            StreamReader ansCsv = new StreamReader(@"../../csv/2019JS_ans.csv");
+
+            ansCsv.ReadLine();// 一行飛ばす
+            while (!ansCsv.EndOfStream)
+            {
+                string line = ansCsv.ReadLine();
+                string[] values = line.Split(',');
+
+                AnsList.AddRange(values);
+            }
+        }
+
         private void display()
         {
             Qnum.Text = " 問" + QList[calc(0)];
@@ -93,13 +110,50 @@ namespace HitApp
 
             try
             {
+
+                selectButton1.IsEnabled = true;
+                selectButton2.IsEnabled = true;
+                selectButton3.IsEnabled = true;
+                selectButton4.IsEnabled = true;
+                selectButton5.IsEnabled = true;
+
+                nextQues.IsEnabled = false;
+
+                resText.Text = "";
+
                 display();
             }
-            catch (System.ArgumentOutOfRangeException err)
+            catch (ArgumentOutOfRangeException err)
             {
                 // リザルトに移動させる
                 var result = new ResultWindow();
                 NavigationService.Navigate(result);
+            }
+        }
+
+        private void selectAns(object sender, RoutedEventArgs e)
+        {
+            selectButton1.IsEnabled = false;
+            selectButton2.IsEnabled = false;
+            selectButton3.IsEnabled = false;
+            selectButton4.IsEnabled = false;
+            selectButton5.IsEnabled = false;
+
+            nextQues.IsEnabled = true;
+
+            Button btn = (Button)sender;
+            string select = btn.Content.ToString();
+            select = select.Substring(1, 1);
+
+            string ans = AnsList[QCount * 3 + 1];
+
+            if (select.Equals(ans))
+            {
+                rightCount++;
+                resText.Text = "正解";
+            }else
+            {
+                resText.Text = "不正解";
             }
         }
     }

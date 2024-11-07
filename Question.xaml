@@ -22,20 +22,20 @@
         <TextBlock x:Name="Qnum" HorizontalAlignment="Left" Margin="34,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94" Height="33" FontSize="25" Grid.Row="1"><Run Text="問１"/><LineBreak/><Run/></TextBlock>
         <TextBlock x:Name="monndai" HorizontalAlignment="Left" Margin="38,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="631" FontSize="15" Grid.Row="1" Text="第二次予防にあたるのはどれですか。"/>
         <TextBlock x:Name="title" HorizontalAlignment="Right" Margin="0,19,22,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="214" FontSize="20" Height="26" Grid.Row="1"><Run Text="2023年度・医学医療"/></TextBlock>
-        <Button Content="ア" HorizontalAlignment="Left" Margin="42,94,0,0"  VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="1"/>
+        <Button x:Name="selectButton1" Content="(1)" HorizontalAlignment="Left" Margin="42,94,0,0"  VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="1" Click="selectAns"/>
         <TextBlock x:Name="selection1" HorizontalAlignment="Left" Margin="112,0,0,0"   TextWrapping="Wrap" VerticalAlignment="Center" Height="40" Width="539" FontSize="15" Text="事故予防" Grid.Row="1"/>
-        <Button Content="イ" HorizontalAlignment="Left" Margin="42,147,0,0" VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="1"/>
+        <Button x:Name="selectButton2" Content="(2)" HorizontalAlignment="Left" Margin="42,147,0,0" VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="1" Click="selectAns"/>
         <TextBlock x:Name="selection2" HorizontalAlignment="Left" Margin="113,148,0,0"   TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="539" FontSize="15" Grid.Row="1"><Run Language="ja-jp" Text="健康増進"/></TextBlock>
-        <Button Content="ウ" HorizontalAlignment="Left" Margin="42,197,0,0" VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="1"/>
+        <Button x:Name="selectButton3" Content="(3)" HorizontalAlignment="Left" Margin="42,197,0,0" VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="1" Click="selectAns"/>
         <TextBlock x:Name="selection3" HorizontalAlignment="Left" Margin="115,198,0,0"   TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="539" FontSize="15" Grid.RowSpan="2" Text="疾病予防" Grid.Row="1"/>
-        <Button Content="エ" HorizontalAlignment="Left" Margin="42,14,0,0"  VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="2"/>
+        <Button x:Name="selectButton4" Content="(4)" HorizontalAlignment="Left" Margin="42,14,0,0"  VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="2" Click="selectAns"/>
         <TextBlock x:Name="selection4" HorizontalAlignment="Left" Margin="112,12,0,0"   TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="539" FontSize="15" Grid.Row="2"><Run Language="ja-jp" Text="早期発見"/></TextBlock>
-        <Button Content="オ" HorizontalAlignment="Left" Margin="42,66,0,0"  VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="2"/>
+        <Button x:Name="selectButton5" Content="(5)" HorizontalAlignment="Left" Margin="42,66,0,0"  VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="2" Click="selectAns"/>
         <TextBlock x:Name="selection5" HorizontalAlignment="Left" Margin="112,64,0,0"   TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="539" FontSize="15" Grid.Row="2"><Run Language="ja-jp" Text="リハビリテーション"/></TextBlock>
         <Button Content="正解表示" HorizontalAlignment="Left" Margin="686,89,0,0" VerticalAlignment="Top" Height="49" Width="118" FontSize="20" Grid.Row="1"/>
         <TextBlock HorizontalAlignment="Left" TextAlignment="Center" Margin="698,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="96" FontSize="15" Grid.Row="1"><Run Language="ja-jp" Text="あなたの回答　エ"/></TextBlock>
-        <TextBox HorizontalAlignment="Left"  TextAlignment="Center"  Margin="688,190,0,0" TextWrapping="Wrap" Text="正解" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="118" Height="38" FontSize="20" Grid.Row="1" IsReadOnly="True"/>
-        <Button Content="次の問題に進む" HorizontalAlignment="Left" Margin="676,16,0,0" VerticalAlignment="Top" Height="48" Width="138" FontSize="20" Grid.Row="2" Click="nextQuestion"/>
+        <TextBox x:Name="resText" HorizontalAlignment="Left"  TextAlignment="Center"  Margin="688,190,0,0" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="118" Height="38" FontSize="20" Grid.Row="1" IsReadOnly="True"/>
+        <Button x:Name="nextQues" Content="次の問題に進む" HorizontalAlignment="Left" Margin="676,16,0,0" VerticalAlignment="Top" Height="48" Width="138" FontSize="20" Grid.Row="2" Click="nextQuestion" IsEnabled="False"/>
         <Button Content="参考表示" HorizontalAlignment="Left" Margin="697,69,0,0" VerticalAlignment="Top" Height="37" Width="108" FontSize="20" Grid.Row="2"/>
         <TextBlock HorizontalAlignment="Left" Margin="47,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="87" Width="773" FontSize="20" Grid.Row="2"><Run Language="ja-jp" Text="解説"/></TextBlock>
     </Grid>
