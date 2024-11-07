@@ -34,8 +34,8 @@
         <TextBlock x:Name="selection5" HorizontalAlignment="Left" Margin="112,64,0,0"   TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="539" FontSize="15" Grid.Row="2"><Run Language="ja-jp" Text="リハビリテーション"/></TextBlock>
         <Button Content="正解表示" HorizontalAlignment="Left" Margin="686,89,0,0" VerticalAlignment="Top" Height="49" Width="118" FontSize="20" Grid.Row="1"/>
         <TextBlock HorizontalAlignment="Left" TextAlignment="Center" Margin="698,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="96" FontSize="15" Grid.Row="1"><Run Language="ja-jp" Text="あなたの回答　エ"/></TextBlock>
-        <TextBox HorizontalAlignment="Left"  TextAlignment="Center"  Margin="688,190,0,0" TextWrapping="Wrap" Text="正解" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="118" Height="38" FontSize="20" Grid.Row="1"/>
-        <Button Content="次の問題に進む" HorizontalAlignment="Left" Margin="676,16,0,0" VerticalAlignment="Top" Height="48" Width="138" FontSize="20" Grid.Row="2"/>
+        <TextBox HorizontalAlignment="Left"  TextAlignment="Center"  Margin="688,190,0,0" TextWrapping="Wrap" Text="正解" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="118" Height="38" FontSize="20" Grid.Row="1" IsReadOnly="True"/>
+        <Button Content="次の問題に進む" HorizontalAlignment="Left" Margin="676,16,0,0" VerticalAlignment="Top" Height="48" Width="138" FontSize="20" Grid.Row="2" Click="nextQuestion"/>
         <Button Content="参考表示" HorizontalAlignment="Left" Margin="697,69,0,0" VerticalAlignment="Top" Height="37" Width="108" FontSize="20" Grid.Row="2"/>
         <TextBlock HorizontalAlignment="Left" Margin="47,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="87" Width="773" FontSize="20" Grid.Row="2"><Run Language="ja-jp" Text="解説"/></TextBlock>
     </Grid>

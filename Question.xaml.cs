@@ -25,8 +25,8 @@ namespace HitApp
     {
         // 問題分、選択肢を格納するリスト
         List<string> QList = new List<string>();
-        // 解いている問題が何問目か
-        int QCount = 2;
+        // 解いている問題が何問目か(0が一問目)
+        int QCount = 48;
         // 正解数
         int rightCount = 0;
 
@@ -85,6 +85,22 @@ namespace HitApp
         private int calc (int num)
         {
             return QCount * 7 + num;
+        }
+
+        private void nextQuestion(object sender, RoutedEventArgs e)
+        {
+            QCount++;
+
+            try
+            {
+                display();
+            }
+            catch (System.ArgumentOutOfRangeException err)
+            {
+                // リザルトに移動させる
+                var result = new ResultWindow();
+                NavigationService.Navigate(result);
+            }
         }
     }
 }
