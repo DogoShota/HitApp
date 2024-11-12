@@ -112,7 +112,7 @@ namespace HitApp
         {
             Button btn = (Button)sender;
 
-            var QWindow = new Question("2013", btn.Content.ToString());
+            var QWindow = new Question("2012", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
 
@@ -120,7 +120,7 @@ namespace HitApp
         {
             Button btn = (Button)sender;
 
-            var QWindow = new Question("2013", btn.Content.ToString());
+            var QWindow = new Question("2011", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
 
