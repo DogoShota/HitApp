@@ -42,11 +42,14 @@ namespace HitApp
             display();
         }
 
+        // csvから問題を取得して、リストに格納する
         private void getQuestionText ()
         {
             StreamReader csv = new StreamReader(@"../../csv/2019JS.csv");
 
             csv.ReadLine();// 一行とばす
+
+            // リストに格納
             while (!csv.EndOfStream)
             {
                 string line = csv.ReadLine();
@@ -74,11 +77,14 @@ namespace HitApp
             }
         }
 
+        // csvから正解を取得して、リストに格納する
         private void getQustionAnswer()
         {
             StreamReader ansCsv = new StreamReader(@"../../csv/2019JS_ans.csv");
 
             ansCsv.ReadLine();// 一行飛ばす
+            
+            // リストに格納
             while (!ansCsv.EndOfStream)
             {
                 string line = ansCsv.ReadLine();
@@ -88,6 +94,7 @@ namespace HitApp
             }
         }
 
+        // 取得した問題文、選択肢を画面に表示する
         private void display()
         {
             Qnum.Text = " 問" + QList[calc(0)];
@@ -99,24 +106,28 @@ namespace HitApp
             selection5.Text = QList[calc(6)];
         }
 
+        // 指定した問題文、選択肢を表示するための引数の計算
         private int calc (int num)
         {
             return QCount * 7 + num;
         }
 
+        // 次の問題文を表示するためにボタンを最有効化、正誤を初期化
+        // 最後の問題の場合、リザルト画面に遷移
         private void nextQuestion(object sender, RoutedEventArgs e)
         {
             QCount++;
 
             try
             {
-
+                // 選択肢ボタンを有効化
                 selectButton1.IsEnabled = true;
                 selectButton2.IsEnabled = true;
                 selectButton3.IsEnabled = true;
                 selectButton4.IsEnabled = true;
                 selectButton5.IsEnabled = true;
 
+                // 次の問題にいくためのボタンを無効化
                 nextQues.IsEnabled = false;
 
                 resText.Text = "";
@@ -131,22 +142,27 @@ namespace HitApp
             }
         }
 
+        // 別のボタンを押せないようにし、正誤判定、画面に表示する
         private void selectAns(object sender, RoutedEventArgs e)
         {
+            // 選択肢ボタンの無効化
             selectButton1.IsEnabled = false;
             selectButton2.IsEnabled = false;
             selectButton3.IsEnabled = false;
             selectButton4.IsEnabled = false;
             selectButton5.IsEnabled = false;
 
+            // 次の問題に行くためのボタンを有効化
             nextQues.IsEnabled = true;
-
+            
+            // 選択された選択肢を取得
             Button btn = (Button)sender;
             string select = btn.Content.ToString();
             select = select.Substring(1, 1);
 
             string ans = AnsList[QCount * 3 + 1];
 
+            // 正誤判定
             if (select.Equals(ans))
             {
                 rightCount++;
