@@ -23,6 +23,10 @@ namespace HitApp
     /// </summary>
     public partial class Question : Page
     {
+        // 前画面で選択された年度と分野
+        string year, bunnya;
+        // 取得するcsvを格納する変数
+        StreamReader csv, ansCsv;
         // 問題分、選択肢を格納するリスト
         List<string> AnsList = new List<string>();
         // 解答を格納するリスト
@@ -35,21 +39,225 @@ namespace HitApp
         public Question(string year, string bunnya)
         {
             InitializeComponent();
-            title.Text = year + "年度・" + bunnya;
+            this.year = year;
+            this.bunnya = bunnya;
 
             getQuestionText();
-            getQustionAnswer();
             display();
         }
 
-        // csvから問題を取得して、リストに格納する
+        // csvから問題と正解を取得して、リストに格納する
         private void getQuestionText ()
         {
-            StreamReader csv = new StreamReader(@"../../csv/2019JS.csv");
+            // 選択された年度、分野のcsvを取得する
+            switch (year)
+            {
+                case "2023":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2023JS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2023JS.解説.csv");
+                            break;
 
-            csv.ReadLine();// 一行とばす
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2023IS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2023IS.解説.csv");
+                            break;
 
-            // リストに格納
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2023II.csv");
+                            ansCsv = new StreamReader(@"../../csv/2023II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2022":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2022JS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2022JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2022IS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2022IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2022II.csv");
+                            ansCsv = new StreamReader(@"../../csv/2022II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2021":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2021JS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2021JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2021IS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2021IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2021II.csv");
+                            ansCsv = new StreamReader(@"../../csv/2021II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2019":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2019JS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2019JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2019IS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2019IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2019II.csv");
+                            ansCsv = new StreamReader(@"../../csv/2019II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2018":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2018JS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2018JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2018IS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2018IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2018II.csv");
+                            ansCsv = new StreamReader(@"../../csv/2018II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2017":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2017JS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2017JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2017IS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2017IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2017II.csv");
+                            ansCsv = new StreamReader(@"../../csv/2017II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2016":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2016JS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2016JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2016IS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2016IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2016II.csv");
+                            ansCsv = new StreamReader(@"../../csv/2016II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2015":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2015JS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2015JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2015IS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2015IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2015II.csv");
+                            ansCsv = new StreamReader(@"../../csv/2015II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2014":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2014JS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2014JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2014IS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2014IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2014II.csv");
+                            ansCsv = new StreamReader(@"../../csv/2014II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2013":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2013JS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2013JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2013IS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2013IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2013II.csv");
+                            ansCsv = new StreamReader(@"../../csv/2013II.解説.csv");
+                            break;
+                    }
+                    break;
+            }
+
+            // 一行とばす
+            csv.ReadLine();
+            ansCsv.ReadLine();
+
+            // 問題文csvをリストに格納
             while (!csv.EndOfStream)
             {
                 string line = csv.ReadLine();
@@ -58,6 +266,16 @@ namespace HitApp
                 QList.AddRange(values);
             }
 
+            // 解答例csvをリストに格納
+            while (!ansCsv.EndOfStream)
+            {
+                string ansLine = ansCsv.ReadLine();
+                string[] ansValues = ansLine.Split(',');
+
+                AnsList.AddRange(ansValues);
+            }
+
+            // 「'」がある問題文が正しく表示されるために整形する
             for ( int i = 0; i < QList.Count; i++ )
             {
                 if (QList[i] != string.Empty && QList[i].TrimStart()[0] == '"')
@@ -77,26 +295,11 @@ namespace HitApp
             }
         }
 
-        // csvから正解を取得して、リストに格納する
-        private void getQustionAnswer()
-        {
-            StreamReader ansCsv = new StreamReader(@"../../csv/2019JS_ans.csv");
-
-            ansCsv.ReadLine();// 一行飛ばす
-            
-            // リストに格納
-            while (!ansCsv.EndOfStream)
-            {
-                string line = ansCsv.ReadLine();
-                string[] values = line.Split(',');
-
-                AnsList.AddRange(values);
-            }
-        }
-
         // 取得した問題文、選択肢を画面に表示する
         private void display()
         {
+            title.Text = year + "年度・" + bunnya;
+
             Qnum.Text = " 問" + QList[calc(0)];
             monndai.Text = QList[calc(1)];
             selection1.Text = QList[calc(2)];
@@ -134,7 +337,7 @@ namespace HitApp
 
                 display();
             }
-            catch (ArgumentOutOfRangeException err)
+            catch (ArgumentOutOfRangeException)
             {
                 // リザルトに移動させる
                 var result = new ResultWindow();
