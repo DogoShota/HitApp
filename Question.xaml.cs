@@ -32,9 +32,11 @@ namespace HitApp
         // 解答を格納するリスト
         List<string> QList = new List<string>();
         // 解いている問題が何問目か(0が一問目)
-        int QCount = 0;
+        int QCount = 49;
         // 正解数
         int rightCount = 0;
+        // 正誤結果を格納するリスト
+        List<string> resList = new List<string>();
 
         public Question(string year, string bunnya)
         {
@@ -340,7 +342,7 @@ namespace HitApp
             catch (ArgumentOutOfRangeException)
             {
                 // リザルトに移動させる
-                var result = new ResultWindow();
+                var result = new ResultWindow(year, bunnya, QCount, rightCount, resList);
                 NavigationService.Navigate(result);
             }
         }
@@ -370,9 +372,11 @@ namespace HitApp
             {
                 rightCount++;
                 resText.Text = "正解";
+                resList.Add("○");
             }else
             {
                 resText.Text = "不正解";
+                resList.Add("×");
             }
         }
     }

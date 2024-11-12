@@ -20,10 +20,41 @@ namespace HitApp
     /// </summary>
     public partial class ResultWindow : Page
     {
-        public ResultWindow()
+        // 前画面で選択された年度と分野
+        string year, bunnya;
+        // 解いている問題が何問目か(0が一問目)
+        int Qnum;
+        // 正解数
+        double rightCount;
+        //
+        double ansPercentage;
+        // 正誤結果を格納するリスト
+        List<string> resList = new List<string>();
+        public ResultWindow(string year, string bunnya, int Qnum, int rightCount,  List<string> resList)
         {
             InitializeComponent();
+            this.year = year;
+            this.bunnya = bunnya;
+            this.Qnum = Qnum;
+            this.rightCount = rightCount;
+            this.resList = resList;
+
             dataSet();
+            calc();
+
+            display();
+        }
+
+        // 正解率の計算
+        private void calc()
+        {
+            ansPercentage = (rightCount / Qnum) * 100;
+        }
+        
+        private void display()
+        {
+            title.Content = year + "年度・" + bunnya;
+            正解率.Content = "正解率：" + ansPercentage.ToString() + "%";
         }
 
         private void dataSet ()
