@@ -37,6 +37,7 @@ namespace HitApp
             var QWindow = new Question("2024", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
+
         private void Button_Click_2023(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -44,6 +45,7 @@ namespace HitApp
             var QWindow = new Question("2023", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
+
         private void Button_Click_2022(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -51,6 +53,7 @@ namespace HitApp
             var QWindow = new Question("2022", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
+
         private void Button_Click_2021(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -58,6 +61,7 @@ namespace HitApp
             var QWindow = new Question("2021", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
+
         private void Button_Click_2019(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -65,6 +69,7 @@ namespace HitApp
             var QWindow = new Question("2019", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
+
         private void Button_Click_2018(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -72,6 +77,7 @@ namespace HitApp
             var QWindow = new Question("2018", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
+
         private void Button_Click_2017(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -79,6 +85,7 @@ namespace HitApp
             var QWindow = new Question("2017", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
+
         private void Button_Click_2016(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -86,6 +93,7 @@ namespace HitApp
             var QWindow = new Question("2016", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
+
         private void Button_Click_2015(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -93,6 +101,7 @@ namespace HitApp
             var QWindow = new Question("2015", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
+
         private void Button_Click_2014(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -100,6 +109,7 @@ namespace HitApp
             var QWindow = new Question("2014", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
         }
+
         private void Button_Click_2013(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
@@ -146,11 +156,6 @@ namespace HitApp
 
             var QWindow = new Question("2008", btn.Content.ToString());
             NavigationService.Navigate(QWindow);
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
