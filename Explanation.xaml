@@ -1,0 +1,20 @@
+﻿<Page x:Class="HitApp.Explanation"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HitApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Explanation">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="25,25,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="65"><Run Language="ja-jp" FontSize="30" Text="問１"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="25,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="65"><Run Language="ja-jp" FontSize="30" Text="解説"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="25,85,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="65"><Run FontSize="30" Language="ja-jp" Text="解答"/></TextBlock>
+        <TextBlock x:Name="title" HorizontalAlignment="Right" Margin="0,15,22,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" FontSize="20" Height="52"><Run Text="2023年度"/><Run Language="ja-jp" Text="・"/><Run Text="医学医療"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="120,85,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="65"><Run FontSize="30" Language="ja-jp" Text="ア" /></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="120,145,0,0" TextWrapping="Wrap" Text="一次予防は健康増進、疾病予防、事故予防、 二次予防は疾病の早期発見、早期対処、適切な医療と合併症対策、三次予防はリハ ビリテーション、再発予防がそれぞれの目的とされてい る。3)疾病の早期発見、5)治療や保健指導による重症化の予防は二次予防に該当するもので あ り、正 しい。 1)再発予防は三次予防、2)予 防接種 と4)生活習慣の改善は一次予防に該当する。" VerticalAlignment="Top" Height="207" Width="647" FontSize="20"/>
+        <Button Content="戻る" HorizontalAlignment="Left" Margin="660,372,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="20" Click="Button_Click"/>
+    </Grid>
+</Page>
