@@ -33,15 +33,17 @@
         <Button Content="オ" HorizontalAlignment="Left" Margin="42,66,0,0"  VerticalAlignment="Top" Height="35" Width="65" FontSize="15" Grid.Row="2"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="112,0,0,0"   TextWrapping="Wrap" VerticalAlignment="Center" Height="40" Width="539" FontSize="15" Text="事故予防" Grid.Row="1"/>
-        <Button Content="次の問題に進む" HorizontalAlignment="Left" Margin="676,16,0,0" VerticalAlignment="Top" Height="48" Width="138" FontSize="20" Grid.Row="2"/>
+        <Button Content="次の問題に進む" HorizontalAlignment="Left" Margin="355,161,0,0" VerticalAlignment="Top" Height="43" Width="138" FontSize="20" Grid.Row="2"/>
         <Button Content="正解表示" HorizontalAlignment="Left" Margin="686,89,0,0" VerticalAlignment="Top" Height="49" Width="118" FontSize="20" Grid.Row="1"/>
         <TextBlock HorizontalAlignment="Left" TextAlignment="Center" Margin="698,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="96" FontSize="15" Grid.Row="1"><Run Language="ja-jp" Text="あなたの回答　エ"/></TextBlock>
         <TextBox HorizontalAlignment="Left"  TextAlignment="Center"  Margin="688,190,0,0" TextWrapping="Wrap" Text="正解" VerticalContentAlignment="Center" VerticalAlignment="Top" Width="118" Height="38" FontSize="20" Grid.Row="1"/>
-        <Button Content="選択画面に戻る" HorizontalAlignment="Left" Margin="677,69,0,0" VerticalAlignment="Top" Height="45" Width="138" FontSize="20" Grid.Row="2" Click="Button_Click"/>
+        <Button Content="選択画面に戻る" HorizontalAlignment="Left" Margin="673,159,0,0" VerticalAlignment="Top" Height="45" Width="138" FontSize="20" Grid.Row="2" Click="Button_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="112,148,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="539" FontSize="15" Grid.Row="1"><Run Language="ja-jp" Text="健康増進"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="112,198,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="539" FontSize="15" Grid.Row="1"><Run Language="ja-jp" Text="疾病予防"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="112,12,0,0"   TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="539" FontSize="15" Grid.Row="2"><Run Language="ja-jp" Text="早期発見"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="112,64,0,0"   TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="539" FontSize="15" Grid.Row="2"><Run Language="ja-jp" Text="リハビリテーション"/></TextBlock>
+        <Button Content="前の問題に戻る" HorizontalAlignment="Left" Margin="515,160,0,0" VerticalAlignment="Top" Height="43" Width="138" FontSize="20" Grid.Row="2" Click="Button_Click_1"/>
+        <Button Content="解説表示" HorizontalAlignment="Left" Margin="689,27,0,0" VerticalAlignment="Top" Height="49" Width="118" FontSize="20" Grid.Row="2" Click="Button_Click_1"/>
 
     </Grid>
 </Page>

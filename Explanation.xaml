@@ -15,6 +15,6 @@
         <TextBlock x:Name="title" HorizontalAlignment="Right" Margin="0,15,22,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="228" FontSize="20" Height="52"><Run Text="2023年度"/><Run Language="ja-jp" Text="・"/><Run Text="医学医療"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="120,85,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="65" TextAlignment="center"><Run FontSize="30" Language="ja-jp" Text="ア" /></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="120,145,0,0" TextWrapping="Wrap" Text="一次予防は健康増進、疾病予防、事故予防、 二次予防は疾病の早期発見、早期対処、適切な医療と合併症対策、三次予防はリハ ビリテーション、再発予防がそれぞれの目的とされてい る。3)疾病の早期発見、5)治療や保健指導による重症化の予防は二次予防に該当するもので あ り、正 しい。 1)再発予防は三次予防、2)予 防接種 と4)生活習慣の改善は一次予防に該当する。" VerticalAlignment="Top" Height="207" Width="647" FontSize="20"/>
-        <Button Content="戻る" HorizontalAlignment="Left" Margin="660,372,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="20" Click="Button_Click"/>
+        <Button Content="戻る" HorizontalAlignment="Left" Margin="642,359,0,0" VerticalAlignment="Top" Height="41" Width="104" FontSize="20" Click="Button_Click"/>
     </Grid>
 </Page>

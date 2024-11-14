@@ -31,6 +31,12 @@ namespace HitApp
             var SelectMain = new SelectMain();
             NavigationService.Navigate(SelectMain);
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var Explanation = new Explanation();
+            NavigationService.Navigate(Explanation);
+        }
     }
 }
 
