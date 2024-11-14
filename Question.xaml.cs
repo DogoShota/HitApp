@@ -25,6 +25,12 @@ namespace HitApp
             InitializeComponent();
             title.Text = year + "年度・" + bunnya;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var SelectMain = new SelectMain();
+            NavigationService.Navigate(SelectMain);
+        }
     }
 }
 
