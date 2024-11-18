@@ -66,7 +66,7 @@ namespace HitApp
 
             for (int i = 0; i < resList.Count; i++)
             {
-                items.Add(new DataGridItems((i + 1).ToString(), resList[i], "a"));
+                items.Add(new DataGridItems((i + 1).ToString(), resList[i]));
             }
 
             DataGridName.ItemsSource = items;
@@ -84,20 +84,22 @@ namespace HitApp
             var QWindow = new Question(year, bunnya);
             NavigationService.Navigate(QWindow);
         }
+        private void explanation(object sender, RoutedEventArgs e)
+        {
+
+        }
 
     }
 
     public class DataGridItems
     {
-        public DataGridItems(string No, string res, string exp)
+        public DataGridItems(string No, string res)
         {
             this.item0 = No;
             this.item1 = res;
-            this.item2 = exp;
         }
 
         public string item0 { get; set; }
         public string item1 { get; set; }
-        public string item2 { get; set; }
     }
 }
