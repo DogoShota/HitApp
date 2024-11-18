@@ -20,35 +20,86 @@ namespace HitApp
     /// </summary>
     public partial class ResultWindow : Page
     {
-        public ResultWindow()
+        // 前画面で選択された年度と分野
+        string year, bunnya;
+        // 解いている問題が何問目か(0が一問目)
+        int Qnum;
+        // 正解数
+        double rightCount;
+        // 正解率
+        double ansPercentage;
+        // 正誤結果を格納するリスト
+        List<string> resList = new List<string>();
+
+        public ResultWindow(string year, string bunnya, int Qnum, int rightCount,  List<string> resList)
         {
             InitializeComponent();
+            this.year = year;
+            this.bunnya = bunnya;
+            this.Qnum = Qnum;
+            this.rightCount = rightCount;
+            this.resList = resList;
+
             dataSet();
+            calc();
+
+            display();
         }
 
+        // 正解率の計算
+        private void calc()
+        {
+            ansPercentage = (rightCount / Qnum) * 100;
+        }
+        
+        // 画面表示
+        private void display()
+        {
+            title.Content = year + "年度・" + bunnya;
+            正解率.Content = "正解率：" + ansPercentage.ToString() + "%";
+        }
+
+        // 画面の表に表示する内容を設定
         private void dataSet ()
         {
             List<DataGridItems> items = new List<DataGridItems>();
-            items.Add(new DataGridItems("0", "○", "222"));
-            items.Add(new DataGridItems("1", "○", "ccc"));
-            items.Add(new DataGridItems("2", "×", "CCC"));
+
+            for (int i = 0; i < resList.Count; i++)
+            {
+                items.Add(new DataGridItems((i + 1).ToString(), resList[i]));
+            }
 
             DataGridName.ItemsSource = items;
 
         }
+
+        private void reSelect(object sender, RoutedEventArgs e)
+        {
+            var selectMain = new SelectMain();
+            NavigationService.Navigate(selectMain);
+        }
+
+        private void retry(object sender, RoutedEventArgs e)
+        {
+            var QWindow = new Question(year, bunnya);
+            NavigationService.Navigate(QWindow);
+        }
+        private void explanation(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 
     public class DataGridItems
     {
-        public DataGridItems(string item0, string item1, string item2)
+        public DataGridItems(string No, string res)
         {
-            this.item0 = item0;
-            this.item1 = item1;
-            this.item2 = item2;
+            this.item0 = No;
+            this.item1 = res;
         }
 
         public string item0 { get; set; }
         public string item1 { get; set; }
-        public string item2 { get; set; }
     }
 }
