@@ -20,14 +20,34 @@ namespace HitApp
     /// </summary>
     public partial class Explanation : Page
     {
-        public Explanation()
+        string year, bunnya;
+        int QCount;
+        // 問題分、選択肢を格納するリスト
+        List<string> AnsList = new List<string>();
+        public Explanation(string year, string bunnya, int QCount, List<string> AnsList)
         {
             InitializeComponent();
+            this.year = year;
+            this.bunnya = bunnya;
+            this.QCount = QCount;
+            this.AnsList = AnsList;
+
+            display();
+        }
+
+        private void display ()
+        {
+            title.Text = year + "年度・" + bunnya;
+            QnumText.Text = "問" + AnsList[QCount * 3];
+
+            ansText.Text = AnsList[QCount * 3 + 1];
+            expText.Text = AnsList[QCount * 3 + 2];
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            this.NavigationService.GoBack();
         }
     }
 }

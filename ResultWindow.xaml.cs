@@ -23,22 +23,28 @@ namespace HitApp
         // 前画面で選択された年度と分野
         string year, bunnya;
         // 解いている問題が何問目か(0が一問目)
-        int Qnum;
+        int QCount;
         // 正解数
         double rightCount;
         // 正解率
         double ansPercentage;
         // 正誤結果を格納するリスト
         List<string> resList = new List<string>();
+        // 問題分、選択肢を格納するリスト
+        List<string> AnsList = new List<string>();
+        // 解答を格納するリスト
+        List<string> QList = new List<string>();
 
-        public ResultWindow(string year, string bunnya, int Qnum, int rightCount,  List<string> resList)
+        public ResultWindow(string year, string bunnya, int QCount, int rightCount,  List<string> resList, List<string> QList, List<string> AnsList)
         {
             InitializeComponent();
             this.year = year;
             this.bunnya = bunnya;
-            this.Qnum = Qnum;
+            this.QCount = QCount;
             this.rightCount = rightCount;
             this.resList = resList;
+            this.QList = QList;
+            this.AnsList = AnsList;
 
             dataSet();
             calc();
@@ -49,7 +55,7 @@ namespace HitApp
         // 正解率の計算
         private void calc()
         {
-            ansPercentage = (rightCount / Qnum) * 100;
+            ansPercentage = (rightCount / QCount) * 100;
         }
         
         // 画面表示
@@ -86,7 +92,8 @@ namespace HitApp
         }
         private void explanation(object sender, RoutedEventArgs e)
         {
-
+            Explanation exp = new Explanation(year, bunnya, QCount, AnsList);
+            NavigationService.Navigate(exp);
         }
 
     }

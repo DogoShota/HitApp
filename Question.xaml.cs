@@ -32,7 +32,7 @@ namespace HitApp
         // 解答を格納するリスト
         List<string> QList = new List<string>();
         // 解いている問題が何問目か(0が一問目)
-        int QCount = 49;
+        int QCount = 0;
         // 正解数
         int rightCount = 0;
         // 正誤結果を格納するリスト
@@ -278,7 +278,7 @@ namespace HitApp
             }
 
             // 「'」がある問題文が正しく表示されるために整形する
-            for ( int i = 0; i < QList.Count; i++ )
+            for (int i = 0; i < QList.Count; i++)
             {
                 if (QList[i] != string.Empty && QList[i].TrimStart()[0] == '"')
                 {
@@ -292,7 +292,25 @@ namespace HitApp
                     }
                     int strLen = QList[i].Length;
 
-                    QList[i] = QList[i].Substring(3, strLen-6);
+                    QList[i] = QList[i].Substring(3, strLen - 6);
+                }
+            }
+            // 解答用
+            for (int i = 0; i < AnsList.Count; i++)
+            {
+                if (AnsList[i] != string.Empty && AnsList[i].TrimStart()[0] == '"')
+                {
+                    // もう一回ダブルクォーテーションが出てくるまで要素を結合
+                    while (AnsList[i].TrimEnd()[AnsList[i].TrimEnd().Length - 1] != '"')
+                    {
+                        AnsList[i] = AnsList[i] + "," + AnsList[i + 1];
+
+                        //結合したら要素を削除する
+                        AnsList.RemoveAt(i + 1);
+                    }
+                    int strLen = AnsList[i].Length;
+
+                    AnsList[i] = AnsList[i].Substring(3, strLen - 6);
                 }
             }
         }
@@ -334,6 +352,8 @@ namespace HitApp
 
                 // 次の問題にいくためのボタンを無効化
                 nextQues.IsEnabled = false;
+                expButton.IsEnabled = false;
+
 
                 resText.Text = "";
 
@@ -342,7 +362,7 @@ namespace HitApp
             catch (ArgumentOutOfRangeException)
             {
                 // リザルトに移動させる
-                var result = new ResultWindow(year, bunnya, QCount, rightCount, resList);
+                var result = new ResultWindow(year, bunnya, QCount, rightCount, resList, QList, AnsList);
                 NavigationService.Navigate(result);
             }
         }
@@ -359,6 +379,7 @@ namespace HitApp
 
             // 次の問題に行くためのボタンを有効化
             nextQues.IsEnabled = true;
+            expButton.IsEnabled = true;
             
             // 選択された選択肢を取得
             Button btn = (Button)sender;
@@ -386,9 +407,9 @@ namespace HitApp
             NavigationService.Navigate(SelectMain);
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void dispExp(object sender, RoutedEventArgs e)
         {
-            var Explanation = new Explanation();
+            var Explanation = new Explanation(year, bunnya, QCount, AnsList);
             NavigationService.Navigate(Explanation);
         }
     }
