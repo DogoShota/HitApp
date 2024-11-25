@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -32,7 +33,7 @@ namespace HitApp
         // 解答を格納するリスト
         List<string> QList = new List<string>();
         // 解いている問題が何問目か(0が一問目)
-        int QCount = 49;
+        int QCount = 5;
         // 正解数
         int rightCount = 0;
         // 正誤結果を格納するリスト
@@ -389,16 +390,34 @@ namespace HitApp
             string ans = AnsList[QCount * 3 + 1];
 
             // 正誤判定
-            if (select.Equals(ans))
+            if (ans.Length == 1)
             {
-                rightCount++;
-                resText.Text = "正解";
-                resList.Add("○");
+                if (select.Equals(ans))
+                {
+                    rightCount++;
+                    resText.Text = "正解";
+                    resList.Add("○");
+                }else
+                {
+                    resText.Text = "不正解";
+                    resList.Add("×");
+                }
             }else
             {
-                resText.Text = "不正解";
-                resList.Add("×");
+                string ans1 = ans.Substring(0, 1);
+                string ans2 = ans.Substring(4);
+                if (select.Equals(ans1) || select.Equals(ans2))
+                {
+                    rightCount++;
+                    resText.Text = "正解";
+                    resList.Add("○");
+                }else
+                {
+                    resText.Text = "不正解";
+                    resList.Add("×");
+                }
             }
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
