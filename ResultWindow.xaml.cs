@@ -92,7 +92,9 @@ namespace HitApp
         }
         private void explanation(object sender, RoutedEventArgs e)
         {
-            Explanation exp = new Explanation(year, bunnya, QCount, AnsList);
+            int Qnum = int.Parse((((Button)sender).Tag as DataGridItems).item0) - 1;
+
+            Explanation exp = new Explanation(year, bunnya, Qnum, AnsList);
             NavigationService.Navigate(exp);
         }
 

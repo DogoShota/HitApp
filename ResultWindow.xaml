@@ -33,7 +33,7 @@
                 <DataGridTemplateColumn Header="解説">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="解説表示" Click="explanation"/>
+                            <Button Content="解説表示" Click="explanation" Tag="{Binding}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
