@@ -254,6 +254,106 @@ namespace HitApp
                             break;
                     }
                     break;
+
+                case "2012":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2012JS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2012JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2012IS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2012IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2012II.csv");
+                            ansCsv = new StreamReader(@"../../csv/2012II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2011":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2011JS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2011JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2011IS.csv");
+                            ansCsv = new StreamReader(@"../../csv/2011IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2011II.csv");
+                            ansCsv = new StreamReader(@"../../csv/2011II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2010":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2010JS.csv");
+                            // ansCsv = new StreamReader(@"../../csv/2010JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2010IS.csv");
+                            // ansCsv = new StreamReader(@"../../csv/2010IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2010II.csv");
+                            //ansCsv = new StreamReader(@"../../csv/2010II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2009":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2009JS.csv");
+                            // ansCsv = new StreamReader(@"../../csv/2009JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2009IS.csv");
+                            // ansCsv = new StreamReader(@"../../csv/2009IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2009II.csv");
+                            // ansCsv = new StreamReader(@"../../csv/2009II.解説.csv");
+                            break;
+                    }
+                    break;
+
+                case "2008":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"../../csv/2008JS.csv");
+                            // ansCsv = new StreamReader(@"../../csv/2008JS.解説.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"../../csv/2008IS.csv");
+                            // ansCsv = new StreamReader(@"../../csv/2008IS.解説.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"../../csv/2008II.csv");
+                            // ansCsv = new StreamReader(@"../../csv/2008II.解説.csv");
+                            break;
+                    }
+                    break;
             }
 
             // 一行とばす
