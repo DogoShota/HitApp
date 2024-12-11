@@ -33,7 +33,7 @@ namespace HitApp
         // 解答を格納するリスト
         List<string> QList = new List<string>();
         // 解いている問題が何問目か(0が一問目)
-        int QCount = 5;
+        int QCount = 0;
         // 正解数
         int rightCount = 0;
         // 正誤結果を格納するリスト
