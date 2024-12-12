@@ -9,114 +9,124 @@
       Background="White"
       Title="SelectMain">
 
-    <Grid Height="450">
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="102*"/>
-            <RowDefinition Height="74*"/>
-            <RowDefinition Height="49*"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <StackPanel Grid.RowSpan="3">
+        <StackPanel Grid.Row="0">
             <TextBlock Text="医療情報技師試験対策アプリ" FontSize="24" FontWeight="Bold" Margin="5"/>
             <TextBlock Text="　2008年度から2024年度まで勉強できます！　(2024年度は過去問未発表です...)" FontSize="14" FontWeight="Bold" Margin="5"/>
-            <ListBox Height="300">
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2024年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2024"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2024"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2024"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2023年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2023"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2023"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2023"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2022年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2022"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2022"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2022"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2021年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2021"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2021"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2021"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2019年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2019"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2019"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2019"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2018年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2018"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2018"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2018"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2017年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2017"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2017"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2017"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2016年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2016"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2016"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2016"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2015年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2015"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2015"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2015"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2014年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2014"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2014"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2014"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2013年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2013"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2013"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2013"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2012年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2012"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2012"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2012"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2011年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2011"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2011"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2011"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2010年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2010"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2010"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2010"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2009年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2009"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2009"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2009"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <TextBlock Text="2008年度" FontSize="15" FontWeight="UltraBlack"  Margin="10" Height="20" Width="75" TextAlignment="Center"/>
-                    <Button Content="情報処理技術系"     Width="150" Height="25" Margin="10" Background="LightGreen" Click="Button_Click_2008"/>
-                    <Button Content="医療情報システム系" Width="150" Height="25" Margin="10" Background="Yellow" Click="Button_Click_2008"/>
-                    <Button Content="医学・医療系"       Width="150" Height="25" Margin="10" Background="Aqua" Click="Button_Click_2008"/>
-                </StackPanel>
-            </ListBox>
-            <Button Content="最初に戻る" Width="100" Margin="10" Click="Button_Click"/>
         </StackPanel>
+        <ScrollViewer Grid.Row="1">
+            <Grid x:Name="table">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" MinWidth="100"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="2024年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="0" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2024"/>
+                <Button    Grid.Row="0" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2024"/>
+                <Button    Grid.Row="0" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2024"/>
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="2023年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="1" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2023"/>
+                <Button    Grid.Row="1" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2023"/>
+                <Button    Grid.Row="1" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2023"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="2022年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="2" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2022"/>
+                <Button    Grid.Row="2" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2022"/>
+                <Button    Grid.Row="2" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2022"/>
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="2021年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="3" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2021"/>
+                <Button    Grid.Row="3" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2021"/>
+                <Button    Grid.Row="3" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2021"/>
+
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="2019年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="4" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2019"/>
+                <Button    Grid.Row="4" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2019"/>
+                <Button    Grid.Row="4" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2019"/>
+
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="2018年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="5" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2019"/>
+                <Button    Grid.Row="5" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2018"/>
+                <Button    Grid.Row="5" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2018"/>
+
+                <TextBlock Grid.Row="6" Grid.Column="0" Text="2017年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="6" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2017"/>
+                <Button    Grid.Row="6" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2017"/>
+                <Button    Grid.Row="6" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2017"/>
+
+                <TextBlock Grid.Row="7" Grid.Column="0" Text="2016年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="7" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2016"/>
+                <Button    Grid.Row="7" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2016"/>
+                <Button    Grid.Row="7" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2016"/>
+
+                <TextBlock Grid.Row="8" Grid.Column="0" Text="2015年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="8" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2015"/>
+                <Button    Grid.Row="8" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2015"/>
+                <Button    Grid.Row="8" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2015"/>
+
+                <TextBlock Grid.Row="9" Grid.Column="0" Text="2014年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="9" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2014"/>
+                <Button    Grid.Row="9" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2014"/>
+                <Button    Grid.Row="9" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2014"/>
+
+                <TextBlock Grid.Row="10" Grid.Column="0" Text="2013年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="10" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2013"/>
+                <Button    Grid.Row="10" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2013"/>
+                <Button    Grid.Row="10" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2013"/>
+
+                <TextBlock Grid.Row="11" Grid.Column="0" Text="2012年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="11" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2012"/>
+                <Button    Grid.Row="11" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2012"/>
+                <Button    Grid.Row="11" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2012"/>
+
+
+                <TextBlock Grid.Row="12" Grid.Column="0" Text="2011年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="12" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2011"/>
+                <Button    Grid.Row="12" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2011"/>
+                <Button    Grid.Row="12" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2011"/>
+
+                <TextBlock Grid.Row="13" Grid.Column="0" Text="2010年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="13" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2010"/>
+                <Button    Grid.Row="13" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2010"/>
+                <Button    Grid.Row="13" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2010"/>
+
+                <TextBlock Grid.Row="14" Grid.Column="0" Text="2009年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="14" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2009"/>
+                <Button    Grid.Row="14" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2009"/>
+                <Button    Grid.Row="14" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2009"/>
+
+                <TextBlock Grid.Row="15" Grid.Column="0" Text="2008年度" FontSize="15" FontWeight="UltraBlack" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="15" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2008"/>
+                <Button    Grid.Row="15" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2008"/>
+                <Button    Grid.Row="15" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2008"/>
+            </Grid>
+        </ScrollViewer>
+        <Button Grid.Row="2" Content="最初に戻る" Width="100" Margin="10" Click="Button_Click"/>
     </Grid>
 </Page>

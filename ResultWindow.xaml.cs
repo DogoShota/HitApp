@@ -62,7 +62,7 @@ namespace HitApp
         private void display()
         {
             title.Content = year + "年度・" + bunnya;
-            正解率.Content = "正解率：" + ansPercentage.ToString() + "%";
+            正解率.Text = "正解率：" + ansPercentage.ToString() + "%";
         }
 
         // 画面の表に表示する内容を設定

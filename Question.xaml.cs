@@ -33,7 +33,7 @@ namespace HitApp
         // 解答を格納するリスト
         List<string> QList = new List<string>();
         // 解いている問題が何問目か(0が一問目)
-        int QCount = 5;
+        int QCount = 0;
         // 正解数
         int rightCount = 0;
         // 正誤結果を格納するリスト
@@ -389,6 +389,9 @@ namespace HitApp
 
             string ans = AnsList[QCount * 3 + 1];
 
+            // 選んだ解答を表示
+            yourAns.Text = ans;
+
             // 正誤判定
             if (ans.Length == 1)
             {
@@ -418,6 +421,12 @@ namespace HitApp
                 }
             }
             
+        }
+
+        private void backStart(object sender, RoutedEventArgs e)
+        {
+            var selectMain = new SelectMain();
+            NavigationService.Navigate(selectMain);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

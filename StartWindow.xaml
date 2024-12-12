@@ -10,10 +10,22 @@
       Title="StartWindow">
 
     <Grid>
-        <StackPanel>
-            <TextBlock Text="医療情報技師" FontSize="50" Background="White" TextAlignment="Center" Margin="0,150,0,0"/>
-            <Button Content="はじめる" Width="125" Height="25" Background="LightPink" Margin="10" Click="Button_Click"></Button>
-            <Image Height="159" Width="137" Margin="600,0,0,0"/>
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="130"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="0.5*" MinHeight="50" MaxHeight="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.7*" MinWidth="80" MaxWidth="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Text="医療情報技師" FontSize="50" Background="White" TextAlignment="Center"/>
+        <Button Grid.Row="2" Grid.Column="1" Background="LightPink" Click="Button_Click">
+            <Viewbox Stretch="Uniform">
+                <Label Content="はじめる"/>
+            </Viewbox>
+        </Button>
     </Grid>
 </Page>
