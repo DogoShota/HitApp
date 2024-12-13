@@ -150,5 +150,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\2022JS13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\2019JS20.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,8 +33,10 @@ namespace HitApp
         List<string> AnsList = new List<string>();
         // 解答を格納するリスト
         List<string> QList = new List<string>();
+        // 問題文中の画像を格納する辞書リスト
+        Dictionary<string, BitmapImage> ImageList = new Dictionary<string, BitmapImage>();
         // 解いている問題が何問目か(0が一問目)
-        int QCount = 7;
+        int QCount = 1;
         // 正解数
         int rightCount = 0;
         // 正誤結果を格納するリスト
@@ -51,6 +53,7 @@ namespace HitApp
             this.bunnya = bunnya;
 
             getQuestionText();
+            getQuestionImage();
             display();
         }
 
@@ -412,6 +415,15 @@ namespace HitApp
             }
         }
 
+        private void getQuestionImage()
+        {
+            string[] filePath = Directory.GetFiles(@"../../image", "*", System.IO.SearchOption.TopDirectoryOnly);
+            for (int i = 0; i < filePath.Length; i++)
+            {
+                ImageList.Add(filePath[i].Substring(filePath[i].Length - 12), new BitmapImage(new Uri(filePath[i], UriKind.Relative)));
+            }
+        }
+
         // 取得した問題文、選択肢を画面に表示する
         private void display()
         {
@@ -427,6 +439,27 @@ namespace HitApp
             selection3.Text = QList[calc(4)];
             selection4.Text = QList[calc(5)];
             selection5.Text = QList[calc(6)];
+
+            string tes = "";
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    tes = "JS";
+                    break;
+                case "医療情報システム系":
+                    tes = "IS";
+                    break;
+                case "医学・医療系":
+                    tes = "II";
+                    break;
+            }
+            try
+            {
+                Qimage.Source = ImageList[year + tes + QList[calc(0)].ToString() + ".png"];
+            } catch
+            {
+
+            }
         }
 
         // 指定した問題文、選択肢を表示するための引数の計算
@@ -502,7 +535,6 @@ namespace HitApp
 
             updateButtonDisp();
         }
-
 
         // 選択しているボタンがわかるように
         private void updateButtonDisp()
