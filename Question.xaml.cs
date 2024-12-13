@@ -36,7 +36,7 @@ namespace HitApp
         // 問題文中の画像を格納する辞書リスト
         Dictionary<string, BitmapImage> ImageList = new Dictionary<string, BitmapImage>();
         // 解いている問題が何問目か(0が一問目)
-        int QCount = 1;
+        int QCount = 0;
         // 正解数
         int rightCount = 0;
         // 正誤結果を格納するリスト
