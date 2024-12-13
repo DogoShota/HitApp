@@ -125,6 +125,23 @@
                 <Button    Grid.Row="15" Grid.Column="1" Content="情報処理技術系"     Margin="10,3" Background="LightGreen" Click="Button_Click_2008"/>
                 <Button    Grid.Row="15" Grid.Column="2" Content="医療情報システム系" Margin="10,3" Background="Yellow" Click="Button_Click_2008"/>
                 <Button    Grid.Row="15" Grid.Column="3" Content="医学・医療系"       Margin="10,3" Background="Aqua" Click="Button_Click_2008"/>
+
+                <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0.5,0,0.5"/>
+                <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
             </Grid>
         </ScrollViewer>
         <Button Grid.Row="2" Content="最初に戻る" Width="100" Margin="10" Click="Button_Click"/>
