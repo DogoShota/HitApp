@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using System.Windows.Resources;
 using System.Windows.Shapes;
 
 namespace HitApp
@@ -32,12 +33,18 @@ namespace HitApp
         List<string> AnsList = new List<string>();
         // 解答を格納するリスト
         List<string> QList = new List<string>();
+        // 問題文中の画像を格納する辞書リスト
+        Dictionary<string, BitmapImage> ImageList = new Dictionary<string, BitmapImage>();
         // 解いている問題が何問目か(0が一問目)
-        int QCount = 0;
+        int QCount = 1;
         // 正解数
         int rightCount = 0;
         // 正誤結果を格納するリスト
         List<string> resList = new List<string>();
+        // 選択した選択肢を格納
+        List<string> selects = new List<string>();
+        // 解答中の問題の正解を格納
+        string ans;
 
         public Question(string year, string bunnya)
         {
@@ -46,6 +53,7 @@ namespace HitApp
             this.bunnya = bunnya;
 
             getQuestionText();
+            getQuestionImage();
             display();
         }
 
@@ -407,9 +415,21 @@ namespace HitApp
             }
         }
 
+        private void getQuestionImage()
+        {
+            string[] filePath = Directory.GetFiles(@"../../image", "*", System.IO.SearchOption.TopDirectoryOnly);
+            for (int i = 0; i < filePath.Length; i++)
+            {
+                ImageList.Add(filePath[i].Substring(filePath[i].Length - 12), new BitmapImage(new Uri(filePath[i], UriKind.Relative)));
+            }
+        }
+
         // 取得した問題文、選択肢を画面に表示する
         private void display()
         {
+            // 正解を取得
+            ans = AnsList[QCount * 3 + 1];
+
             title.Text = year + "年度・" + bunnya;
 
             Qnum.Text = " 問" + QList[calc(0)];
@@ -419,6 +439,27 @@ namespace HitApp
             selection3.Text = QList[calc(4)];
             selection4.Text = QList[calc(5)];
             selection5.Text = QList[calc(6)];
+
+            string tes = "";
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    tes = "JS";
+                    break;
+                case "医療情報システム系":
+                    tes = "IS";
+                    break;
+                case "医学・医療系":
+                    tes = "II";
+                    break;
+            }
+            try
+            {
+                Qimage.Source = ImageList[year + tes + QList[calc(0)].ToString() + ".png"];
+            } catch
+            {
+
+            }
         }
 
         // 指定した問題文、選択肢を表示するための引数の計算
@@ -441,14 +482,16 @@ namespace HitApp
                 selectButton3.IsEnabled = true;
                 selectButton4.IsEnabled = true;
                 selectButton5.IsEnabled = true;
+                finalAnsButton.IsEnabled = true;
 
                 // 次の問題にいくためのボタンを無効化
                 nextQues.IsEnabled = false;
                 expButton.IsEnabled = false;
 
-
                 resText.Text = "";
+                yourAns.Text = "";
 
+                resetButtonDisp();
                 display();
             }
             catch (ArgumentOutOfRangeException)
@@ -462,56 +505,146 @@ namespace HitApp
         // 別のボタンを押せないようにし、正誤判定、画面に表示する
         private void selectAns(object sender, RoutedEventArgs e)
         {
+            // 選択された選択肢を取得
+            Button btn = (Button)sender;
+            string rawSelect = btn.Content.ToString();
+
+            string select = rawSelect.Substring(1, 1);
+
+            if (selects.Contains(select))// 既に選んでいるボタンがおされたら、選択を取り消す
+            {
+                selects.Remove(select);
+            }
+            else
+            {
+                if (ans.Length == 3)// 複数選択のとき
+                {
+                    if (selects.Count < 2)// 二個選択されていないとき
+                    {
+                        selects.Add(select);
+                    }// 既に選択されているときはなにもしない
+                }
+                else// 解答がひとつのとき
+                {
+                    selects.Clear();
+                    selects.Add(select);
+                }
+            }
+
+            
+
+            updateButtonDisp();
+        }
+
+        // 選択しているボタンがわかるように
+        private void updateButtonDisp()
+        {
+            resetButtonDisp();
+
+            for (int i = 0; i < selects.Count; i++)
+            {
+                if (selectButton1.Content.ToString().Substring(1, 1) == selects[i])
+                {
+                    selectButton1.Background = Brushes.Gray;
+                }
+                if (selectButton2.Content.ToString().Substring(1, 1) == selects[i])
+                {
+                    selectButton2.Background = Brushes.Gray;
+                }
+                if (selectButton3.Content.ToString().Substring(1, 1) == selects[i])
+                {
+                    selectButton3.Background = Brushes.Gray;
+                }
+                if (selectButton4.Content.ToString().Substring(1, 1) == selects[i])
+                {
+                    selectButton4.Background = Brushes.Gray;
+                }
+                if (selectButton5.Content.ToString().Substring(1, 1) == selects[i])
+                {
+                    selectButton5.Background = Brushes.Gray;
+                }
+            }
+        }
+
+        private void resetButtonDisp()
+        {
+            selectButton1.Background = Brushes.Transparent;
+            selectButton2.Background = Brushes.Transparent;
+            selectButton3.Background = Brushes.Transparent;
+            selectButton4.Background = Brushes.Transparent;
+            selectButton5.Background = Brushes.Transparent;
+        }
+
+        private void finalAns(object sender, RoutedEventArgs e)
+        {
             // 選択肢ボタンの無効化
             selectButton1.IsEnabled = false;
             selectButton2.IsEnabled = false;
             selectButton3.IsEnabled = false;
             selectButton4.IsEnabled = false;
             selectButton5.IsEnabled = false;
+            finalAnsButton.IsEnabled = false;
 
             // 次の問題に行くためのボタンを有効化
             nextQues.IsEnabled = true;
             expButton.IsEnabled = true;
-            
-            // 選択された選択肢を取得
-            Button btn = (Button)sender;
-            string select = btn.Content.ToString();
-            select = select.Substring(1, 1);
-
-            string ans = AnsList[QCount * 3 + 1];
 
             // 選んだ解答を表示
-            yourAns.Text = ans;
+            string selectAns = selects[0];
+            for (int i = 1; i < selects.Count; i++)
+            {
+                selectAns += ", " + selects[i];
+            }
+            yourAns.Text = selectAns;
 
             // 正誤判定
-            if (ans.Length == 1)
-            {
-                if (select.Equals(ans))
-                {
-                    rightCount++;
-                    resText.Text = "正解";
-                    resList.Add("○");
-                }else
-                {
-                    resText.Text = "不正解";
-                    resList.Add("×");
-                }
-            }else
+            if (ans.Length == 3)// 複数回答
             {
                 string ans1 = ans.Substring(0, 1);
-                string ans2 = ans.Substring(4);
-                if (select.Equals(ans1) || select.Equals(ans2))
+                string ans2 = ans.Substring(2);
+
+                if (selects.Contains(ans1) && selects.Contains(ans2))
                 {
                     rightCount++;
                     resText.Text = "正解";
                     resList.Add("○");
-                }else
+                }
+                else
                 {
                     resText.Text = "不正解";
                     resList.Add("×");
                 }
             }
-            
+            else if (ans.Length == 1)
+            {
+                if (selects.Contains(ans))
+                {
+                    rightCount++;
+                    resText.Text = "正解";
+                    resList.Add("○");
+                }
+                else
+                {
+                    resText.Text = "不正解";
+                    resList.Add("×");
+                }
+            }
+            else
+            {
+                string ans1 = ans.Substring(0, 1);
+                string ans2 = ans.Substring(4);
+                if (selects.Contains(ans1) || selects.Contains(ans2))
+                {
+                    rightCount++;
+                    resText.Text = "正解";
+                    resList.Add("○");
+                }
+                else
+                {
+                    resText.Text = "不正解";
+                    resList.Add("×");
+                }
+            }
         }
 
         private void backStart(object sender, RoutedEventArgs e)
