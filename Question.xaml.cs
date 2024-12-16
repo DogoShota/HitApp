@@ -527,7 +527,7 @@ namespace HitApp
                 nextQues.IsEnabled = false;
                 expButton.IsEnabled = false;
 
-                resText.Text = "";
+                resText.Content = "";
                 yourAns.Text = "";
 
                 resetButtonDisp();
@@ -547,8 +547,27 @@ namespace HitApp
         {
             // 選択された選択肢を取得
             Button btn = (Button)sender;
-            string rawSelect = btn.Content.ToString();
 
+            string rawSelect = "";
+
+            switch (btn.Name)
+            {
+                case "selectButton1":
+                    rawSelect = select1.Content.ToString();
+                    break;
+                case "selectButton2":
+                    rawSelect = select2.Content.ToString();
+                    break;
+                case "selectButton3":
+                    rawSelect = select3.Content.ToString();
+                    break;
+                case "selectButton4":
+                    rawSelect = select4.Content.ToString();
+                    break;
+                case "selectButton5":
+                    rawSelect = select5.Content.ToString();
+                    break;
+            }
             string select = rawSelect.Substring(1, 1);
 
             if (selects.Contains(select))// 既に選んでいるボタンがおされたら、選択を取り消す
@@ -584,23 +603,23 @@ namespace HitApp
 
             for (int i = 0; i < selects.Count; i++)
             {
-                if (selectButton1.Content.ToString().Substring(1, 1) == selects[i])
+                if (select1.Content.ToString().Substring(1, 1) == selects[i])
                 {
                     selectButton1.Background = Brushes.Gray;
                 }
-                if (selectButton2.Content.ToString().Substring(1, 1) == selects[i])
+                if (select2.Content.ToString().Substring(1, 1) == selects[i])
                 {
                     selectButton2.Background = Brushes.Gray;
                 }
-                if (selectButton3.Content.ToString().Substring(1, 1) == selects[i])
+                if (select3.Content.ToString().Substring(1, 1) == selects[i])
                 {
                     selectButton3.Background = Brushes.Gray;
                 }
-                if (selectButton4.Content.ToString().Substring(1, 1) == selects[i])
+                if (select4.Content.ToString().Substring(1, 1) == selects[i])
                 {
                     selectButton4.Background = Brushes.Gray;
                 }
-                if (selectButton5.Content.ToString().Substring(1, 1) == selects[i])
+                if (select5.Content.ToString().Substring(1, 1) == selects[i])
                 {
                     selectButton5.Background = Brushes.Gray;
                 }
@@ -647,12 +666,12 @@ namespace HitApp
                 if (selects.Contains(ans1) && selects.Contains(ans2))
                 {
                     rightCount++;
-                    resText.Text = "正解";
+                    resText.Content = "正解";
                     resList.Add("○");
                 }
                 else
                 {
-                    resText.Text = "不正解";
+                    resText.Content = "不正解";
                     resList.Add("×");
                 }
             }
@@ -661,12 +680,12 @@ namespace HitApp
                 if (selects.Contains(ans))
                 {
                     rightCount++;
-                    resText.Text = "正解";
+                    resText.Content = "正解";
                     resList.Add("○");
                 }
                 else
                 {
-                    resText.Text = "不正解";
+                    resText.Content = "不正解";
                     resList.Add("×");
                 }
             }
@@ -677,12 +696,12 @@ namespace HitApp
                 if (selects.Contains(ans1) || selects.Contains(ans2))
                 {
                     rightCount++;
-                    resText.Text = "正解";
+                    resText.Content = "正解";
                     resList.Add("○");
                 }
                 else
                 {
-                    resText.Text = "不正解";
+                    resText.Content = "不正解";
                     resList.Add("×");
                 }
             }
@@ -702,7 +721,7 @@ namespace HitApp
             nextQues.IsEnabled = true;
             expButton.IsEnabled = true;
 
-            resText.Text = ans;
+            resText.Content = ans;
             resList.Add("×");
         }
 
