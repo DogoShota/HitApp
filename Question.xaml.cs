@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -36,7 +37,7 @@ namespace HitApp
         // 問題文中の画像を格納する辞書リスト
         Dictionary<string, BitmapImage> ImageList = new Dictionary<string, BitmapImage>();
         // 解いている問題が何問目か(0が一問目)
-        int QCount = 1;
+        int QCount = 0;
         // 正解数
         int rightCount = 0;
         // 正誤結果を格納するリスト
@@ -440,6 +441,22 @@ namespace HitApp
             selection4.Text = QList[calc(5)];
             selection5.Text = QList[calc(6)];
 
+            // 削除問題の時、次の問題にいく操作だけできるようにする
+            if (monndai.Text.Equals("削除"))
+            {
+                // 選択肢ボタンの無効化
+                selectButton1.IsEnabled = false;
+                selectButton2.IsEnabled = false;
+                selectButton3.IsEnabled = false;
+                selectButton4.IsEnabled = false;
+                selectButton5.IsEnabled = false;
+                finalAnsButton.IsEnabled = false;
+
+                nextQues.IsEnabled = true;
+                expButton.IsEnabled = false;
+
+            }
+
             string tes = "";
             switch (bunnya)
             {
@@ -460,6 +477,8 @@ namespace HitApp
             {
 
             }
+
+            finalAnsButton.IsEnabled = false;
         }
 
         // 指定した問題文、選択肢を表示するための引数の計算
@@ -492,6 +511,7 @@ namespace HitApp
                 yourAns.Text = "";
 
                 resetButtonDisp();
+                selects.Clear();
                 display();
             }
             catch (ArgumentOutOfRangeException)
@@ -540,6 +560,7 @@ namespace HitApp
         private void updateButtonDisp()
         {
             resetButtonDisp();
+            finalAnsButton.IsEnabled = true;
 
             for (int i = 0; i < selects.Count; i++)
             {
@@ -651,12 +672,6 @@ namespace HitApp
         {
             var selectMain = new SelectMain();
             NavigationService.Navigate(selectMain);
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var SelectMain = new SelectMain();
-            NavigationService.Navigate(SelectMain);
         }
 
         private void dispExp(object sender, RoutedEventArgs e)
