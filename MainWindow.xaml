@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HitApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" 
+        Title="医療情報技師過去問道場" Height="450" Width="800" 
         ShowsNavigationUI="False"
         Source="StartWindow.xaml">
 </NavigationWindow>
