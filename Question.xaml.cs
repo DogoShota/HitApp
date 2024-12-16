@@ -703,6 +703,7 @@ namespace HitApp
             expButton.IsEnabled = true;
 
             resText.Text = ans;
+            resList.Add("×");
         }
 
         private void backStart(object sender, RoutedEventArgs e)
