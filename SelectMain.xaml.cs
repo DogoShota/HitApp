@@ -32,18 +32,20 @@ namespace HitApp
 
         private void Button_Click_2024(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+            // 過去問が追加されたらコメントアウト消す
+            //Button btn = (Button)sender;
 
-            var QWindow = new Question("2024", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            //var QWindow = new Question("2024", btn.Content.ToString());
+            //NavigationService.Navigate(QWindow);
         }
 
         private void Button_Click_2023(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+            // 過去問が追加されたらコメントアウト消す
+            //Button btn = (Button)sender;
 
-            var QWindow = new Question("2023", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            //var QWindow = new Question("2023", btn.Content.ToString());
+            //NavigationService.Navigate(QWindow);
         }
 
         private void Button_Click_2022(object sender, RoutedEventArgs e)
