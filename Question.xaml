@@ -54,7 +54,7 @@
 
         <Button Grid.Row="7" Grid.Column="0" x:Name="finalAnsButton" Margin="10" Content="解答" FontSize="15" Click="finalAns" Background="Transparent"/>
 
-        <Button Grid.Row="2" Grid.Column="2" Margin="10" Content="正解表示" FontSize="20" />
+        <Button Grid.Row="2" Grid.Column="2" Margin="10" Content="正解表示" FontSize="20" Click="ansDisp"/>
         <TextBlock Grid.Row="3" Grid.Column="2" FontSize="15" TextAlignment="Center" Text="あなたの回答"/>
         <TextBlock Grid.Row="3" Grid.Column="2" Margin="0,25,0,0" x:Name="yourAns" FontSize="15" TextAlignment="Center" Text="ア"/>
         <TextBox Grid.Row="4" Grid.Column="2" Margin="5" x:Name="resText" Text=""  FontSize="20" IsReadOnly="True"/>

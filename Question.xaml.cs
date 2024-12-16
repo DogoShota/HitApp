@@ -450,6 +450,8 @@ namespace HitApp
             selection4.Text = QList[calc(5)];
             selection5.Text = QList[calc(6)];
 
+            yourAns.Text = "";
+
             // 削除問題の時、次の問題にいく操作だけできるようにする
             if (monndai.Text.Equals("削除"))
             {
@@ -675,6 +677,23 @@ namespace HitApp
                     resList.Add("×");
                 }
             }
+        }
+
+        private void ansDisp(object sender, RoutedEventArgs e)
+        {
+            // 選択肢ボタンの無効化
+            selectButton1.IsEnabled = false;
+            selectButton2.IsEnabled = false;
+            selectButton3.IsEnabled = false;
+            selectButton4.IsEnabled = false;
+            selectButton5.IsEnabled = false;
+            finalAnsButton.IsEnabled = false;
+
+            // 次の問題に行くためのボタンを有効化
+            nextQues.IsEnabled = true;
+            expButton.IsEnabled = true;
+
+            resText.Text = ans;
         }
 
         private void backStart(object sender, RoutedEventArgs e)
