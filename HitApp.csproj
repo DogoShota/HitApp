@@ -200,5 +200,30 @@
   <ItemGroup>
     <Resource Include="image\2017II.Q2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\2015JS.Q27.png" />
+    <Resource Include="image\2015JS.Q47.png" />
+    <Resource Include="image\2015JS.Q50.png" />
+    <Resource Include="image\2016JS.Q13.png" />
+    <Resource Include="image\2016JS.Q20.png" />
+    <Resource Include="image\2016JS.Q22.png" />
+    <Resource Include="image\2016JS.Q46.png" />
+    <Resource Include="image\2016JS.Q5.png" />
+    <Resource Include="image\2016JS.Q9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\2013II.Q49.png" />
+    <Resource Include="image\2013II.Q5.png" />
+    <Resource Include="image\2013JS.Q22.png" />
+    <Resource Include="image\2013JS.Q27.png" />
+    <Resource Include="image\2013JS.Q29.png" />
+    <Resource Include="image\2014JS.Q31.png" />
+    <Resource Include="image\2014JS.Q32.png" />
+    <Resource Include="image\2014JS.Q33.png" />
+    <Resource Include="image\2014JS.Q7.png" />
+    <Resource Include="image\2014JS.Q8.png" />
+    <Resource Include="image\2015JS.Q2.png" />
+    <Resource Include="image\2015JS.Q3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
