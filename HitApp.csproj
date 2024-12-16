@@ -154,10 +154,51 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="image\" />
+    <Resource Include="image\2017II.Q48.png" />
+    <Resource Include="image\2017JS.Q16.png" />
+    <Resource Include="image\2017JS.Q20.png" />
+    <Resource Include="image\2017JS.Q21.png" />
+    <Resource Include="image\2017JS.Q26.png" />
+    <Resource Include="image\2017JS.Q3.png" />
+    <Resource Include="image\2017JS.Q43.png" />
+    <Resource Include="image\2017JS.Q47.png" />
+    <Resource Include="image\2017JS.Q5.png" />
+    <Resource Include="image\2017JS.Q8.png" />
+    <Resource Include="image\2018IS.Q12.png" />
+    <Resource Include="image\2018JS.Q12.png" />
+    <Resource Include="image\2018JS.Q16.png" />
+    <Resource Include="image\2018JS.Q17.png" />
+    <Resource Include="image\2018JS.Q32.png" />
+    <Resource Include="image\2018JS.Q5.png" />
+    <Resource Include="image\2019JS.Q18.png" />
+    <Resource Include="image\2019JS.Q20.png" />
+    <Resource Include="image\2019JS.Q29.png" />
+    <Resource Include="image\2019JS.Q34.png" />
+    <Resource Include="image\2019JS.Q45.png" />
+    <Resource Include="image\2021II.Q41.png" />
+    <Resource Include="image\2021IS.Q14.png" />
+    <Resource Include="image\2021JS.Q11.png" />
+    <Resource Include="image\2021JS.Q15.png" />
+    <Resource Include="image\2021JS.Q17.png" />
+    <Resource Include="image\2021JS.Q18.png" />
+    <Resource Include="image\2021JS.Q22.png" />
+    <Resource Include="image\2021JS.Q32.png" />
+    <Resource Include="image\2021JS.Q4.png" />
+    <Resource Include="image\2021JS.Q43.png" />
+    <Resource Include="image\2021JS.Q9.png" />
+    <Resource Include="image\2022II.Q47.png" />
+    <Resource Include="image\2022JS.Q10.png" />
+    <Resource Include="image\2022JS.Q13.png" />
+    <Resource Include="image\2022JS.Q22.png" />
+    <Resource Include="image\2022JS.Q31.png" />
+    <Resource Include="image\2022JS.Q33.png" />
+    <Resource Include="image\2022JS.Q47.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="医療情報技師過去問道場.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\2017II.Q2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

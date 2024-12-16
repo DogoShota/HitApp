@@ -430,7 +430,7 @@ namespace HitApp
             string[] filePath = Directory.GetFiles(@"../../image", "*", System.IO.SearchOption.TopDirectoryOnly);
             for (int i = 0; i < filePath.Length; i++)
             {
-                ImageList.Add(filePath[i].Substring(filePath[i].Length - 12), new BitmapImage(new Uri(filePath[i], UriKind.Relative)));
+                ImageList.Add(filePath[i].Substring(filePath[i].Length - 14), new BitmapImage(new Uri(filePath[i], UriKind.Relative)));
             }
         }
 
@@ -467,7 +467,9 @@ namespace HitApp
                 expButton.IsEnabled = false;
 
             }
-
+            finalAnsButton.IsEnabled = false;
+            
+            // 画像表示
             string tes = "";
             switch (bunnya)
             {
@@ -481,15 +483,22 @@ namespace HitApp
                     tes = "II";
                     break;
             }
-            try
+            try// 画像がある時
             {
-                Qimage.Source = ImageList[year + tes + QList[calc(0)].ToString() + ".png"];
-            } catch
+                if (int.Parse(QList[calc(0)]) < 10) // 問題番号が一桁のとき
+                {
+                    Qimage.Source = ImageList[@"\" + year + tes + ".Q" + QList[calc(0)].ToString() + ".png"];
+                }
+                else // 問題番号が二桁のとき
+                {
+                    Qimage.Source = ImageList[year + tes + ".Q" + QList[calc(0)].ToString() + ".png"];
+                }
+                
+            } catch// 画像がないとき
             {
-
+                Qimage.Source = null;
             }
 
-            finalAnsButton.IsEnabled = false;
         }
 
         // 指定した問題文、選択肢を表示するための引数の計算
