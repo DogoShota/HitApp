@@ -32,12 +32,12 @@
         <Viewbox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
             <TextBlock x:Name="正解率" Text="正解率：65%" TextAlignment="Center" FontSize="25"/>
         </Viewbox>
-        <Button Grid.Row="5" Grid.Column="1" Margin="10,10" MaxWidth="400" Click="reSelect">
+        <Button Grid.Row="5" Grid.Column="1" Margin="10,10" MaxWidth="400" Click="reSelect" Background="LightPink">
             <Viewbox Stretch="Uniform">
                 <Label Content="最初に戻る"/>
             </Viewbox>
         </Button>
-        <Button Grid.Row="5" Grid.Column="2" Margin="10,10" MaxWidth="400" Click="retry">
+        <Button Grid.Row="5" Grid.Column="2" Margin="10,10" MaxWidth="400" Click="retry" Background="LightBlue">
             <Viewbox Stretch="Uniform">
                 <Label Content="もう一度"/>
             </Viewbox>

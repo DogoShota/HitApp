@@ -22,7 +22,7 @@ namespace HitApp
 {
 
     /// <summary>
-    /// Medical_Q.xaml の相互作用ロジック
+    /// Question.xaml の相互作用ロジック
     /// </summary>
     public partial class Question : Page
     {
