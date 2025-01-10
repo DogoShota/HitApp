@@ -159,7 +159,13 @@
   <ItemGroup>
     <Resource Include="医療情報技師過去問道場.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="image\2012\2012JS.Q26.png" />
+    <Resource Include="image\2012\2012JS.Q35.png" />
+    <Resource Include="image\2012\2012JS.Q36.png" />
+    <Resource Include="image\2012\2012JS.Q42.png" />
+    <Resource Include="image\2012\2012JS.Q48.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="image\2013\2013II.Q49.png" />
     <Resource Include="image\2013\2013II.Q5.png" />
