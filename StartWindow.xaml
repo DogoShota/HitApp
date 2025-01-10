@@ -18,13 +18,13 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="0.7*" MinWidth="80" MaxWidth="250"/>
+            <ColumnDefinition Width="0.6*" MinWidth="80" MaxWidth="250"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Text="医療情報技師過去問道場" FontSize="50" Background="White" TextAlignment="Center"/>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Text="医療情報技師過去問道場" FontSize="50" FontFamily="{StaticResource YujiSyuku}" Background="White" TextAlignment="Center"/>
         <Button Grid.Row="2" Grid.Column="1" Background="LightPink" Click="Button_Click">
             <Viewbox Stretch="Uniform">
-                <Label Content="はじめる"/>
+                <Label Content="開始" FontSize="45"  FontFamily="{StaticResource YujiSyuku}"/>
             </Viewbox>
         </Button>
     </Grid>

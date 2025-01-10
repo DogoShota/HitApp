@@ -16,8 +16,8 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0">
-            <TextBlock Text="医療情報技師試験対策アプリ" FontSize="24" FontWeight="Bold" Margin="5"/>
-            <TextBlock Text="　2008年度から2024年度まで勉強できます！　(2024年度は過去問未発表です...)" FontSize="14" FontWeight="Bold" Margin="5"/>
+            <TextBlock Text="医療情報技師過去問道場" FontSize="24" FontFamily="{StaticResource YujiSyuku}" FontWeight="Bold" Margin="5"/>
+            <TextBlock Text="　2008年度から2024年度まで勉強できます　(2024年度は過去問未発表です...)" FontSize="14" FontWeight="Bold" Margin="5"/>
         </StackPanel>
         <ScrollViewer Grid.Row="1">
             <Grid x:Name="table">
@@ -144,6 +144,6 @@
                 <Border Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
             </Grid>
         </ScrollViewer>
-        <Button Grid.Row="2" Content="最初に戻る" Width="100" Margin="10" Click="Button_Click"/>
+        <Button Grid.Row="2" Content="戻る" Width="100" Margin="10" Click="Button_Click"/>
     </Grid>
 </Page>
