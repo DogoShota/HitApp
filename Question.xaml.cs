@@ -427,8 +427,18 @@ namespace HitApp
 
         private void getQuestionImage()
         {
-            string[] filePath = Directory.GetFiles(@"../../image", "*", System.IO.SearchOption.TopDirectoryOnly);
-            for (int i = 0; i < filePath.Length; i++)
+            List<string> filePath = new List<string>();
+
+            for (int i = 2012; i < 2023; i++)
+            {
+                if (i != 2020)
+                {
+                    string[] buff = Directory.GetFiles(@"../../image/" + i.ToString());
+                    filePath.AddRange(buff.ToList());
+                }
+            }
+
+            for (int i = 0; i < filePath.Count; i++)
             {
                 ImageList.Add(filePath[i].Substring(filePath[i].Length - 14), new BitmapImage(new Uri(filePath[i], UriKind.Relative)));
             }
