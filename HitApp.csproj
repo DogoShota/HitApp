@@ -235,5 +235,10 @@
   <ItemGroup>
     <Resource Include="image\doujou.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\2011\2011IS.Q27.png" />
+    <Resource Include="image\2011\2011JS.Q27.png" />
+    <Resource Include="image\2011\2011JS.Q35.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
