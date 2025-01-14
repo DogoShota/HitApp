@@ -145,9 +145,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="fonts\NotoSansJP-Medium.ttf" />
-    <Resource Include="fonts\NotoSansJP-Regular.ttf" />
     <Resource Include="fonts\YujiSyuku-Regular.ttf" />
+    <Resource Include="fonts\NotoSansJP-Medium.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -227,6 +226,9 @@
     <Resource Include="image\2014JS.Q8.png" />
     <Resource Include="image\2015JS.Q2.png" />
     <Resource Include="image\2015JS.Q3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\doujou.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

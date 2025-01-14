@@ -8,8 +8,8 @@
             <FontFamily x:Key="YujiSyuku">
                 /HitApp;component/fonts/YujiSyuku-Regular.ttf#Yuji Syuku Regular
             </FontFamily>
-            <FontFamily x:Key="NotoSansMedium">
-                /HitApp;component/fonts/NotoSansJp-Medium.ttf#Noto Sans JP Medium
+            <FontFamily x:Key="NotoSans">
+                /HitApp;component/fonts/NotoSansJP-Medium.ttf#Noto Sans JP Medium
             </FontFamily>
         </ResourceDictionary>
     </Application.Resources>

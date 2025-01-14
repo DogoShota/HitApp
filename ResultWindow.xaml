@@ -28,21 +28,21 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="30"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="title" Content="2023年度　医療情報システム" FontSize="28"/>
+        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="title" Content="2023年度　医療情報システム" FontSize="28" FontFamily="{StaticResource NotoSans}"/>
         <Viewbox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
-            <TextBlock x:Name="正解率" Text="正解率：65%" TextAlignment="Center" FontSize="25"/>
+            <TextBlock x:Name="正解率" Text="正解率：65%" TextAlignment="Center" FontSize="25" FontFamily="{StaticResource NotoSans}"/>
         </Viewbox>
-        <Button Grid.Row="5" Grid.Column="1" Margin="10,10" MaxWidth="400" Click="reSelect" Background="LightPink">
+        <Button Grid.Row="5" Grid.Column="1" Margin="10,10" MaxWidth="400" FontFamily="{StaticResource NotoSans}" Click="reSelect" Background="LightPink">
             <Viewbox Stretch="Uniform">
                 <Label Content="最初に戻る"/>
             </Viewbox>
         </Button>
-        <Button Grid.Row="5" Grid.Column="2" Margin="10,10" MaxWidth="400" Click="retry" Background="LightBlue">
+        <Button Grid.Row="5" Grid.Column="2" Margin="10,10" MaxWidth="400" FontFamily="{StaticResource NotoSans}" Click="retry" Background="LightBlue">
             <Viewbox Stretch="Uniform">
                 <Label Content="もう一度"/>
             </Viewbox>
         </Button>
-        <DataGrid Grid.Row="1" Grid.Column="4" Grid.RowSpan="6" Name="DataGridName" FontSize="20" AutoGenerateColumns="False">
+        <DataGrid Grid.Row="1" Grid.Column="4" Grid.RowSpan="6" Name="DataGridName" FontSize="20" FontFamily="{StaticResource NotoSans}" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="No" Width="40" Binding="{Binding item0}">
                     <DataGridTextColumn.ElementStyle>
