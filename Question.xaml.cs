@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -540,7 +542,12 @@ namespace HitApp
                 resText.Content = "";
                 yourAns.Text = "";
 
-                resetButtonDisp();
+                selectButton1.IsChecked = false;
+                selectButton2.IsChecked = false;
+                selectButton3.IsChecked = false;
+                selectButton4.IsChecked = false;
+                selectButton5.IsChecked = false;
+
                 selects.Clear();
                 display();
             }
@@ -556,93 +563,41 @@ namespace HitApp
         private void selectAns(object sender, RoutedEventArgs e)
         {
             // 選択された選択肢を取得
-            Button btn = (Button)sender;
+            ToggleButton btn = (ToggleButton)sender;
 
-            string rawSelect = "";
-
-            switch (btn.Name)
+            if (ans.Length == 1)// 解答がひとつ
             {
-                case "selectButton1":
-                    rawSelect = select1.Content.ToString();
-                    break;
-                case "selectButton2":
-                    rawSelect = select2.Content.ToString();
-                    break;
-                case "selectButton3":
-                    rawSelect = select3.Content.ToString();
-                    break;
-                case "selectButton4":
-                    rawSelect = select4.Content.ToString();
-                    break;
-                case "selectButton5":
-                    rawSelect = select5.Content.ToString();
-                    break;
+                selectButton1.IsChecked = false;
+                selectButton2.IsChecked = false;
+                selectButton3.IsChecked = false;
+                selectButton4.IsChecked = false;
+                selectButton5.IsChecked = false;
+
+                btn.IsChecked = true;
             }
-            string select = rawSelect.Substring(1, 1);
+            else// 解答がふたつ
+            {
+                // 既に選択されている数を計算
+                int selectCount = 0;
+                if ((bool)selectButton1.IsChecked)
+                    selectCount++;
+                if ((bool)selectButton2.IsChecked)
+                    selectCount++;
+                if ((bool)selectButton3.IsChecked)
+                    selectCount++;
+                if ((bool)selectButton4.IsChecked)
+                    selectCount++;
+                if ((bool)selectButton5.IsChecked)
+                    selectCount++;
 
-            if (selects.Contains(select))// 既に選んでいるボタンがおされたら、選択を取り消す
-            {
-                selects.Remove(select);
-            }
-            else
-            {
-                if (ans.Length == 3)// 複数選択のとき
+                if (selectCount > 2)// ふたつ選ばれてたら
                 {
-                    if (selects.Count < 2)// 二個選択されていないとき
-                    {
-                        selects.Add(select);
-                    }// 既に選択されているときはなにもしない
-                }
-                else// 解答がひとつのとき
-                {
-                    selects.Clear();
-                    selects.Add(select);
+                    btn.IsChecked = false;
                 }
             }
 
-            
 
-            updateButtonDisp();
-        }
-
-        // 選択しているボタンがわかるように
-        private void updateButtonDisp()
-        {
-            resetButtonDisp();
             finalAnsButton.IsEnabled = true;
-
-            for (int i = 0; i < selects.Count; i++)
-            {
-                if (select1.Content.ToString().Substring(1, 1) == selects[i])
-                {
-                    selectButton1.Background = Brushes.Gray;
-                }
-                if (select2.Content.ToString().Substring(1, 1) == selects[i])
-                {
-                    selectButton2.Background = Brushes.Gray;
-                }
-                if (select3.Content.ToString().Substring(1, 1) == selects[i])
-                {
-                    selectButton3.Background = Brushes.Gray;
-                }
-                if (select4.Content.ToString().Substring(1, 1) == selects[i])
-                {
-                    selectButton4.Background = Brushes.Gray;
-                }
-                if (select5.Content.ToString().Substring(1, 1) == selects[i])
-                {
-                    selectButton5.Background = Brushes.Gray;
-                }
-            }
-        }
-
-        private void resetButtonDisp()
-        {
-            selectButton1.Background = Brushes.Transparent;
-            selectButton2.Background = Brushes.Transparent;
-            selectButton3.Background = Brushes.Transparent;
-            selectButton4.Background = Brushes.Transparent;
-            selectButton5.Background = Brushes.Transparent;
         }
 
         private void finalAns(object sender, RoutedEventArgs e)
@@ -658,6 +613,18 @@ namespace HitApp
             // 次の問題に行くためのボタンを有効化
             nextQues.IsEnabled = true;
             expButton.IsEnabled = true;
+
+            // 選んだ選択肢をリストに格納
+            if ((bool)selectButton1.IsChecked)
+                selects.Add("1");
+            if ((bool)selectButton2.IsChecked)
+                selects.Add("2");
+            if ((bool)selectButton3.IsChecked)
+                selects.Add("3");
+            if ((bool)selectButton4.IsChecked)
+                selects.Add("4");
+            if ((bool)selectButton5.IsChecked)
+                selects.Add("5");
 
             // 選んだ解答を表示
             string selectAns = selects[0];
