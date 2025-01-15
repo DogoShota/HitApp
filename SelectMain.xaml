@@ -25,7 +25,7 @@
                     BlurRadius="5"/>
                 </TextBlock.Effect>
             </TextBlock>
-            <TextBlock Text="　2008年度から2024年度まで勉強できます　(2024年度は過去問未発表です...)" FontSize="14" FontFamily="{StaticResource NotoSans}" Margin="5"/>
+            <TextBlock Text="　2008年度から2023年度まで勉強できます　(2024年度は過去問未発表です...)" FontSize="14" FontFamily="{StaticResource NotoSans}" Margin="5"/>
         </StackPanel>
         <ScrollViewer Margin="0,80,0,60">
             <Grid x:Name="SelectTable">

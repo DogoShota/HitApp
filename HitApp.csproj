@@ -240,5 +240,17 @@
     <Resource Include="image\2011\2011JS.Q27.png" />
     <Resource Include="image\2011\2011JS.Q35.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\2023\2023II.Q11.png" />
+    <Resource Include="image\2023\2023II.Q21.png" />
+    <Resource Include="image\2023\2023II.Q42.png" />
+    <Resource Include="image\2023\2023II.Q47.png" />
+    <Resource Include="image\2023\2023IS.Q4.png" />
+    <Resource Include="image\2023\2023JS.Q11.png" />
+    <Resource Include="image\2023\2023JS.Q12.png" />
+    <Resource Include="image\2023\2023JS.Q15.png" />
+    <Resource Include="image\2023\2023JS.Q18.png" />
+    <Resource Include="image\2023\2023JS.Q38.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
