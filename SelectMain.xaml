@@ -54,9 +54,9 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="2024年度" FontSize="15" FontFamily="{StaticResource NotoSans}" TextAlignment="Center" VerticalAlignment="Center"/>
-                <Button    Grid.Row="0" Grid.Column="1" Content="情報処理技術系"     Background="LightGreen" Style="{StaticResource SelectButton}" Click="Button_Click_2024"/>
-                <Button    Grid.Row="0" Grid.Column="2" Content="医療情報システム系" Background="Yellow" Style="{StaticResource SelectButton}" Click="Button_Click_2024"/>
-                <Button    Grid.Row="0" Grid.Column="3" Content="医学・医療系"       Background="Aqua" Style="{StaticResource SelectButton}" Click="Button_Click_2024"/>
+                <Button    Grid.Row="0" Grid.Column="1" Content="情報処理技術系"     Background="Gray"  Style="{StaticResource SelectButton}" Click="Button_Click_2024"/>
+                <Button    Grid.Row="0" Grid.Column="2" Content="医療情報システム系" Background="Gray" Style="{StaticResource SelectButton}" Click="Button_Click_2024"/>
+                <Button    Grid.Row="0" Grid.Column="3" Content="医学・医療系"       Background="Gray" Style="{StaticResource SelectButton}" Click="Button_Click_2024"/>
 
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="2023年度" FontSize="15" FontFamily="{StaticResource NotoSans}" TextAlignment="Center" VerticalAlignment="Center"/>
                 <Button    Grid.Row="1" Grid.Column="1" Content="情報処理技術系"     Background="LightGreen" Style="{StaticResource SelectButton}" Click="Button_Click_2023"/>
