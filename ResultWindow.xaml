@@ -33,7 +33,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="30"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="title" Content="2023年度　医療情報システム" FontSize="28" FontFamily="{StaticResource NotoSans}"/>
+        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="title" Content="2023年度　医療情報システム" FontSize="26" FontFamily="{StaticResource NotoSans}"/>
         <Viewbox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
             <TextBlock x:Name="正解率" Text="正解率：65%" TextAlignment="Center" FontSize="25" FontFamily="{StaticResource NotoSans}"/>
         </Viewbox>

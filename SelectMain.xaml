@@ -152,6 +152,6 @@
                 <Border Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
             </Grid>
         </ScrollViewer>
-        <Button Content="戻る" Width="100" Height="40" VerticalAlignment="Bottom" Style="{StaticResource MainButton}" Margin="0,0,0,10" Click="Button_Click"/>
+        <Button Content="戻る" Width="100" Height="40" VerticalAlignment="Bottom" Style="{StaticResource MainButton}" FontSize="20" Margin="0,0,0,10" FontFamily="{StaticResource YujiSyuku}" Click="Button_Click"/>
     </Grid>
 </Page>
