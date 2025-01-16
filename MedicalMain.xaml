@@ -9,72 +9,99 @@
       Background="White"
       Title="MedicalMain">
 
+    <Page.Resources>
+        <ResourceDictionary Source="Dictionary1.xaml"/>
+    </Page.Resources>
+
     <Grid>
-        <StackPanel>
-            <TextBlock Text="医学・医療系" FontSize="24" FontWeight="Bold" Margin="10"/>
-            <ListBox Width="740">
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <Button Content="問1" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問2" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問3" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問4" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問5" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問6" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問7" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問8" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問9" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問10" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <Button Content="問11" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問12" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問13" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問14" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問15" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問16" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問17" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問18" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問19" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問20" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <Button Content="問21" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問22" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問23" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問24" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問25" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問26" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問27" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問28" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問29" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問30" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <Button Content="問31" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問32" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問33" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問34" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問35" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問36" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問37" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問38" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問39" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問40" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                </StackPanel>
-                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Height="45">
-                    <Button Content="問41" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問42" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問43" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問44" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問45" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問46" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問47" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問48" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問49" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                    <Button Content="問50" Width="50" Height="25" Margin="10" Click="selectButton"/>
-                </StackPanel>
-            </ListBox>
-            <Button Content="科目選択に戻る" Width="150" Margin="10" Click="Button_Click"/>
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="11" Grid.ColumnSpan="12" Source="image/doujou.png" Stretch="UniformToFill"/>
+        <Rectangle Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Fill=" #fff" Opacity="0.7"/>
+        <Rectangle Grid.Row="2" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="10" Fill=" #fff" Opacity="0.7"/>
+
+        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center"  Text="医学・医療系" FontSize="24" FontWeight="Bold" Margin="10"/>
+
+        <Button Grid.Row="2" Grid.Column="1"  Content="問1"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="2" Grid.Column="2"  Content="問2"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="2" Grid.Column="3"  Content="問3"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="2" Grid.Column="4"  Content="問4"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="2" Grid.Column="5"  Content="問5"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="2" Grid.Column="6"  Content="問6"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="2" Grid.Column="7"  Content="問7"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="2" Grid.Column="8"  Content="問8"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="2" Grid.Column="9"  Content="問9"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="2" Grid.Column="10" Content="問10" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+
+        <Button Grid.Row="3" Grid.Column="1"  Content="問11"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="3" Grid.Column="2"  Content="問12"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="3" Grid.Column="3"  Content="問13"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="3" Grid.Column="4"  Content="問14"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="3" Grid.Column="5"  Content="問15"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="3" Grid.Column="6"  Content="問16"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="3" Grid.Column="7"  Content="問17"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="3" Grid.Column="8"  Content="問18"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="3" Grid.Column="9"  Content="問19"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="3" Grid.Column="10" Content="問20"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+
+        <Button Grid.Row="4" Grid.Column="1"  Content="問21" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="4" Grid.Column="2"  Content="問22" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="4" Grid.Column="3"  Content="問23" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="4" Grid.Column="4"  Content="問24" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="4" Grid.Column="5"  Content="問25" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="4" Grid.Column="6"  Content="問26" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="4" Grid.Column="7"  Content="問27" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="4" Grid.Column="8"  Content="問28" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="4" Grid.Column="9"  Content="問29" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="4" Grid.Column="10" Content="問30" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+
+        <Button Grid.Row="5" Grid.Column="1"  Content="問31" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="5" Grid.Column="2"  Content="問32" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="5" Grid.Column="3"  Content="問33" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="5" Grid.Column="4"  Content="問34" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="5" Grid.Column="5"  Content="問35" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="5" Grid.Column="6"  Content="問36" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="5" Grid.Column="7"  Content="問37" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="5" Grid.Column="8"  Content="問38" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="5" Grid.Column="9"  Content="問39" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="5" Grid.Column="10" Content="問40" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+
+        <Button Grid.Row="6" Grid.Column="1"  Content="問41" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="6" Grid.Column="2"  Content="問42" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="6" Grid.Column="3"  Content="問43" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="6" Grid.Column="4"  Content="問44" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="6" Grid.Column="5"  Content="問45" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="6" Grid.Column="6"  Content="問46" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="6" Grid.Column="7"  Content="問47" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="6" Grid.Column="8"  Content="問48" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="6" Grid.Column="9"  Content="問49" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button Grid.Row="6" Grid.Column="10" Content="問50" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+
+        <Button Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="2" Content="科目選択に戻る" Click="Button_Click" Style="{StaticResource QuesWinButton}"/>
     </Grid>
 </Page>
