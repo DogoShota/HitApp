@@ -20,15 +20,27 @@ namespace HitApp
     /// </summary>
     public partial class SystemMain : Page
     {
-        public SystemMain()
+        string year, bunnya;
+        public SystemMain(string year, string bunnya)
         {
             InitializeComponent();
+            this.year = year;
+            this.bunnya = bunnya;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var selectMain = new SelectMain();
             NavigationService.Navigate(selectMain);
+        }
+
+        private void selectButton(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            string Qnum = btn.Content.ToString().Substring(1);
+            int intQnum = int.Parse(Qnum);
+            var QWindow = new Question(this.year, this.bunnya, intQnum);
+            NavigationService.Navigate(QWindow);
         }
 
     }

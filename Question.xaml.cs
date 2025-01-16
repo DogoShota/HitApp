@@ -49,11 +49,12 @@ namespace HitApp
         // 解答中の問題の正解を格納
         string ans;
 
-        public Question(string year, string bunnya)
+        public Question(string year, string bunnya,int QCount)
         {
             InitializeComponent();
             this.year = year;
             this.bunnya = bunnya;
+            this.QCount = QCount - 1;
 
             getQuestionText();
             getQuestionImage();
@@ -704,8 +705,21 @@ namespace HitApp
 
         private void backStart(object sender, RoutedEventArgs e)
         {
-            var selectMain = new SelectMain();
-            NavigationService.Navigate(selectMain);
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain(year, "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain(year, "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain(year, "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void dispExp(object sender, RoutedEventArgs e)

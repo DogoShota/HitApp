@@ -87,8 +87,21 @@ namespace HitApp
 
         private void retry(object sender, RoutedEventArgs e)
         {
-            var QWindow = new Question(year, bunnya);
-            NavigationService.Navigate(QWindow);
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain(year, "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain(year, "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain(year, "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
         private void explanation(object sender, RoutedEventArgs e)
         {

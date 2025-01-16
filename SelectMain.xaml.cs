@@ -97,121 +97,316 @@ namespace HitApp
         private void Button_Click_2023(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2023", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2023", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2023", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2023", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2022(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2022", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2022", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2022", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2022", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2021(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2021", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2021", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2021", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2021", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2019(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2019", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2019", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2019", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2019", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2018(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2018", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2018", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2018", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2018", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2017(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2017", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2017", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2017", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2017", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2016(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2016", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2016", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2016", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2016", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2015(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2015", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2015", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2015", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2015", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2014(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2014", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2014", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2014", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2014", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2013(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2013", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2013", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2013", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2013", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2012(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2012", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2012", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2012", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2012", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2011(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2011", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2011", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2011", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2011", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2010(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2010", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2010", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2010", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2010", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2009(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2009", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2009", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2009", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2009", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
 
         private void Button_Click_2008(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-
-            var QWindow = new Question("2008", btn.Content.ToString());
-            NavigationService.Navigate(QWindow);
+            string bunnya = btn.Content.ToString();
+            switch (bunnya)
+            {
+                case "情報処理技術系":
+                    var TechWindow = new TechnoMain("2008", "情報処理技術系");
+                    NavigationService.Navigate(TechWindow);
+                    break;
+                case "医療情報システム系":
+                    var IJWindow = new SystemMain("2008", "医療情報システム系");
+                    NavigationService.Navigate(IJWindow);
+                    break;
+                case "医学・医療系":
+                    var IIWindow = new MedicalMain("2008", "医学・医療系");
+                    NavigationService.Navigate(IIWindow);
+                    break;
+            }
         }
     }
 }
