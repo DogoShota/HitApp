@@ -432,7 +432,7 @@ namespace HitApp
         {
             List<string> filePath = new List<string>();
 
-            for (int i = 2012; i < 2023; i++)
+            for (int i = 2011; i < 2023; i++)
             {
                 if (i != 2020)
                 {
