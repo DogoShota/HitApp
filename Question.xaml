@@ -24,23 +24,27 @@
             <RowDefinition Height="*" MaxHeight="100"/>
             <RowDefinition Height="*" MaxHeight="100"/>
             <RowDefinition Height="*" MaxHeight="70"/>
+            <RowDefinition Height="0.1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.15*" MaxWidth="150"/>
+            <ColumnDefinition Width="0.15*" MaxWidth="200" MinWidth="90"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="0.15*" MaxWidth="200"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.3*" MaxWidth="200" MinWidth="90"/>
             <ColumnDefinition Width="25"/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle Grid.Row="0" Grid.Column="0" Grid.RowSpan="8" Grid.ColumnSpan="4" Fill="#fffeed"/>
-        <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Black" Margin="5,0" BorderThickness="0,0,0,0.5"/>
-        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Black" Margin="5,0" BorderThickness="0,0,0,0.5"/>
-        <Border Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Black" Margin="5,0" BorderThickness="0,0,0,0.5"/>
-        <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Black" Margin="5,0" BorderThickness="0,0,0,0.5"/>
+        <Rectangle Grid.Row="0" Grid.Column="0" Grid.RowSpan="9" Grid.ColumnSpan="5" Fill="#fffeed"/>
+        <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" BorderBrush="Black" Margin="5,0" BorderThickness="0,0,0,0.5"/>
+        <Border Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" BorderBrush="Black" Margin="5,0" BorderThickness="0,0,0,0.5"/>
+        <Border Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" BorderBrush="Black" Margin="5,0" BorderThickness="0,0,0,0.5"/>
+        <Border Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" BorderBrush="Black" Margin="5,0" BorderThickness="0,0,0,0.5"/>
 
         <TextBlock Grid.Row="0" x:Name="Qnum" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="{StaticResource NotoSans}" Text="問１"/>
-        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" x:Name="title" HorizontalAlignment="Right" Margin="0,10,25,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontFamily="{StaticResource NotoSans}"><Run Text="2023年度"/><Run Language="ja-jp" Text="・"/><Run Text="医学医療"/></TextBlock>
-        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Name="monndai" Margin="20,0,0,0" FontSize="14" MaxHeight="70" FontFamily="{StaticResource NotoSans}" TextWrapping="Wrap" Text="第二次予防にあたるのはどれですか。"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" x:Name="title" HorizontalAlignment="Right" Margin="0,10,25,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontFamily="{StaticResource NotoSans}"><Run Text="2023年度"/><Run Language="ja-jp" Text="・"/><Run Text="医学医療"/></TextBlock>
+        <ScrollViewer Grid.Row="1" Grid.ColumnSpan="3">
+            <TextBlock x:Name="monndai" Margin="20,0,0,0" FontSize="14" MaxHeight="70" FontFamily="{StaticResource NotoSans}" TextWrapping="Wrap" Text="第二次予防にあたるのはどれですか。"/>
+        </ScrollViewer>
         <ToggleButton Grid.Row="2" Grid.Column="0" x:Name="selectButton1" Style="{StaticResource ToggleButton}" Click="selectAns">
             <Viewbox>
                 <Label x:Name="select1" Content="(1)"/>
@@ -67,38 +71,38 @@
             </Viewbox>
         </ToggleButton>
         <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left">
-            <TextBlock x:Name="selection1" Margin="0,10" FontSize="20" FontFamily="{StaticResource NotoSans}" Text="事故予防"/>
+            <TextBlock x:Name="selection1" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="事故予防"/>
         </Viewbox>
         <Viewbox Stretch="Uniform" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left">
-            <TextBlock Grid.Row="3" Grid.Column="1" x:Name="selection2" Margin="0,10" FontSize="20" FontFamily="{StaticResource NotoSans}" Text="健康増進"/>
+            <TextBlock x:Name="selection2" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="健康増進"/>
         </Viewbox>
         <Viewbox Stretch="Uniform" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left">
-            <TextBlock Grid.Row="4" Grid.Column="1" x:Name="selection3" Margin="0,10" FontSize="20" FontFamily="{StaticResource NotoSans}" Text="疾病予防"/>
+            <TextBlock x:Name="selection3" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="疾病予防"/>
         </Viewbox>
         <Viewbox Stretch="Uniform" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left">
-            <TextBlock Grid.Row="5" Grid.Column="1" x:Name="selection4" Margin="0,10" FontSize="20" FontFamily="{StaticResource NotoSans}" Text="早期発見"/>
+            <TextBlock x:Name="selection4" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="早期発見"/>
         </Viewbox>
         <Viewbox Stretch="Uniform" Grid.Row="6" Grid.Column="1" HorizontalAlignment="Left">
-            <TextBlock Grid.Row="6" Grid.Column="1" x:Name="selection5" Margin="0,10" FontSize="20" FontFamily="{StaticResource NotoSans}" Text="リハビリテーション"/>
+            <TextBlock x:Name="selection5" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="リハビリテーション"/>
         </Viewbox>
 
         <Button Grid.Row="7" Grid.Column="0" x:Name="finalAnsButton" Content="解答" FontSize="15" Margin="10" Style="{StaticResource QuesWinButton}" Click="finalAns"/>
 
-        <Button Grid.Row="2" Grid.Column="2" Content="正解表示" FontSize="20" Margin="2,5" Style="{StaticResource QuesWinButton}" Click="ansDisp"/>
-        <Viewbox Grid.Row="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" >
+        <Button Grid.Row="2" Grid.Column="3" Content="正解表示" FontSize="20" Margin="2,5" Style="{StaticResource QuesWinButton}" Click="ansDisp"/>
+        <Viewbox Grid.Row="3" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Top" >
             <TextBlock FontSize="15" FontFamily="{StaticResource NotoSans}" Text="あなたの回答"/>
         </Viewbox>
-        <Viewbox Grid.Row="3" Grid.Column="2" Margin="0,25,0,0" HorizontalAlignment="Center">
+        <Viewbox Grid.Row="3" Grid.Column="3" Margin="0,25,0,0" HorizontalAlignment="Center">
             <TextBlock x:Name="yourAns" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="ア"/>
         </Viewbox>
-        <Viewbox Grid.Row="4" Grid.Column="2" Margin="5">
+        <Viewbox Grid.Row="4" Grid.Column="3" Margin="5">
             <Label x:Name="resText" Content=""  FontSize="20" FontFamily="{StaticResource NotoSans}"/>
         </Viewbox>
-        <Button Grid.Row="5" Grid.Column="2" x:Name="nextQues" Content="次の問題" FontSize="20" Margin="2,5,2,5" Style="{StaticResource QuesWinButton}" Click="nextQuestion" IsEnabled="False"/>
-        <Button Grid.Row="6" Grid.Column="2" x:Name="expButton" Content="解説" FontSize="20" Margin="2,5,2,5" Style="{StaticResource QuesWinButton}" IsEnabled="False" Click="dispExp"/>
-        <Button Grid.Row="7" Grid.Column="2" Content="戻る" FontSize="20" Margin="2,5,2,5" Style="{StaticResource QuesWinButton}" Click="backStart"/>
+        <Button Grid.Row="5" Grid.Column="3" x:Name="nextQues" Content="次の問題" FontSize="20" Margin="2,5,2,5" Style="{StaticResource QuesWinButton}" Click="nextQuestion" IsEnabled="False"/>
+        <Button Grid.Row="6" Grid.Column="3" x:Name="expButton" Content="解説" FontSize="20" Margin="2,5,2,5" Style="{StaticResource QuesWinButton}" IsEnabled="False" Click="dispExp"/>
+        <Button Grid.Row="7" Grid.Column="3" Content="戻る" FontSize="20" Margin="2,5,2,5" Style="{StaticResource QuesWinButton}" Click="backStart"/>
 
-        <Image x:Name="Qimage" Grid.Row="2" Grid.Column="1" Grid.RowSpan="5" Margin="300,0,0,0" Stretch="Fill"/>
+        <Image x:Name="Qimage" Grid.Row="2" Grid.Column="2" Grid.RowSpan="5" Stretch="Fill"/>
 
     </Grid>
 </Page>
