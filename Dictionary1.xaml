@@ -1,6 +1,15 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
+
+    <FontFamily x:Key="YujiSyuku">
+        /HitApp;component/fonts/YujiSyuku-Regular.ttf#Yuji Syuku Regular
+    </FontFamily>
+    
+    <FontFamily x:Key="NotoSans">
+        /HitApp;component/fonts/NotoSansJP-Medium.ttf#Noto Sans JP Medium
+    </FontFamily>
+
     <Style TargetType="Button" x:Key="MainButton">
         <Setter Property="Template">
             <Setter.Value>

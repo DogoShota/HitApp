@@ -3,14 +3,4 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:HitApp"
              StartupUri="MainWindow.xaml">
-    <Application.Resources>
-        <ResourceDictionary>
-            <FontFamily x:Key="YujiSyuku">
-                /HitApp;component/fonts/YujiSyuku-Regular.ttf#Yuji Syuku Regular
-            </FontFamily>
-            <FontFamily x:Key="NotoSans">
-                /HitApp;component/fonts/NotoSansJP-Medium.ttf#Noto Sans JP Medium
-            </FontFamily>
-        </ResourceDictionary>
-    </Application.Resources>
 </Application>
