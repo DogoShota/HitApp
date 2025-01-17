@@ -151,14 +151,12 @@
     </EmbeddedResource>
     <Resource Include="fonts\YujiSyuku-Regular.ttf" />
     <Resource Include="fonts\NotoSansJP-Medium.ttf" />
+    <None Include="app.config" />
     <None Include="App1.config" />
     <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="医療情報技師過去問道場.ico" />

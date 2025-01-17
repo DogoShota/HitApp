@@ -13,5 +13,20 @@ namespace HitApp
     /// </summary>
     public partial class App : Application
     {
+
+        public App ()
+        {
+            InitializeComponent();
+        }
+
+        public static int old_year
+        {
+            get {  return HitApp.Properties.Settings.Default.old_year; }
+        }
+
+        public static int new_year
+        {
+            get { return HitApp.Properties.Settings.Default.new_year; }
+        }
     }
 }

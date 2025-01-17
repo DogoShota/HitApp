@@ -430,9 +430,10 @@ namespace HitApp
 
         private void getQuestionImage()
         {
+
             List<string> filePath = new List<string>();
 
-            for (int i = 2011; i < 2023; i++)
+            for (int i = App.old_year; i < App.new_year; i++)
             {
                 if (i != 2020)
                 {
