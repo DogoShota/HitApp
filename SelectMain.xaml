@@ -27,7 +27,7 @@
             </TextBlock>
             <TextBlock Text="　2008年度から2023年度まで勉強できます　(2024年度は過去問未発表です...)" FontSize="14" FontFamily="{StaticResource NotoSans}" Margin="5"/>
         </StackPanel>
-        <ScrollViewer Margin="0,80,0,60">
+        <ScrollViewer Margin="0,80,0,60" Style="{StaticResource CustomScrollViewerStyle}">
             <Grid x:Name="SelectTable">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>

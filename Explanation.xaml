@@ -42,7 +42,9 @@
         <Viewbox Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left">
             <TextBlock Grid.Row="1" Grid.Column="1" x:Name="ansText" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" TextAlignment="center" FontSize="30" FontFamily="{StaticResource NotoSans}" Text="ア"/>
         </Viewbox>
-        <TextBlock Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" x:Name="expText" Margin="10,0,0,0" TextWrapping="Wrap" FontSize="14" FontFamily="{StaticResource NotoSans}" Text="一次予防は健康増進、疾病予防、事故予防、 二次予防は疾病の早期発見、早期対処、適切な医療と合併症対策、三次予防はリハ ビリテーション、再発予防がそれぞれの目的とされてい る。3)疾病の早期発見、5)治療や保健指導による重症化の予防は二次予防に該当するもので あ り、正 しい。 1)再発予防は三次予防、2)予 防接種 と4)生活習慣の改善は一次予防に該当する。"/>
+        <ScrollViewer Grid.Row="2" Grid.Column="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Style="{StaticResource CustomScrollViewerStyle}">
+            <TextBlock x:Name="expText" Margin="10,0,0,0" TextWrapping="Wrap" FontSize="14" FontFamily="{StaticResource NotoSans}" Text="一次予防は健康増進、疾病予防、事故予防、 二次予防は疾病の早期発見、早期対処、適切な医療と合併症対策、三次予防はリハ ビリテーション、再発予防がそれぞれの目的とされてい る。3)疾病の早期発見、5)治療や保健指導による重症化の予防は二次予防に該当するもので あ り、正 しい。 1)再発予防は三次予防、2)予 防接種 と4)生活習慣の改善は一次予防に該当する。"/>
+        </ScrollViewer>
         <Button Grid.Row="4" Grid.Column="2" Content="戻る" FontSize="20" Style="{StaticResource QuesWinButton}" Click="Button_Click"/>
     </Grid>
 </Page>
