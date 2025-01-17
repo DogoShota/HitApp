@@ -40,7 +40,7 @@
 
         <TextBlock Grid.Row="0" x:Name="Qnum" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="{StaticResource NotoSans}" Text="問１"/>
         <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" x:Name="title" HorizontalAlignment="Right" Margin="0,10,25,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontFamily="{StaticResource NotoSans}"><Run Text="2023年度"/><Run Language="ja-jp" Text="・"/><Run Text="医学医療"/></TextBlock>
-        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Name="monndai" Margin="20,0,0,0" FontSize="13" MaxHeight="70" FontFamily="{StaticResource NotoSans}" TextWrapping="Wrap" Text="第二次予防にあたるのはどれですか。"/>
+        <TextBlock Grid.Row="1" Grid.ColumnSpan="2" x:Name="monndai" Margin="20,0,0,0" FontSize="14" MaxHeight="70" FontFamily="{StaticResource NotoSans}" TextWrapping="Wrap" Text="第二次予防にあたるのはどれですか。"/>
         <ToggleButton Grid.Row="2" Grid.Column="0" x:Name="selectButton1" Style="{StaticResource ToggleButton}" Click="selectAns">
             <Viewbox>
                 <Label x:Name="select1" Content="(1)"/>
