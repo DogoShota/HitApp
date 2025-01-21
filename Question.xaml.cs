@@ -59,6 +59,7 @@ namespace HitApp
             getQuestionText();
             getQuestionImage();
             display();
+
         }
 
         // csvから問題と正解を取得して、リストに格納する
@@ -430,21 +431,13 @@ namespace HitApp
 
         private void getQuestionImage()
         {
+            // 画像ファイルのパス一覧を取得
+            string[] paths = Directory.GetFiles(@"image", "*", SearchOption.AllDirectories);
 
-            List<string> filePath = new List<string>();
-
-            for (int i = App.old_year; i < App.new_year + 1; i++)
+            // 辞書型にパス名をキー、BitMapImageをバリューに設定
+            foreach ( string path in paths)
             {
-                if (i != 2020)
-                {
-                    string[] buff = Directory.GetFiles(@"image/" + i.ToString());
-                    filePath.AddRange(buff.ToList());
-                }
-            }
-
-            for (int i = 0; i < filePath.Count; i++)
-            {
-                ImageList.Add(filePath[i].Substring(filePath[i].Length - 14), new BitmapImage(new Uri(filePath[i], UriKind.Relative)));
+                ImageList.Add(path.Substring(path.Length - 14), new BitmapImage(new Uri(path, UriKind.Relative)));
             }
         }
 
