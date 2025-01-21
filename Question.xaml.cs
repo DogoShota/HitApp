@@ -71,18 +71,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2023/2023JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2023/2023JS.解説.csv");
+                            csv = new StreamReader(@"csv/2023/2023JS.csv");
+                            ansCsv = new StreamReader(@"csv/2023/2023JS.解説.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2023/2023IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2023/2023IS.解説.csv");
+                            csv = new StreamReader(@"csv/2023/2023IS.csv");
+                            ansCsv = new StreamReader(@"csv/2023/2023IS.解説.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2023/2023II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2023/2023II.解説.csv");
+                            csv = new StreamReader(@"csv/2023/2023II.csv");
+                            ansCsv = new StreamReader(@"csv/2023/2023II.解説.csv");
                             break;
                     }
                     break;
@@ -91,18 +91,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2022/2022JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2022/2022JS.解説.csv");
+                            csv = new StreamReader(@"csv/2022/2022JS.csv");
+                            ansCsv = new StreamReader(@"csv/2022/2022JS.解説.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2022/2022IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2022/2022IS.解説.csv");
+                            csv = new StreamReader(@"csv/2022/2022IS.csv");
+                            ansCsv = new StreamReader(@"csv/2022/2022IS.解説.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2022/2022II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2022/2022II.解説.csv");
+                            csv = new StreamReader(@"csv/2022/2022II.csv");
+                            ansCsv = new StreamReader(@"csv/2022/2022II.解説.csv");
                             break;
                     }
                     break;
@@ -111,18 +111,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2021/2021JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2021/2021JS.解説.csv");
+                            csv = new StreamReader(@"csv/2021/2021JS.csv");
+                            ansCsv = new StreamReader(@"csv/2021/2021JS.解説.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2021/2021IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2021/2021IS.解説.csv");
+                            csv = new StreamReader(@"csv/2021/2021IS.csv");
+                            ansCsv = new StreamReader(@"csv/2021/2021IS.解説.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2021/2021II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2021/2021II.解説.csv");
+                            csv = new StreamReader(@"csv/2021/2021II.csv");
+                            ansCsv = new StreamReader(@"csv/2021/2021II.解説.csv");
                             break;
                     }
                     break;
@@ -131,18 +131,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2019/2019JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2019/2019JS.解説.csv");
+                            csv = new StreamReader(@"csv/2019/2019JS.csv");
+                            ansCsv = new StreamReader(@"csv/2019/2019JS.解説.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2019/2019IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2019/2019IS.解説.csv");
+                            csv = new StreamReader(@"csv/2019/2019IS.csv");
+                            ansCsv = new StreamReader(@"csv/2019/2019IS.解説.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2019/2019II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2019/2019II.解説.csv");
+                            csv = new StreamReader(@"csv/2019/2019II.csv");
+                            ansCsv = new StreamReader(@"csv/2019/2019II.解説.csv");
                             break;
                     }
                     break;
@@ -151,18 +151,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2018/2018JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2018/2018JS.解説.csv");
+                            csv = new StreamReader(@"csv/2018/2018JS.csv");
+                            ansCsv = new StreamReader(@"csv/2018/2018JS.解説.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2018/2018IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2018/2018IS.解説.csv");
+                            csv = new StreamReader(@"csv/2018/2018IS.csv");
+                            ansCsv = new StreamReader(@"csv/2018/2018IS.解説.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2018/2018II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2018/2018II.解説.csv");
+                            csv = new StreamReader(@"csv/2018/2018II.csv");
+                            ansCsv = new StreamReader(@"csv/2018/2018II.解説.csv");
                             break;
                     }
                     break;
@@ -171,18 +171,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2017/2017JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2017/2017JS.解説.csv");
+                            csv = new StreamReader(@"csv/2017/2017JS.csv");
+                            ansCsv = new StreamReader(@"csv/2017/2017JS.解説.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2017/2017IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2017/2017IS.解説.csv");
+                            csv = new StreamReader(@"csv/2017/2017IS.csv");
+                            ansCsv = new StreamReader(@"csv/2017/2017IS.解説.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2017/2017II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2017/2017II.解説.csv");
+                            csv = new StreamReader(@"csv/2017/2017II.csv");
+                            ansCsv = new StreamReader(@"csv/2017/2017II.解説.csv");
                             break;
                     }
                     break;
@@ -191,18 +191,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2016/2016JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2016/2016JS.解説.csv");
+                            csv = new StreamReader(@"csv/2016/2016JS.csv");
+                            ansCsv = new StreamReader(@"csv/2016/2016JS.解説.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2016/2016IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2016/2016IS.解説.csv");
+                            csv = new StreamReader(@"csv/2016/2016IS.csv");
+                            ansCsv = new StreamReader(@"csv/2016/2016IS.解説.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2016/2016II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2016/2016II.解説.csv");
+                            csv = new StreamReader(@"csv/2016/2016II.csv");
+                            ansCsv = new StreamReader(@"csv/2016/2016II.解説.csv");
                             break;
                     }
                     break;
@@ -211,18 +211,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2015/2015JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2015/2015JS.解説.csv");
+                            csv = new StreamReader(@"csv/2015/2015JS.csv");
+                            ansCsv = new StreamReader(@"csv/2015/2015JS.解説.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2015/2015IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2015/2015IS.解説.csv");
+                            csv = new StreamReader(@"csv/2015/2015IS.csv");
+                            ansCsv = new StreamReader(@"csv/2015/2015IS.解説.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2015/2015II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2015/2015II.解説.csv");
+                            csv = new StreamReader(@"csv/2015/2015II.csv");
+                            ansCsv = new StreamReader(@"csv/2015/2015II.解説.csv");
                             break;
                     }
                     break;
@@ -231,18 +231,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2014/2014JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2014/2014JS.解説.csv");
+                            csv = new StreamReader(@"csv/2014/2014JS.csv");
+                            ansCsv = new StreamReader(@"csv/2014/2014JS.解説.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2014/2014IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2014/2014IS.解説.csv");
+                            csv = new StreamReader(@"csv/2014/2014IS.csv");
+                            ansCsv = new StreamReader(@"csv/2014/2014IS.解説.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2014/2014II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2014/2014II.解説.csv");
+                            csv = new StreamReader(@"csv/2014/2014II.csv");
+                            ansCsv = new StreamReader(@"csv/2014/2014II.解説.csv");
                             break;
                     }
                     break;
@@ -251,18 +251,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2013/2013JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2013/2013JS.解説.csv");
+                            csv = new StreamReader(@"csv/2013/2013JS.csv");
+                            ansCsv = new StreamReader(@"csv/2013/2013JS.解説.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2013/2013IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2013/2013IS.解説.csv");
+                            csv = new StreamReader(@"csv/2013/2013IS.csv");
+                            ansCsv = new StreamReader(@"csv/2013/2013IS.解説.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2013/2013II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2013/2013II.解説.csv");
+                            csv = new StreamReader(@"csv/2013/2013II.csv");
+                            ansCsv = new StreamReader(@"csv/2013/2013II.解説.csv");
                             break;
                     }
                     break;
@@ -271,18 +271,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2012/2012JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2012/2012JS.解説.csv");
+                            csv = new StreamReader(@"csv/2012/2012JS.csv");
+                            ansCsv = new StreamReader(@"csv/2012/2012JS.解説.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2012/2012IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2012/2012IS.解説.csv");
+                            csv = new StreamReader(@"csv/2012/2012IS.csv");
+                            ansCsv = new StreamReader(@"csv/2012/2012IS.解説.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2012/2012II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2012/2012II.解説.csv");
+                            csv = new StreamReader(@"csv/2012/2012II.csv");
+                            ansCsv = new StreamReader(@"csv/2012/2012II.解説.csv");
                             break;
                     }
                     break;
@@ -291,18 +291,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2011/2011JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2011/2011JS.解説.csv");
+                            csv = new StreamReader(@"csv/2011/2011JS.csv");
+                            ansCsv = new StreamReader(@"csv/2011/2011JS.解説.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2011/2011IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2011/2011IS.解説.csv");
+                            csv = new StreamReader(@"csv/2011/2011IS.csv");
+                            ansCsv = new StreamReader(@"csv/2011/2011IS.解説.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2011/2011II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2011/2011II.解説.csv");
+                            csv = new StreamReader(@"csv/2011/2011II.csv");
+                            ansCsv = new StreamReader(@"csv/2011/2011II.解説.csv");
                             break;
                     }
                     break;
@@ -311,18 +311,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2010/2010JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2010/2010JS.解答.csv");
+                            csv = new StreamReader(@"csv/2010/2010JS.csv");
+                            ansCsv = new StreamReader(@"csv/2010/2010JS.解答.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2010/2010IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2010/2010IS.解答.csv");
+                            csv = new StreamReader(@"csv/2010/2010IS.csv");
+                            ansCsv = new StreamReader(@"csv/2010/2010IS.解答.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2010/2010II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2010/2010II.解答.csv");
+                            csv = new StreamReader(@"csv/2010/2010II.csv");
+                            ansCsv = new StreamReader(@"csv/2010/2010II.解答.csv");
                             break;
                     }
                     break;
@@ -331,18 +331,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2009/2009JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2009/2009JS.解答.csv");
+                            csv = new StreamReader(@"csv/2009/2009JS.csv");
+                            ansCsv = new StreamReader(@"csv/2009/2009JS.解答.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2009/2009IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2009/2009IS.解答.csv");
+                            csv = new StreamReader(@"csv/2009/2009IS.csv");
+                            ansCsv = new StreamReader(@"csv/2009/2009IS.解答.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2009/2009II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2009/2009II.解答.csv");
+                            csv = new StreamReader(@"csv/2009/2009II.csv");
+                            ansCsv = new StreamReader(@"csv/2009/2009II.解答.csv");
                             break;
                     }
                     break;
@@ -351,18 +351,18 @@ namespace HitApp
                     switch (bunnya)
                     {
                         case "情報処理技術系":
-                            csv = new StreamReader(@"../../csv/2008/2008JS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2008/2008JS.解答.csv");
+                            csv = new StreamReader(@"csv/2008/2008JS.csv");
+                            ansCsv = new StreamReader(@"csv/2008/2008JS.解答.csv");
                             break;
 
                         case "医療情報システム系":
-                            csv = new StreamReader(@"../../csv/2008/2008IS.csv");
-                            ansCsv = new StreamReader(@"../../csv/2008/2008IS.解答.csv");
+                            csv = new StreamReader(@"csv/2008/2008IS.csv");
+                            ansCsv = new StreamReader(@"csv/2008/2008IS.解答.csv");
                             break;
 
                         case "医学・医療系":
-                            csv = new StreamReader(@"../../csv/2008/2008II.csv");
-                            ansCsv = new StreamReader(@"../../csv/2008/2008II.解答.csv");
+                            csv = new StreamReader(@"csv/2008/2008II.csv");
+                            ansCsv = new StreamReader(@"csv/2008/2008II.解答.csv");
                             break;
                     }
                     break;
@@ -437,7 +437,7 @@ namespace HitApp
             {
                 if (i != 2020)
                 {
-                    string[] buff = Directory.GetFiles(@"../../image/" + i.ToString());
+                    string[] buff = Directory.GetFiles(@"image/" + i.ToString());
                     filePath.AddRange(buff.ToList());
                 }
             }
