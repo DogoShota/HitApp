@@ -15,6 +15,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Converters;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Resources;
@@ -470,6 +471,7 @@ namespace HitApp
                 selectButton5.IsEnabled = false;
                 finalAnsButton.IsEnabled = false;
 
+                
                 nextQues.IsEnabled = true;
                 expButton.IsEnabled = false;
 
@@ -639,11 +641,13 @@ namespace HitApp
                 {
                     rightCount++;
                     resText.Content = "正解";
+                    resText.Foreground = Brushes.Lime;
                     resList.Add("○");
                 }
                 else
                 {
                     resText.Content = "不正解";
+                    resText.Foreground = Brushes.Red;
                     resList.Add("×");
                 }
             }
@@ -653,11 +657,13 @@ namespace HitApp
                 {
                     rightCount++;
                     resText.Content = "正解";
+                    resText.Foreground = Brushes.Lime;
                     resList.Add("○");
                 }
                 else
                 {
                     resText.Content = "不正解";
+                    resText.Foreground = Brushes.Red;
                     resList.Add("×");
                 }
             }
