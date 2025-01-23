@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:HitApp"
         mc:Ignorable="d"
         Title="医療情報技師過去問道場" Height="450" Width="800" 
+        MinWidth="800"
+        MinHeight="450"
         ShowsNavigationUI="False"
         Source="StartWindow.xaml">
 </NavigationWindow>
