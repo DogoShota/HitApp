@@ -153,6 +153,12 @@
     <Resource Include="fonts\NotoSansJP-Medium.ttf" />
     <None Include="app.config" />
     <None Include="App1.config" />
+    <None Include="csv\2008\2008II.csv" />
+    <None Include="csv\2008\2008II.解答.csv" />
+    <None Include="csv\2008\2008IS.csv" />
+    <None Include="csv\2008\2008IS.解答.csv" />
+    <None Include="csv\2008\2008JS.csv" />
+    <None Include="csv\2008\2008JS.解答.csv" />
     <None Include="csv\2009\2009II.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -729,6 +735,18 @@
     <Resource Include="image\2023\2023JS.Q38.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\2008\2008IS.Q23.png" />
+    <Resource Include="image\2008\2008IS.Q55.png" />
+    <Resource Include="image\2008\2008JS.Q10.png" />
+    <Resource Include="image\2008\2008JS.Q20.png" />
+    <Resource Include="image\2008\2008JS.Q26.png" />
+    <Resource Include="image\2008\2008JS.Q39.png" />
+    <Resource Include="image\2008\2008JS.Q40.png" />
+    <Resource Include="image\2008\2008JS.Q41.png" />
+    <Resource Include="image\2008\2008JS.Q5.png" />
+    <Resource Include="image\2008\2008JS.Q6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
