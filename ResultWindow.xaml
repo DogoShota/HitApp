@@ -12,65 +12,81 @@
     <Page.Resources>
         <ResourceDictionary Source="Dictionary1.xaml"/>
     </Page.Resources>
-    
+
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="0.3*"/>
-            <RowDefinition Height="0.1*"/>
-            <RowDefinition Height="0.3*" MaxHeight="70"/>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="0.4*" MaxHeight="80"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="30"/>
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
-            <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="0.5*"/>
-            <ColumnDefinition Width="0.1*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" x:Name="title" Content="2023年度　医療情報システム" FontSize="26" FontFamily="{StaticResource NotoSans}"/>
-        <Viewbox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
-            <TextBlock x:Name="正解率" Text="正解率：65%" TextAlignment="Center" FontSize="25" FontFamily="{StaticResource NotoSans}"/>
-        </Viewbox>
-        <Button Grid.Row="5" Grid.Column="1" MaxWidth="400" Margin="10" Style="{StaticResource MainButton}" Click="reSelect" Background="LightPink">
-            <Viewbox Stretch="Uniform">
-                <Label Content="最初に戻る"/>
+
+        <Rectangle Grid.ColumnSpan="5" Fill="#fffeed"/>
+        
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition Height="0.3*" MaxHeight="70"/>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="0.4*" MaxHeight="80"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="*" MaxWidth="300"/>
+                <ColumnDefinition Width="0.1*" MaxWidth="10"/>
+                <ColumnDefinition Width="*" MaxWidth="300"/>
+                <ColumnDefinition Width="0.1*"/>
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Row="1" Grid.ColumnSpan="5">
+                <Label x:Name="title" Content="2023年度　医療情報システム" FontSize="26" FontFamily="{StaticResource NotoSans}"/>
             </Viewbox>
-        </Button>
-        <Button Grid.Row="5" Grid.Column="2" MaxWidth="400" Margin="10" Style="{StaticResource MainButton}" Click="retry" Background="LightBlue">
-            <Viewbox Stretch="Uniform">
-                <Label Content="もう一度"/>
+            <Viewbox Grid.Row="3" Grid.ColumnSpan="5">
+                <TextBlock x:Name="正解率" Text="正解率：65%" TextAlignment="Center" FontSize="25" FontFamily="{StaticResource NotoSans}"/>
             </Viewbox>
-        </Button>
-        <DataGrid Grid.Row="1" Grid.Column="4" Grid.RowSpan="6" Name="DataGridName" FontSize="20" FontFamily="{StaticResource NotoSans}" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="No" Width="40" Binding="{Binding item0}">
-                    <DataGridTextColumn.ElementStyle>
-                        <Style TargetType="{x:Type TextBlock}">
-                            <Setter Property="TextAlignment" Value="Right" />
-                        </Style>
-                    </DataGridTextColumn.ElementStyle>
-                </DataGridTextColumn>
-                <DataGridTextColumn Header="正誤" Width="50" Binding="{Binding item1}">
-                    <DataGridTextColumn.ElementStyle>
-                        <Style TargetType="{x:Type TextBlock}">
-                            <Setter Property="TextAlignment" Value="Center" />
-                        </Style>
-                    </DataGridTextColumn.ElementStyle>
-                </DataGridTextColumn>
-                <DataGridTemplateColumn Header="解説">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="解説表示" Click="explanation" Tag="{Binding}"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
+            <Button Grid.Row="5" Grid.Column="1" Margin="10" Style="{StaticResource MainButton}" FontFamily="{StaticResource YujiSyuku}" Click="reSelect" Background="LightPink">
+                <Viewbox Stretch="Uniform">
+                    <Label Content="最初に戻る"/>
+                </Viewbox>
+            </Button>
+            <Button Grid.Row="5" Grid.Column="3" Margin="10" Style="{StaticResource MainButton}" FontFamily="{StaticResource YujiSyuku}" Click="retry" Background="LightBlue">
+                <Viewbox Stretch="Uniform">
+                    <Label Content="もう一度"/>
+                </Viewbox>
+            </Button>
+        </Grid>
+
+        <Grid Grid.Column="3">
+            <DataGrid Margin="0,20" Name="DataGridName" FontSize="20" FontFamily="{StaticResource NotoSans}" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="No" Width="40" Binding="{Binding item0}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="TextAlignment" Value="Right" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="正誤" Width="50" Binding="{Binding item1}">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Setter Property="TextAlignment" Value="Center" />
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTemplateColumn Header="解説">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="解説表示" Click="explanation" Tag="{Binding}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </Grid>
 </Page>
