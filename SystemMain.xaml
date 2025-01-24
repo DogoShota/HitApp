@@ -23,8 +23,8 @@
             <RowDefinition Height="0.9*" MaxHeight="100"/>
             <RowDefinition Height="0.9*" MaxHeight="100"/>
             <RowDefinition Height="0.9*" MaxHeight="100"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="0.8*" MaxHeight="70"/>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="1.2*" MaxHeight="70"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
@@ -355,7 +355,7 @@
             </Viewbox>
         </Button>
 
-        <Button Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="2" Click="Button_Click" Style="{StaticResource MainButton}" FontSize="15" FontFamily="{StaticResource YujiSyuku}">
+        <Button Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="2" Margin="0,0,0,10" Click="Button_Click" Style="{StaticResource MainButton}" FontSize="15" FontFamily="{StaticResource YujiSyuku}">
             <Viewbox>
                 <Label  Content="科目選択に戻る"/>
             </Viewbox>

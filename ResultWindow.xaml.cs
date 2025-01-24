@@ -70,9 +70,16 @@ namespace HitApp
         {
             List<DataGridItems> items = new List<DataGridItems>();
 
-            for (int i = 0; i < resList.Count; i++)
+            int question_count = 50;
+            if (this.bunnya.Equals("医療情報システム系"))
+                question_count = 60;
+
+            int first_question_num = question_count - resList.Count;
+            int n = 0;
+            for (int i = first_question_num; i < question_count; i++)
             {
-                items.Add(new DataGridItems((i + 1).ToString(), resList[i]));
+                items.Add(new DataGridItems((i + 1).ToString(), resList[n]));
+                n++;
             }
 
             DataGridName.ItemsSource = items;
