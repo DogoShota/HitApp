@@ -354,7 +354,11 @@
                 <Label Content="問60"/>
             </Viewbox>
         </Button>
-        
-        <Button Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="2" Content="科目選択に戻る" Click="Button_Click" Style="{StaticResource MainButton}" FontSize="15" FontFamily="{StaticResource YujiSyuku}"/>
+
+        <Button Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="2" Click="Button_Click" Style="{StaticResource MainButton}" FontSize="15" FontFamily="{StaticResource YujiSyuku}">
+            <Viewbox>
+                <Label  Content="科目選択に戻る"/>
+            </Viewbox>
+        </Button>
     </Grid>
 </Page>

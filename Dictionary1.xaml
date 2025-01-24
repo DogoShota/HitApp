@@ -95,7 +95,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
     <Style TargetType="Button" x:Key="QuesWinButton">
         <Setter Property="Margin" Value="2,5,2,5"/>
         <Setter Property="FontFamily" Value="{StaticResource NotoSans}"/>
@@ -112,6 +112,32 @@
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter TargetName="border" Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="Button" x:Key="nextQuesButton">
+        <Setter Property="Margin" Value="2,5,2,5"/>
+        <Setter Property="FontFamily" Value="{StaticResource NotoSans}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderBrush="#000" BorderThickness="1" CornerRadius="5" Background="#e8e8e8">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border" Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#b3d0ff"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#92abd4"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

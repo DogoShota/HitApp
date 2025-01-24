@@ -47,7 +47,7 @@
                 <Label x:Name="title" Content="2023年度　医療情報システム" FontSize="26" FontFamily="{StaticResource NotoSans}"/>
             </Viewbox>
             <Viewbox Grid.Row="3" Grid.ColumnSpan="5">
-                <TextBlock x:Name="正解率" Text="正解率：65%" TextAlignment="Center" FontSize="25" FontFamily="{StaticResource NotoSans}"/>
+                <TextBlock x:Name="正解率" Text="正答率：65%" TextAlignment="Center" FontSize="25" FontFamily="{StaticResource NotoSans}"/>
             </Viewbox>
             <Button Grid.Row="5" Grid.Column="1" Margin="10" Style="{StaticResource MainButton}" FontFamily="{StaticResource YujiSyuku}" Click="reSelect" Background="LightPink">
                 <Viewbox Stretch="Uniform">

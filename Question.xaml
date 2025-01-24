@@ -82,21 +82,25 @@
                     <Label x:Name="select5" Content="(5)"/>
                 </Viewbox>
             </ToggleButton>
-            <Button Grid.Row="7" Grid.Column="0" x:Name="finalAnsButton" Content="解答" FontSize="15" Style="{StaticResource QuesWinButton}" Click="finalAns"/>
+            <Button Grid.Row="7" Grid.Column="0" x:Name="finalAnsButton" FontSize="15" Style="{StaticResource QuesWinButton}" Click="finalAns">
+                <Viewbox>
+                    <Label Content="解答"/>
+                </Viewbox>
+            </Button>
 
-            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left">
+            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="1" Margin="10,0,0,0" HorizontalAlignment="Left">
                 <TextBlock x:Name="selection1" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="事故予防"/>
             </Viewbox>
-            <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left">
+            <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="1" Margin="10,0,0,0"  HorizontalAlignment="Left">
                 <TextBlock x:Name="selection2" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="健康増進"/>
             </Viewbox>
-            <Viewbox Stretch="Uniform" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left">
+            <Viewbox Stretch="Uniform" Grid.Row="3" Grid.Column="1" Margin="10,0,0,0"  HorizontalAlignment="Left">
                 <TextBlock x:Name="selection3" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="疾病予防"/>
             </Viewbox>
-            <Viewbox Stretch="Uniform" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left">
+            <Viewbox Stretch="Uniform" Grid.Row="4" Grid.Column="1" Margin="10,0,0,0"  HorizontalAlignment="Left">
                 <TextBlock x:Name="selection4" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="早期発見"/>
             </Viewbox>
-            <Viewbox Stretch="Uniform" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Left">
+            <Viewbox Stretch="Uniform" Grid.Row="5" Grid.Column="1" Margin="10,0,0,0"  HorizontalAlignment="Left">
                 <TextBlock x:Name="selection5" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="リハビリテーション"/>
             </Viewbox>
 
@@ -127,7 +131,7 @@
             <Viewbox Grid.Row="3" Margin="5">
                 <Label x:Name="resText" Content=""  FontSize="20" FontFamily="{StaticResource NotoSans}"/>
             </Viewbox>
-            <Button Grid.Row="4" x:Name="nextQues" Content="次の問題" FontSize="20" Style="{StaticResource QuesWinButton}" Click="nextQuestion" IsEnabled="False"/>
+            <Button Grid.Row="4" x:Name="nextQues" Content="次の問題" FontSize="20" Style="{StaticResource nextQuesButton}" Click="nextQuestion" IsEnabled="False"/>
             <Button Grid.Row="5" x:Name="expButton" Content="解説" FontSize="20" Style="{StaticResource QuesWinButton}" IsEnabled="False" Click="dispExp"/>
             <Button Grid.Row="6" Content="戻る" FontSize="20" Style="{StaticResource QuesWinButton}" Click="backStart"/>
         </Grid>
