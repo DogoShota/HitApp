@@ -15,17 +15,15 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="10"/>
+            <RowDefinition Height="*" MaxHeight="100"/>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.9*" MaxHeight="100"/>
+            <RowDefinition Height="0.9*" MaxHeight="100"/>
+            <RowDefinition Height="0.9*" MaxHeight="100"/>
+            <RowDefinition Height="0.9*" MaxHeight="100"/>
+            <RowDefinition Height="0.9*" MaxHeight="100"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="0.8*" MaxHeight="70"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30"/>
@@ -45,63 +43,266 @@
         <Rectangle Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Fill=" #fff" Opacity="0.7"/>
         <Rectangle Grid.Row="2" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="10" Fill=" #fff" Opacity="0.7"/>
 
-        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center"  Text="情報処理技術系" FontSize="24" FontWeight="Bold" Margin="10"/>
+        <Viewbox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center">
+            <TextBlock Text="情報処理技術系" FontSize="24" FontWeight="Bold" Margin="10"/>
+        </Viewbox>
 
-        <Button Grid.Row="2" Grid.Column="1"  Content="問1"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="2" Grid.Column="2"  Content="問2"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="2" Grid.Column="3"  Content="問3"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="2" Grid.Column="4"  Content="問4"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="2" Grid.Column="5"  Content="問5"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="2" Grid.Column="6"  Content="問6"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="2" Grid.Column="7"  Content="問7"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="2" Grid.Column="8"  Content="問8"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="2" Grid.Column="9"  Content="問9"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="2" Grid.Column="10" Content="問10" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button x:Name="問1" Grid.Row="2" Grid.Column="1" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問1"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問2" Grid.Row="2" Grid.Column="2" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問2"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問3" Grid.Row="2" Grid.Column="3" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問3"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問4" Grid.Row="2" Grid.Column="4" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問4"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問5" Grid.Row="2" Grid.Column="5" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問5"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問6" Grid.Row="2" Grid.Column="6" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問6"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問7" Grid.Row="2" Grid.Column="7" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問7"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問8" Grid.Row="2" Grid.Column="8" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問8"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問9" Grid.Row="2" Grid.Column="9" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問9"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問10" Grid.Row="2" Grid.Column="10" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問10"/>
+            </Viewbox>
+        </Button>
 
-        <Button Grid.Row="3" Grid.Column="1"  Content="問11"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="3" Grid.Column="2"  Content="問12"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="3" Grid.Column="3"  Content="問13"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="3" Grid.Column="4"  Content="問14"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="3" Grid.Column="5"  Content="問15"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="3" Grid.Column="6"  Content="問16"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="3" Grid.Column="7"  Content="問17"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="3" Grid.Column="8"  Content="問18"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="3" Grid.Column="9"  Content="問19"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="3" Grid.Column="10" Content="問20"  Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
 
-        <Button Grid.Row="4" Grid.Column="1"  Content="問21" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="4" Grid.Column="2"  Content="問22" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="4" Grid.Column="3"  Content="問23" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="4" Grid.Column="4"  Content="問24" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="4" Grid.Column="5"  Content="問25" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="4" Grid.Column="6"  Content="問26" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="4" Grid.Column="7"  Content="問27" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="4" Grid.Column="8"  Content="問28" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="4" Grid.Column="9"  Content="問29" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="4" Grid.Column="10" Content="問30" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button x:Name="問11" Grid.Row="3" Grid.Column="1" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問11"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問12" Grid.Row="3" Grid.Column="2" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問12"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問13" Grid.Row="3" Grid.Column="3" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問13"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問14" Grid.Row="3" Grid.Column="4" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問14"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問15" Grid.Row="3" Grid.Column="5" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問15"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問16" Grid.Row="3" Grid.Column="6" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問16"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問17" Grid.Row="3" Grid.Column="7" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問17"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問18" Grid.Row="3" Grid.Column="8" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問18"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問19" Grid.Row="3" Grid.Column="9" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問19"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問20" Grid.Row="3" Grid.Column="10" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問20"/>
+            </Viewbox>
+        </Button>
 
-        <Button Grid.Row="5" Grid.Column="1"  Content="問31" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="5" Grid.Column="2"  Content="問32" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="5" Grid.Column="3"  Content="問33" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="5" Grid.Column="4"  Content="問34" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="5" Grid.Column="5"  Content="問35" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="5" Grid.Column="6"  Content="問36" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="5" Grid.Column="7"  Content="問37" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="5" Grid.Column="8"  Content="問38" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="5" Grid.Column="9"  Content="問39" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="5" Grid.Column="10" Content="問40" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button x:Name="問21" Grid.Row="4" Grid.Column="1" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問21"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問22" Grid.Row="4" Grid.Column="2" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問22"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問23" Grid.Row="4" Grid.Column="3" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問23"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問24" Grid.Row="4" Grid.Column="4" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問24"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問25" Grid.Row="4" Grid.Column="5" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問25"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問26" Grid.Row="4" Grid.Column="6" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問26"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問27" Grid.Row="4" Grid.Column="7" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問27"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問28" Grid.Row="4" Grid.Column="8" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問28"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問29" Grid.Row="4" Grid.Column="9" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問29"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問30" Grid.Row="4" Grid.Column="10" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問30"/>
+            </Viewbox>
+        </Button>
 
-        <Button Grid.Row="6" Grid.Column="1"  Content="問41" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="6" Grid.Column="2"  Content="問42" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="6" Grid.Column="3"  Content="問43" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="6" Grid.Column="4"  Content="問44" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="6" Grid.Column="5"  Content="問45" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="6" Grid.Column="6"  Content="問46" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="6" Grid.Column="7"  Content="問47" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="6" Grid.Column="8"  Content="問48" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="6" Grid.Column="9"  Content="問49" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
-        <Button Grid.Row="6" Grid.Column="10" Content="問50" Margin="10" Click="selectButton" Style="{StaticResource QuesWinButton}"/>
+        <Button x:Name="問31" Grid.Row="5" Grid.Column="1" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問31"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問32" Grid.Row="5" Grid.Column="2" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問32"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問33" Grid.Row="5" Grid.Column="3" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問33"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問34" Grid.Row="5" Grid.Column="4" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問34"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問35" Grid.Row="5" Grid.Column="5" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問35"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問36" Grid.Row="5" Grid.Column="6" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問36"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問37" Grid.Row="5" Grid.Column="7" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問37"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問38" Grid.Row="5" Grid.Column="8" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問38"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問39" Grid.Row="5" Grid.Column="9" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問39"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問40" Grid.Row="5" Grid.Column="10" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問40"/>
+            </Viewbox>
+        </Button>
 
-        <Button Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="2" Content="科目選択に戻る" Click="Button_Click" Style="{StaticResource QuesWinButton}"/>
+        <Button x:Name="問41" Grid.Row="6" Grid.Column="1" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問41"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問42" Grid.Row="6" Grid.Column="2" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問42"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問43" Grid.Row="6" Grid.Column="3" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問43"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問44" Grid.Row="6" Grid.Column="4" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問44"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問45" Grid.Row="6" Grid.Column="5" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問45"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問46" Grid.Row="6" Grid.Column="6" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問46"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問47" Grid.Row="6" Grid.Column="7" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問47"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問48" Grid.Row="6" Grid.Column="8" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問48"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問49" Grid.Row="6" Grid.Column="9" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問49"/>
+            </Viewbox>
+        </Button>
+        <Button x:Name="問50" Grid.Row="6" Grid.Column="10" Click="selectButton" Style="{StaticResource SelectNumButton}">
+            <Viewbox>
+                <Label Content="問50"/>
+            </Viewbox>
+        </Button>
+
+        <Button Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="2" Margin="0,0,0,10" Content="科目選択に戻る" Click="Button_Click" Style="{StaticResource MainButton}" FontSize="15" FontFamily="{StaticResource YujiSyuku}"/>
     </Grid>
 </Page>
