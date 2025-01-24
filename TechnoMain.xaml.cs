@@ -38,7 +38,8 @@ namespace HitApp
         private void selectButton(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;
-            string Qnum = btn.Content.ToString().Substring(1);
+            string Qnum = btn.Name.ToString().Substring(1);
+
             int intQnum = int.Parse(Qnum);
             var QWindow = new Question(this.year, this.bunnya, intQnum);
             NavigationService.Navigate(QWindow);
