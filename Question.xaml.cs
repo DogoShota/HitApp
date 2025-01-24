@@ -459,6 +459,7 @@ namespace HitApp
             selection5.Text = QList[calc(6)];
 
             yourAns.Text = "";
+            resText.Foreground = Brushes.Black;
 
             // 削除問題の時、次の問題にいく操作だけできるようにする
             if (monndai.Text.Equals("削除"))
