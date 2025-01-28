@@ -308,5 +308,7 @@
                 <Label  Content="科目選択に戻る"/>
             </Viewbox>
         </Button>
+
+        <Button x:Name="randum" Grid.Row="8" Grid.Column="3" Click="selectButton" Style="{StaticResource SelectNumButton}"/>
     </Grid>
 </Page>

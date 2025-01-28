@@ -39,7 +39,7 @@ namespace HitApp
             Button btn = (Button)sender;
             string Qnum = btn.Name.ToString().Substring(1);
             int intQnum = int.Parse(Qnum);
-            var QWindow = new Question(this.year, this.bunnya, intQnum);
+            var QWindow = new Question(this.year, this.bunnya, intQnum, 50);
             NavigationService.Navigate(QWindow);
         }
 

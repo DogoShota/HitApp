@@ -20,7 +20,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Resources;
 using System.Windows.Shapes;
-
 namespace HitApp
 {
 
@@ -41,6 +40,8 @@ namespace HitApp
         Dictionary<string, BitmapImage> ImageList = new Dictionary<string, BitmapImage>();
         // 解いている問題が何問目か(0が一問目)
         int QCount = 0;
+        // 問題が何問目まであるか
+        int maxQCount;
         // 正解数
         int rightCount = 0;
         // 正誤結果を格納するリスト
@@ -49,13 +50,24 @@ namespace HitApp
         List<string> selects = new List<string>();
         // 解答中の問題の正解を格納
         string ans;
+        // ランダム出題がどうか
+        bool randumMode;
+        // ランダム時、月に出題する問題番号を格納
+        List<int> rumList = new List<int>();
 
-        public Question(string year, string bunnya,int QCount)
+        public Question(string year, string bunnya,int QCount, int maxQCount, bool randumMode = false)
         {
             InitializeComponent();
             this.year = year;
             this.bunnya = bunnya;
             this.QCount = QCount - 1;
+            this.maxQCount = maxQCount;
+            this.randumMode = randumMode;
+
+            if (randumMode)
+            {
+                randumQuestion();
+            }
 
             getQuestionText();
             getQuestionImage();
@@ -514,7 +526,35 @@ namespace HitApp
         // 指定した問題文、選択肢を表示するための引数の計算
         private int calc (int num)
         {
-            return QCount * 7 + num;
+            int res = QCount * 7 + num;
+            if (randumMode)
+            {
+                res = rumList[QCount] * 7 + num;
+            }
+            return res;
+        }
+
+        // ランダムモードのとき、次の問題を選択する
+        private void randumQuestion()
+        {
+
+            // 連番のリストを作成
+            for (int i = 0; i < maxQCount; i++)
+            {
+                rumList.Add(i);
+            }
+
+            // 連番をランダムに並べ替え
+            // リストlistをシャッフルする (for降順ランダム取り)
+            Random rnd = new Random();
+            for (int i = rumList.Count - 1; i > 0; i--)
+            {
+                var j = rnd.Next(0, i + 1); // ランダムで要素番号を１つ選ぶ（ランダム要素）
+                var temp = rumList[i]; // 一番最後の要素を仮確保（temp）にいれる
+                rumList[i] = rumList[j]; // ランダム要素を一番最後にいれる
+                rumList[j] = temp; // 仮確保を元ランダム要素に上書き
+            }
+
         }
 
         // 次の問題文を表示するためにボタンを最有効化、正誤を初期化
@@ -523,7 +563,14 @@ namespace HitApp
         {
             QCount++;
 
-            try
+            if (QCount == maxQCount)
+            {
+                // リザルトに移動させる
+                var result = new ResultWindow(year, bunnya, QCount, rightCount, resList, QList, AnsList);
+                NavigationService.Navigate(result);
+                
+            }
+            else
             {
                 // 選択肢ボタンを有効化
                 selectButton1.IsEnabled = true;
@@ -549,12 +596,7 @@ namespace HitApp
                 selects.Clear();
                 display();
             }
-            catch (ArgumentOutOfRangeException)
-            {
-                // リザルトに移動させる
-                var result = new ResultWindow(year, bunnya, QCount, rightCount, resList, QList, AnsList);
-                NavigationService.Navigate(result);
-            }
+            
         }
 
         // 別のボタンを押せないようにし、正誤判定、画面に表示する
