@@ -31,7 +31,7 @@
             <TextBlock Text="医療情報技師過去問道場" FontSize="24" FontFamily="{StaticResource YujiSyuku}" FontWeight="Bold" Margin="5"/>
         </Viewbox>
         <Viewbox Stretch="Uniform" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
-            <TextBlock Text="　2008年度から2023年度まで勉強できます　(2024年度は過去問未発表です...)" FontSize="14" FontFamily="{StaticResource NotoSans}" Margin="5"/>
+            <TextBlock Text="　※2004年度から2023年度まで勉強可能！　(2024年度は過去問未発表です...)" FontSize="14" FontFamily="{StaticResource NotoSans}" Margin="5"/>
         </Viewbox>
         <ScrollViewer Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource CustomScrollViewerStyle}">
             <Grid x:Name="SelectTable">
@@ -143,27 +143,27 @@
                 <Button    Grid.Row="15" Grid.Column="1" Content="情報処理技術系"     Background="LightGreen" Style="{StaticResource SelectButton}" Click="Button_Click_2008"/>
                 <Button    Grid.Row="15" Grid.Column="2" Content="医療情報システム系" Background="Yellow" Style="{StaticResource SelectButton}" Click="Button_Click_2008"/>
                 <Button    Grid.Row="15" Grid.Column="3" Content="医学・医療系"       Background="Aqua" Style="{StaticResource SelectButton}" Click="Button_Click_2008"/>
-                
+
                 <TextBlock Grid.Row="16" Grid.Column="0" Text="2007年度" FontSize="15" FontFamily="{StaticResource NotoSans}" TextAlignment="Center" VerticalAlignment="Center"/>
                 <Button    Grid.Row="16" Grid.Column="1" Content="情報処理技術系"     Background="LightGreen" Style="{StaticResource SelectButton}" Click="Button_Click_2007"/>
                 <Button    Grid.Row="16" Grid.Column="2" Content="医療情報システム系" Background="Yellow" Style="{StaticResource SelectButton}" Click="Button_Click_2007"/>
                 <Button    Grid.Row="16" Grid.Column="3" Content="医学・医療系"       Background="Aqua" Style="{StaticResource SelectButton}" Click="Button_Click_2007"/>
-                
+
                 <TextBlock Grid.Row="17" Grid.Column="0" Text="2006年度" FontSize="15" FontFamily="{StaticResource NotoSans}" TextAlignment="Center" VerticalAlignment="Center"/>
                 <Button    Grid.Row="17" Grid.Column="1" Content="情報処理技術系"     Background="LightGreen" Style="{StaticResource SelectButton}" Click="Button_Click_2006"/>
                 <Button    Grid.Row="17" Grid.Column="2" Content="医療情報システム系" Background="Yellow" Style="{StaticResource SelectButton}" Click="Button_Click_2006"/>
                 <Button    Grid.Row="17" Grid.Column="3" Content="医学・医療系"       Background="Aqua" Style="{StaticResource SelectButton}" Click="Button_Click_2006"/>
-                
+
                 <TextBlock Grid.Row="18" Grid.Column="0" Text="2005年度" FontSize="15" FontFamily="{StaticResource NotoSans}" TextAlignment="Center" VerticalAlignment="Center"/>
                 <Button    Grid.Row="18" Grid.Column="1" Content="情報処理技術系"     Background="LightGreen" Style="{StaticResource SelectButton}" Click="Button_Click_2005"/>
                 <Button    Grid.Row="18" Grid.Column="2" Content="医療情報システム系" Background="Yellow" Style="{StaticResource SelectButton}" Click="Button_Click_2005"/>
                 <Button    Grid.Row="18" Grid.Column="3" Content="医学・医療系"       Background="Aqua" Style="{StaticResource SelectButton}" Click="Button_Click_2005"/>
-                
+
                 <TextBlock Grid.Row="19" Grid.Column="0" Text="2004年度" FontSize="15" FontFamily="{StaticResource NotoSans}" TextAlignment="Center" VerticalAlignment="Center"/>
                 <Button    Grid.Row="19" Grid.Column="1" Content="情報処理技術系"     Background="LightGreen" Style="{StaticResource SelectButton}" Click="Button_Click_2004"/>
                 <Button    Grid.Row="19" Grid.Column="2" Content="医療情報システム系" Background="Yellow" Style="{StaticResource SelectButton}" Click="Button_Click_2004"/>
                 <Button    Grid.Row="19" Grid.Column="3" Content="医学・医療系"       Background="Aqua" Style="{StaticResource SelectButton}" Click="Button_Click_2004"/>
-                
+
                 <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0.5,0,0.5"/>
                 <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
                 <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
