@@ -55,7 +55,8 @@ namespace HitApp
         // 正解率の計算
         private void calc()
         {
-            ansPercentage = (rightCount / resList.Count) * 100;
+            double buff = (rightCount / resList.Count) * 100;
+            ansPercentage = Math.Round(buff, 1, MidpointRounding.AwayFromZero);
         }
         
         // 画面表示
