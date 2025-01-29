@@ -470,6 +470,8 @@ namespace HitApp
             selection4.Text = QList[calc(5)];
             selection5.Text = QList[calc(6)];
 
+            QcountNow.Content = (QCount + 1) + "/" + maxQCount;
+
             yourAns.Text = "";
             resText.Foreground = Brushes.Black;
 

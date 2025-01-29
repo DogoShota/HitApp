@@ -105,6 +105,8 @@
             </Viewbox>
 
             <Image x:Name="Qimage" Grid.Row="0" Grid.Column="2" Grid.RowSpan="5" Stretch="Fill"/>
+
+            <Label x:Name="QcountNow" Grid.Row="8" Content="12/50"/>
         </Grid>
         
         <Grid Grid.Row="2" Grid.Column="1">
