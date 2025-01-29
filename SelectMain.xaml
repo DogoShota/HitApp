@@ -52,6 +52,10 @@
                     <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
                     <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
                     <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
+                    <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
+                    <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
+                    <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
+                    <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.5*" MinWidth="100"/>
@@ -139,7 +143,27 @@
                 <Button    Grid.Row="15" Grid.Column="1" Content="情報処理技術系"     Background="LightGreen" Style="{StaticResource SelectButton}" Click="Button_Click_2008"/>
                 <Button    Grid.Row="15" Grid.Column="2" Content="医療情報システム系" Background="Yellow" Style="{StaticResource SelectButton}" Click="Button_Click_2008"/>
                 <Button    Grid.Row="15" Grid.Column="3" Content="医学・医療系"       Background="Aqua" Style="{StaticResource SelectButton}" Click="Button_Click_2008"/>
-
+                
+                <TextBlock Grid.Row="16" Grid.Column="0" Text="2007年度" FontSize="15" FontFamily="{StaticResource NotoSans}" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="16" Grid.Column="1" Content="情報処理技術系"     Background="LightGreen" Style="{StaticResource SelectButton}" Click="Button_Click_2007"/>
+                <Button    Grid.Row="16" Grid.Column="2" Content="医療情報システム系" Background="Yellow" Style="{StaticResource SelectButton}" Click="Button_Click_2007"/>
+                <Button    Grid.Row="16" Grid.Column="3" Content="医学・医療系"       Background="Aqua" Style="{StaticResource SelectButton}" Click="Button_Click_2007"/>
+                
+                <TextBlock Grid.Row="17" Grid.Column="0" Text="2006年度" FontSize="15" FontFamily="{StaticResource NotoSans}" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="17" Grid.Column="1" Content="情報処理技術系"     Background="LightGreen" Style="{StaticResource SelectButton}" Click="Button_Click_2006"/>
+                <Button    Grid.Row="17" Grid.Column="2" Content="医療情報システム系" Background="Yellow" Style="{StaticResource SelectButton}" Click="Button_Click_2006"/>
+                <Button    Grid.Row="17" Grid.Column="3" Content="医学・医療系"       Background="Aqua" Style="{StaticResource SelectButton}" Click="Button_Click_2006"/>
+                
+                <TextBlock Grid.Row="18" Grid.Column="0" Text="2005年度" FontSize="15" FontFamily="{StaticResource NotoSans}" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="18" Grid.Column="1" Content="情報処理技術系"     Background="LightGreen" Style="{StaticResource SelectButton}" Click="Button_Click_2005"/>
+                <Button    Grid.Row="18" Grid.Column="2" Content="医療情報システム系" Background="Yellow" Style="{StaticResource SelectButton}" Click="Button_Click_2005"/>
+                <Button    Grid.Row="18" Grid.Column="3" Content="医学・医療系"       Background="Aqua" Style="{StaticResource SelectButton}" Click="Button_Click_2005"/>
+                
+                <TextBlock Grid.Row="19" Grid.Column="0" Text="2004年度" FontSize="15" FontFamily="{StaticResource NotoSans}" TextAlignment="Center" VerticalAlignment="Center"/>
+                <Button    Grid.Row="19" Grid.Column="1" Content="情報処理技術系"     Background="LightGreen" Style="{StaticResource SelectButton}" Click="Button_Click_2004"/>
+                <Button    Grid.Row="19" Grid.Column="2" Content="医療情報システム系" Background="Yellow" Style="{StaticResource SelectButton}" Click="Button_Click_2004"/>
+                <Button    Grid.Row="19" Grid.Column="3" Content="医学・医療系"       Background="Aqua" Style="{StaticResource SelectButton}" Click="Button_Click_2004"/>
+                
                 <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0.5,0,0.5"/>
                 <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
                 <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
@@ -156,6 +180,10 @@
                 <Border Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
                 <Border Grid.Row="14" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
                 <Border Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="17" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="18" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
+                <Border Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
             </Grid>
         </ScrollViewer>
         <Button Grid.Row="3" Grid.ColumnSpan="2" Content="戻る" Margin="0,10" Width="100" Style="{StaticResource MainButton}" FontSize="20" FontFamily="{StaticResource YujiSyuku}" Click="Button_Click"/>
