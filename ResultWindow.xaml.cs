@@ -32,10 +32,12 @@ namespace HitApp
         List<string> resList = new List<string>();
         // 問題分、選択肢を格納するリスト
         List<string> AnsList = new List<string>();
-        // 解答を格納するリスト
-        List<string> QList = new List<string>();
+        // ランダム出題がどうか
+        bool randumMode;
+        // ランダム時、月に出題する問題番号を格納
+        List<int> rumList = new List<int>();
 
-        public ResultWindow(string year, string bunnya, int QCount, int rightCount,  List<string> resList, List<string> QList, List<string> AnsList)
+        public ResultWindow(string year, string bunnya, int QCount, int rightCount,  List<string> resList, List<string> AnsList, bool randumMode=false, List<int> rumList=null)
         {
             InitializeComponent();
             this.year = year;
@@ -43,8 +45,9 @@ namespace HitApp
             this.QCount = QCount;
             this.rightCount = rightCount;
             this.resList = resList;
-            this.QList = QList;
             this.AnsList = AnsList;
+            this.randumMode = randumMode;
+            this.rumList = rumList;
 
             dataSet();
             calc();
@@ -75,16 +78,24 @@ namespace HitApp
             if (this.bunnya.Equals("医療情報システム系"))
                 question_count = 60;
 
-            int first_question_num = question_count - resList.Count;
-            int n = 0;
-            for (int i = first_question_num; i < question_count; i++)
+            if (randumMode)
             {
-                items.Add(new DataGridItems((i + 1).ToString(), resList[n]));
-                n++;
+                for (int i = 0; i < question_count; i++)
+                {
+                    items.Add(new DataGridItems((rumList[i] + 1).ToString(), resList[i]));
+                }
             }
-
+            else
+            {
+                int first_question_num = question_count - resList.Count;
+                int n = 0;
+                for (int i = first_question_num; i < question_count; i++)
+                {
+                    items.Add(new DataGridItems((i + 1).ToString(), resList[n]));
+                    n++;
+                }
+            }
             DataGridName.ItemsSource = items;
-
         }
 
         private void reSelect(object sender, RoutedEventArgs e)
@@ -113,9 +124,8 @@ namespace HitApp
         }
         private void explanation(object sender, RoutedEventArgs e)
         {
-            int Qnum = int.Parse((((Button)sender).Tag as DataGridItems).item0) - 1;
-
-            Explanation exp = new Explanation(year, bunnya, Qnum, AnsList);
+            int Qnum = int.Parse((((Button)sender).Tag as DataGridItems).item0);
+            Explanation exp = new Explanation(year, bunnya, Qnum-1, AnsList);
             NavigationService.Navigate(exp);
         }
 

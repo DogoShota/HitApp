@@ -563,12 +563,20 @@ namespace HitApp
         {
             QCount++;
 
+            // リザルトに移動させる
             if (QCount == maxQCount)
             {
-                // リザルトに移動させる
-                var result = new ResultWindow(year, bunnya, QCount, rightCount, resList, QList, AnsList);
-                NavigationService.Navigate(result);
-                
+                ResultWindow resWindow;
+                if (randumMode)
+                {
+                    resWindow = new ResultWindow(year, bunnya, QCount, rightCount, resList, AnsList, randumMode, rumList);
+                }
+                else
+                {
+                    resWindow = new ResultWindow(year, bunnya, QCount, rightCount, resList, AnsList);
+
+                }
+                NavigationService.Navigate(resWindow);
             }
             else
             {
