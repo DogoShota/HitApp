@@ -309,6 +309,10 @@
             </Viewbox>
         </Button>
 
-        <Button x:Name="randum" Grid.Row="8" Grid.Column="3" Click="selectButton" Style="{StaticResource SelectNumButton}"/>
+        <Button x:Name="randum" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,0,10" Click="selectButton" Style="{StaticResource GreenMainButton}" FontFamily="{StaticResource YujiSyuku}" Background="#005731">
+            <Viewbox>
+                <Label Content="ランダムに出題" Foreground="#fff"/>
+            </Viewbox>
+        </Button>
     </Grid>
 </Page>

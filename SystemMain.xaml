@@ -360,5 +360,11 @@
                 <Label  Content="科目選択に戻る"/>
             </Viewbox>
         </Button>
+
+        <Button x:Name="randum" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,0,10" Click="selectButton" Style="{StaticResource GreenMainButton}" FontFamily="{StaticResource YujiSyuku}" Background="#005731">
+            <Viewbox>
+                <Label Content="ランダムに出題" Foreground="#fff"/>
+            </Viewbox>
+        </Button>
     </Grid>
 </Page>
