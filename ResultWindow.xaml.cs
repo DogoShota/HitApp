@@ -128,7 +128,6 @@ namespace HitApp
             Explanation exp = new Explanation(year, bunnya, Qnum-1, AnsList);
             NavigationService.Navigate(exp);
         }
-
     }
 
     public class DataGridItems
