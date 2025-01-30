@@ -37,7 +37,7 @@ namespace HitApp
         // ランダム時、月に出題する問題番号を格納
         List<int> rumList = new List<int>();
 
-        public ResultWindow(string year, string bunnya, int QCount, int rightCount,  List<string> resList, List<string> AnsList, bool randumMode=false, List<int> rumList=null)
+        public ResultWindow(string year, string bunnya, int QCount, int rightCount, List<string> resList, List<string> AnsList, bool randumMode = false, List<int> rumList = null)
         {
             InitializeComponent();
             this.year = year;
@@ -49,10 +49,12 @@ namespace HitApp
             this.randumMode = randumMode;
             this.rumList = rumList;
 
-            dataSet();
             calc();
 
             display();
+
+            addRowRowDefinitions();
+            testAdd();
         }
 
         // 正解率の計算
@@ -61,41 +63,12 @@ namespace HitApp
             double buff = (rightCount / resList.Count) * 100;
             ansPercentage = Math.Round(buff, 1, MidpointRounding.AwayFromZero);
         }
-        
+
         // 画面表示
         private void display()
         {
             title.Content = year + "年度・" + bunnya;
             正解率.Text = "正解率：" + ansPercentage.ToString() + "%";
-        }
-
-        // 画面の表に表示する内容を設定
-        private void dataSet ()
-        {
-            List<DataGridItems> items = new List<DataGridItems>();
-
-            int question_count = 50;
-            if (this.bunnya.Equals("医療情報システム系"))
-                question_count = 60;
-
-            if (randumMode)
-            {
-                for (int i = 0; i < question_count; i++)
-                {
-                    items.Add(new DataGridItems((rumList[i] + 1).ToString(), resList[i]));
-                }
-            }
-            else
-            {
-                int first_question_num = question_count - resList.Count;
-                int n = 0;
-                for (int i = first_question_num; i < question_count; i++)
-                {
-                    items.Add(new DataGridItems((i + 1).ToString(), resList[n]));
-                    n++;
-                }
-            }
-            DataGridName.ItemsSource = items;
         }
 
         private void reSelect(object sender, RoutedEventArgs e)
@@ -124,22 +97,101 @@ namespace HitApp
         }
         private void explanation(object sender, RoutedEventArgs e)
         {
-            int Qnum = int.Parse((((Button)sender).Tag as DataGridItems).item0);
-            Explanation exp = new Explanation(year, bunnya, Qnum-1, AnsList);
+            Button btn = (Button)sender;
+            int Qnum = int.Parse(btn.Name.Substring(1));
+
+            Explanation exp = new Explanation(year, bunnya, Qnum - 1, AnsList);
             NavigationService.Navigate(exp);
         }
 
-    }
-
-    public class DataGridItems
-    {
-        public DataGridItems(string No, string res)
+        private void addRowRowDefinitions()
         {
-            this.item0 = No;
-            this.item1 = res;
+            RowDefinition first = new RowDefinition();
+            first.Height = new GridLength(20, GridUnitType.Pixel);
+            dataGrid.RowDefinitions.Add(first);
+
+            for (int i = 0; i <= resList.Count; i++)
+            {
+                RowDefinition row = new RowDefinition();
+                row.Height = new GridLength(40, GridUnitType.Pixel);
+
+                dataGrid.RowDefinitions.Add(row);
+            }
         }
 
-        public string item0 { get; set; }
-        public string item1 { get; set; }
+        private void testAdd()
+        {
+            Border firstBorder = new Border();
+            firstBorder.BorderBrush = Brushes.Black;
+            firstBorder.BorderThickness = new Thickness(0, 0.5, 0, 0.5);
+
+            dataGrid.Children.Add(firstBorder);
+            firstBorder.SetValue(Grid.RowProperty, 1);
+            firstBorder.SetValue(Grid.ColumnSpanProperty, 3);
+
+            int question_count = 50;
+            if (this.bunnya.Equals("医療情報システム系"))
+                question_count = 60;
+
+            int first_question_num = question_count - resList.Count;
+            int n = 0;
+            for (int i = first_question_num; i < question_count; i++)
+            {
+                var No = new Label();
+                if (randumMode)
+                    No.Content = rumList[i] + 1;
+                else
+                    No.Content = (i + 1).ToString();
+                No.FontSize = 24;
+                No.HorizontalAlignment = HorizontalAlignment.Center;
+                No.VerticalAlignment = VerticalAlignment.Center;
+
+                var ansRes = new Label();
+                ansRes.Content = resList[n];
+                ansRes.FontSize = 24;
+                if (ansRes.Content.Equals("○"))
+                    ansRes.Foreground = Brushes.Lime;
+                else
+                {
+                    ansRes.Foreground = Brushes.Red;
+                    ansRes.Content = "✕";
+                }
+                ansRes.HorizontalAlignment = HorizontalAlignment.Center;
+                ansRes.VerticalAlignment = VerticalAlignment.Center;
+
+
+                var expButton = new Button();
+                expButton.Content = "解説";
+                if (randumMode)
+                    expButton.Name = "問" + (rumList[i] + 1).ToString();
+                else
+                    expButton.Name = "問" + (i+1).ToString();
+                expButton.Click += explanation;
+                expButton.Style = FindResource("QuesWinButton") as Style;
+
+                Border border = new Border();
+                border.BorderBrush = Brushes.Black;
+                border.BorderThickness = new Thickness(0, 0, 0, 0.5);
+
+
+                dataGrid.Children.Add(No);
+                No.SetValue(Grid.RowProperty, n + 1);
+                No.SetValue(Grid.ColumnProperty, 0);
+
+                dataGrid.Children.Add(ansRes);
+                ansRes.SetValue(Grid.RowProperty, n + 1);
+                ansRes.SetValue(Grid.ColumnProperty, 1);
+
+                dataGrid.Children.Add(expButton);
+                expButton.SetValue(Grid.RowProperty, n + 1);
+                expButton.SetValue(Grid.ColumnProperty, 2);
+
+                dataGrid.Children.Add(border);
+                border.SetValue(Grid.RowProperty, n+1);
+                border.SetValue(Grid.ColumnSpanProperty, 3);
+
+                n++;
+            }
+        }
     }
 }
