@@ -97,7 +97,9 @@ namespace HitApp
         }
         private void explanation(object sender, RoutedEventArgs e)
         {
-            int Qnum = int.Parse((((Button)sender).Tag as DataGridItems).item0);
+            Button btn = (Button)sender;
+            int Qnum = int.Parse(btn.Name.Substring(1));
+
             Explanation exp = new Explanation(year, bunnya, Qnum - 1, AnsList);
             NavigationService.Navigate(exp);
         }
@@ -134,6 +136,12 @@ namespace HitApp
 
                 var expButton = new Button();
                 expButton.Content = "解説";
+                if (randumMode)
+                    expButton.Name = (rumList[i] + 1).ToString();
+                else
+                    expButton.Name = "問" + (i+1).ToString();
+                expButton.Click += explanation;
+
 
                 dataGrid.Children.Add(No);
                 No.SetValue(Grid.RowProperty, n + 1);
