@@ -584,6 +584,7 @@
     <Content Include="image\2021\2021IS.Q14.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="image\2021\2021JS.Q10.png" />
     <Content Include="image\2021\2021JS.Q11.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -614,21 +615,17 @@
     <Content Include="image\2022\2022II.Q47.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="image\2022\2022JS.Q10.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="image\2022\2022JS.Q13.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="image\2022\2022JS.Q21.png" />
     <Content Include="image\2022\2022JS.Q22.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="image\2022\2022JS.Q31.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="image\2022\2022JS.Q33.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="image\2022\2022JS.Q38.png" />
     <Content Include="image\2022\2022JS.Q47.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
