@@ -106,6 +106,10 @@ namespace HitApp
 
         private void addRowRowDefinitions()
         {
+            RowDefinition first = new RowDefinition();
+            first.Height = new GridLength(20, GridUnitType.Pixel);
+            dataGrid.RowDefinitions.Add(first);
+
             for (int i = 0; i <= resList.Count; i++)
             {
                 RowDefinition row = new RowDefinition();
@@ -117,6 +121,14 @@ namespace HitApp
 
         private void testAdd()
         {
+            Border firstBorder = new Border();
+            firstBorder.BorderBrush = Brushes.Black;
+            firstBorder.BorderThickness = new Thickness(0, 0.5, 0, 0.5);
+
+            dataGrid.Children.Add(firstBorder);
+            firstBorder.SetValue(Grid.RowProperty, 1);
+            firstBorder.SetValue(Grid.ColumnSpanProperty, 3);
+
             int question_count = 50;
             if (this.bunnya.Equals("医療情報システム系"))
                 question_count = 60;
@@ -130,17 +142,36 @@ namespace HitApp
                     No.Content = rumList[i] + 1;
                 else
                     No.Content = (i + 1).ToString();
+                No.FontSize = 24;
+                No.HorizontalAlignment = HorizontalAlignment.Center;
+                No.VerticalAlignment = VerticalAlignment.Center;
 
                 var ansRes = new Label();
                 ansRes.Content = resList[n];
+                ansRes.FontSize = 24;
+                if (ansRes.Content.Equals("○"))
+                    ansRes.Foreground = Brushes.Lime;
+                else
+                {
+                    ansRes.Foreground = Brushes.Red;
+                    ansRes.Content = "✕";
+                }
+                ansRes.HorizontalAlignment = HorizontalAlignment.Center;
+                ansRes.VerticalAlignment = VerticalAlignment.Center;
+
 
                 var expButton = new Button();
                 expButton.Content = "解説";
                 if (randumMode)
-                    expButton.Name = (rumList[i] + 1).ToString();
+                    expButton.Name = "問" + (rumList[i] + 1).ToString();
                 else
                     expButton.Name = "問" + (i+1).ToString();
                 expButton.Click += explanation;
+                expButton.Style = FindResource("QuesWinButton") as Style;
+
+                Border border = new Border();
+                border.BorderBrush = Brushes.Black;
+                border.BorderThickness = new Thickness(0, 0, 0, 0.5);
 
 
                 dataGrid.Children.Add(No);
@@ -154,6 +185,10 @@ namespace HitApp
                 dataGrid.Children.Add(expButton);
                 expButton.SetValue(Grid.RowProperty, n + 1);
                 expButton.SetValue(Grid.ColumnProperty, 2);
+
+                dataGrid.Children.Add(border);
+                border.SetValue(Grid.RowProperty, n+1);
+                border.SetValue(Grid.ColumnSpanProperty, 3);
 
                 n++;
             }
