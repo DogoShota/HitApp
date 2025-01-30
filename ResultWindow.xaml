@@ -61,7 +61,7 @@
             </Button>
         </Grid>
 
-        <ScrollViewer Grid.Column="3">
+        <ScrollViewer Grid.Column="3" Style="{StaticResource CustomScrollViewerStyle}">
             <Grid x:Name="dataGrid">
                 <Grid.RowDefinitions>
                 </Grid.RowDefinitions>
