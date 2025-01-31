@@ -777,8 +777,12 @@ namespace HitApp
 
         private void dispExp(object sender, RoutedEventArgs e)
         {
-            var Explanation = new Explanation(year, bunnya, QCount, AnsList);
-            NavigationService.Navigate(Explanation);
+            Explanation expWindow;
+            if (randumMode)
+                expWindow = new Explanation(year, bunnya, rumList[QCount], AnsList);
+            else
+                expWindow = new Explanation(year, bunnya, QCount, AnsList);
+            NavigationService.Navigate(expWindow);
         }
     }
 }
