@@ -22,17 +22,5 @@ namespace HitApp.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2025-08-24")]
-        public global::System.DateTime test_day {
-            get {
-                return ((global::System.DateTime)(this["test_day"]));
-            }
-            set {
-                this["test_day"] = value;
-            }
-        }
     }
 }

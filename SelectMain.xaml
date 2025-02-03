@@ -23,9 +23,10 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.7*"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.2*"/>
         </Grid.ColumnDefinitions>
-        <Image Source="image/doujou.png" Grid.RowSpan="4" Grid.ColumnSpan="2" Stretch="UniformToFill"/>
-        <Rectangle Fill="White" Opacity="0.6" Grid.RowSpan="4" Grid.ColumnSpan="2"/>
+        <Image Source="image/doujou.png" Grid.RowSpan="4" Grid.ColumnSpan="3" Stretch="UniformToFill"/>
+        <Rectangle Fill="White" Opacity="0.6" Grid.RowSpan="4" Grid.ColumnSpan="3"/>
 
         <Viewbox Stretch="Uniform" HorizontalAlignment="Left">
             <TextBlock Text="医療情報技師過去問道場" FontSize="24" FontFamily="{StaticResource YujiSyuku}" FontWeight="Bold" Margin="5"/>
@@ -33,7 +34,11 @@
         <Viewbox Stretch="Uniform" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Left">
             <TextBlock Text="　2008年度から2023年度まで勉強できます　(2024年度は過去問未発表です...)" FontSize="14" FontFamily="{StaticResource NotoSans}" Margin="5"/>
         </Viewbox>
-        <ScrollViewer Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource CustomScrollViewerStyle}">
+
+        <Viewbox Grid.Column="2" Stretch="Uniform" HorizontalAlignment="Right">
+            <TextBlock x:Name="testday" FontSize="16" FontFamily="{StaticResource NotoSans}"/>
+        </Viewbox>
+        <ScrollViewer Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource CustomScrollViewerStyle}">
             <Grid x:Name="SelectTable">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
@@ -186,6 +191,6 @@
                 <Border Grid.Row="19" Grid.Column="0" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="0,0,0,0.5"/>
             </Grid>
         </ScrollViewer>
-        <Button Grid.Row="3" Grid.ColumnSpan="2" Content="戻る" Margin="0,10" Width="100" Style="{StaticResource MainButton}" FontSize="20" FontFamily="{StaticResource YujiSyuku}" Click="Button_Click"/>
+        <Button Grid.Row="3" Grid.ColumnSpan="3" Content="戻る" Margin="0,10" Width="100" Style="{StaticResource MainButton}" FontSize="20" FontFamily="{StaticResource YujiSyuku}" Click="Button_Click"/>
     </Grid>
 </Page>

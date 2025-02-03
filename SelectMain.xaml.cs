@@ -18,6 +18,7 @@ using System.Windows.Navigation;
 using System.Windows.Resources;
 using System.Windows.Shapes;
 using static System.Net.Mime.MediaTypeNames;
+using HitApp.config;
 
 namespace HitApp
 {
@@ -30,55 +31,17 @@ namespace HitApp
         {
             InitializeComponent();
 
-            //display();
+            display();
         }
 
         private void display()
         {
-            ResourceDictionary dic = new ResourceDictionary();
-            dic.Source = new Uri("app.xaml", UriKind.Relative);
+            Config conf = new Config();
+            Dictionary<string, DateTime> test = conf.get_test_day();
 
-            TextBlock textBlock = new TextBlock();
-            textBlock.Text = "2024年度";
-            textBlock.FontSize = 15;
-            textBlock.FontFamily = (FontFamily)dic.FindName("NotoSansMedium");
-            textBlock.FontWeight = FontWeights.UltraBlack;
-            textBlock.TextAlignment = TextAlignment.Center;
-            textBlock.VerticalAlignment = VerticalAlignment.Center;
-
-            Button btn1 = new Button();
-            btn1.Content = "情報処理技術系";
-            btn1.Margin = new Thickness(10, 3, 10, 3);
-            btn1.Background = Brushes.LightGreen;
-            btn1.Click += Button_Click_2024;
-
-            Button btn2 = new Button();
-            btn2.Content = "医療情報システム系";
-            btn2.Margin = new Thickness(10, 3, 10, 3);
-            btn2.Background = Brushes.Yellow;
-            btn2.Click += Button_Click_2024;
-
-            Button btn3 = new Button();
-            btn3.Content = "医学・医療系";
-            btn3.Margin = new Thickness(10, 3, 10, 3);
-            btn3.Background = Brushes.Aqua;
-            btn3.Click += Button_Click_2024;
-
-            SelectTable.Children.Add(textBlock);
-            SelectTable.Children.Add(btn1);
-            SelectTable.Children.Add(btn2);
-            SelectTable.Children.Add(btn3);
-
-            Grid.SetRow(textBlock, 0);
-            Grid.SetRow(btn1, 0);
-            Grid.SetRow(btn2, 0);
-            Grid.SetRow(btn3, 0);
-            Grid.SetColumn(textBlock, 0);
-            Grid.SetColumn(btn1, 1);
-            Grid.SetColumn(btn2, 2);
-            Grid.SetColumn(btn3, 3);
-
+            testday.Text = test["testDay"].ToString("yyyy/MM/dd");
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var startPage = new StartWindow();
