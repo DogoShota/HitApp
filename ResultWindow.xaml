@@ -59,6 +59,10 @@
                     <Label Content="もう一度"/>
                 </Viewbox>
             </Button>
+
+            <Viewbox Grid.Row="6" Grid.Column="1">
+                <TextBlock x:Name="test"/>
+            </Viewbox>
         </Grid>
 
         <ScrollViewer Grid.Column="3" Style="{StaticResource CustomScrollViewerStyle}">

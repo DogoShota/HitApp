@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,23 @@ namespace HitApp.config
 {
     internal class Config
     {
+        public Stopwatch sw;
+
+        public Config()
+        {
+            sw = new Stopwatch();
+        }
+
+        public void sw_start()
+        {
+            sw.Start();
+        }
+
+        public void sw_stop()
+        {
+            sw.Stop();
+        }
+
         private Dictionary<string, DateTime> get_test_day()
         {
             StreamReader raw = new StreamReader(@"config/config.json");
@@ -45,5 +63,7 @@ namespace HitApp.config
 
             return text;
         }
+
+
     }
 }

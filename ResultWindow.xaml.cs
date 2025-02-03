@@ -36,8 +36,10 @@ namespace HitApp
         bool randumMode;
         // ランダム時、月に出題する問題番号を格納
         List<int> rumList = new List<int>();
+        // 解答時間を格納
+        double time;
 
-        public ResultWindow(string year, string bunnya, int QCount, int rightCount, List<string> resList, List<string> AnsList, bool randumMode = false, List<int> rumList = null)
+        public ResultWindow(string year, string bunnya, int QCount, int rightCount, List<string> resList, List<string> AnsList, double time, bool randumMode = false, List<int> rumList = null)
         {
             InitializeComponent();
             this.year = year;
@@ -46,6 +48,7 @@ namespace HitApp
             this.rightCount = rightCount;
             this.resList = resList;
             this.AnsList = AnsList;
+            this.time = time;
             this.randumMode = randumMode;
             this.rumList = rumList;
 
@@ -69,6 +72,29 @@ namespace HitApp
         {
             title.Content = year + "年度・" + bunnya;
             正解率.Text = "正解率：" + ansPercentage.ToString() + "%";
+
+            test.Text = "解答時間：" + calc_time();
+        }
+
+        private string calc_time()
+        {
+            double minute = time / 60;
+            double second = time % 60;
+
+            int min = (int)minute;
+            int sec = (int)second;
+
+            string res;
+            if (min == 0)
+            {
+                res = sec.ToString() + "秒";
+            }
+            else
+            {
+               res = min.ToString() + "分" + sec.ToString() + "秒";
+            }
+
+            return res;
         }
 
         private void reSelect(object sender, RoutedEventArgs e)

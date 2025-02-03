@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HitApp.config;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
@@ -54,6 +55,8 @@ namespace HitApp
         bool randumMode;
         // ランダム時、月に出題する問題番号を格納
         List<int> rumList = new List<int>();
+        // コンフィグクラスのインスタンス
+        Config conf;
 
         public Question(string year, string bunnya, int QCount, int maxQCount, bool randumMode = false)
         {
@@ -72,6 +75,9 @@ namespace HitApp
             getQuestionText();
             getQuestionImage();
             display();
+
+            conf = new Config();
+            conf.sw_start();
 
         }
 
@@ -650,14 +656,16 @@ namespace HitApp
             // リザルトに移動させる
             if (QCount == maxQCount)
             {
+                double time = conf.sw.Elapsed.TotalSeconds;
+
                 ResultWindow resWindow;
                 if (randumMode)
                 {
-                    resWindow = new ResultWindow(year, bunnya, QCount, rightCount, resList, AnsList, randumMode, rumList);
+                    resWindow = new ResultWindow(year, bunnya, QCount, rightCount, resList, AnsList, time, randumMode, rumList);
                 }
                 else
                 {
-                    resWindow = new ResultWindow(year, bunnya, QCount, rightCount, resList, AnsList);
+                    resWindow = new ResultWindow(year, bunnya, QCount, rightCount, resList, AnsList, time);
 
                 }
                 NavigationService.Navigate(resWindow);
