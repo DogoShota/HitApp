@@ -410,7 +410,8 @@ namespace HitApp
         }
         private void Button_Click_2007(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+            // 過去問が追加されたらコメントアウト消す
+            /*Button btn = (Button)sender;
             string bunnya = btn.Content.ToString();
             switch (bunnya)
             {
@@ -426,11 +427,12 @@ namespace HitApp
                     var IIWindow = new MedicalMain("2007", "医学・医療系");
                     NavigationService.Navigate(IIWindow);
                     break;
-            }
+            }*/
         }
         private void Button_Click_2006(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+            // 過去問が追加されたらコメントアウト消す
+            /*Button btn = (Button)sender;
             string bunnya = btn.Content.ToString();
             switch (bunnya)
             {
@@ -446,11 +448,12 @@ namespace HitApp
                     var IIWindow = new MedicalMain("2006", "医学・医療系");
                     NavigationService.Navigate(IIWindow);
                     break;
-            }
+            }*/
         }
         private void Button_Click_2005(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+            // 過去問が追加されたらコメントアウト消す
+            /*Button btn = (Button)sender;
             string bunnya = btn.Content.ToString();
             switch (bunnya)
             {
@@ -466,11 +469,12 @@ namespace HitApp
                     var IIWindow = new MedicalMain("2005", "医学・医療系");
                     NavigationService.Navigate(IIWindow);
                     break;
-            }
+            }*/
         }
         private void Button_Click_2004(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+            // 過去問が追加されたらコメントアウト消す
+            /*Button btn = (Button)sender;
             string bunnya = btn.Content.ToString();
             switch (bunnya)
             {
@@ -486,7 +490,7 @@ namespace HitApp
                     var IIWindow = new MedicalMain("2004", "医学・医療系");
                     NavigationService.Navigate(IIWindow);
                     break;
-            }
+            }*/
         }
     }
 }

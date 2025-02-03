@@ -55,7 +55,7 @@ namespace HitApp
         // ランダム時、月に出題する問題番号を格納
         List<int> rumList = new List<int>();
 
-        public Question(string year, string bunnya,int QCount, int maxQCount, bool randumMode = false)
+        public Question(string year, string bunnya, int QCount, int maxQCount, bool randumMode = false)
         {
             InitializeComponent();
             this.year = year;
@@ -76,7 +76,7 @@ namespace HitApp
         }
 
         // csvから問題と正解を取得して、リストに格納する
-        private void getQuestionText ()
+        private void getQuestionText()
         {
             // 選択された年度、分野のcsvを取得する
             switch (year)
@@ -380,6 +380,86 @@ namespace HitApp
                             break;
                     }
                     break;
+
+                case "2007":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"csv/2007/2007JS.csv");
+                            ansCsv = new StreamReader(@"csv/2007/2007JS.解答.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"csv/2007/2007IS.csv");
+                            ansCsv = new StreamReader(@"csv/2007/2007IS.解答.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"csv/2007/2007II.csv");
+                            ansCsv = new StreamReader(@"csv/2007/2007II.解答.csv");
+                            break;
+                    }
+                    break;
+
+                case "2006":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"csv/2006/2006JS.csv");
+                            ansCsv = new StreamReader(@"csv/2006/2006JS.解答.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"csv/2006/2006IS.csv");
+                            ansCsv = new StreamReader(@"csv/2006/2006IS.解答.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"csv/2006/2006II.csv");
+                            ansCsv = new StreamReader(@"csv/2006/2006II.解答.csv");
+                            break;
+                    }
+                    break;
+
+                case "2005":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"csv/2005/2005JS.csv");
+                            ansCsv = new StreamReader(@"csv/2005/2005JS.解答.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"csv/2005/2005IS.csv");
+                            ansCsv = new StreamReader(@"csv/2005/2005IS.解答.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"csv/2005/2005II.csv");
+                            ansCsv = new StreamReader(@"csv/2005/2005II.解答.csv");
+                            break;
+                    }
+                    break;
+
+                case "2004":
+                    switch (bunnya)
+                    {
+                        case "情報処理技術系":
+                            csv = new StreamReader(@"csv/2004/2004JS.csv");
+                            ansCsv = new StreamReader(@"csv/2004/2004JS.解答.csv");
+                            break;
+
+                        case "医療情報システム系":
+                            csv = new StreamReader(@"csv/2004/2004IS.csv");
+                            ansCsv = new StreamReader(@"csv/2004/2004IS.解答.csv");
+                            break;
+
+                        case "医学・医療系":
+                            csv = new StreamReader(@"csv/2004/2004II.csv");
+                            ansCsv = new StreamReader(@"csv/2004/2004II.解答.csv");
+                            break;
+                    }
+                    break;
             }
 
             // 一行とばす
@@ -448,7 +528,7 @@ namespace HitApp
             string[] paths = Directory.GetFiles(@"image", "*", SearchOption.AllDirectories);
 
             // 辞書型にパス名をキー、BitMapImageをバリューに設定
-            foreach ( string path in paths)
+            foreach (string path in paths)
             {
                 ImageList.Add(path.Substring(path.Length - 14), new BitmapImage(new Uri(path, UriKind.Relative)));
             }
@@ -486,13 +566,13 @@ namespace HitApp
                 selectButton5.IsEnabled = false;
                 finalAnsButton.IsEnabled = false;
 
-                
+
                 nextQues.IsEnabled = true;
                 expButton.IsEnabled = false;
 
             }
             finalAnsButton.IsEnabled = false;
-            
+
             // 画像表示
             string tes = "";
             switch (bunnya)
@@ -517,8 +597,9 @@ namespace HitApp
                 {
                     Qimage.Source = ImageList[year + tes + ".Q" + QList[calc(0)].ToString() + ".png"];
                 }
-                
-            } catch// 画像がないとき
+
+            }
+            catch// 画像がないとき
             {
                 Qimage.Source = null;
             }
@@ -526,7 +607,7 @@ namespace HitApp
         }
 
         // 指定した問題文、選択肢を表示するための引数の計算
-        private int calc (int num)
+        private int calc(int num)
         {
             int res = QCount * 7 + num;
             if (randumMode)
@@ -606,7 +687,7 @@ namespace HitApp
                 selects.Clear();
                 display();
             }
-            
+
         }
 
         // 別のボタンを押せないようにし、正誤判定、画面に表示する
