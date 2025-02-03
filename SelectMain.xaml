@@ -35,8 +35,8 @@
             <TextBlock Text="　2008年度から2023年度まで勉強できます　(2024年度は過去問未発表です...)" FontSize="14" FontFamily="{StaticResource NotoSans}" Margin="5"/>
         </Viewbox>
 
-        <Viewbox Grid.Column="2" Stretch="Uniform" HorizontalAlignment="Right">
-            <TextBlock x:Name="testday" FontSize="16" FontFamily="{StaticResource NotoSans}"/>
+        <Viewbox Grid.Column="2" Stretch="Uniform">
+            <TextBlock x:Name="testday" FontSize="16" FontFamily="{StaticResource NotoSans}" TextAlignment="Center"/>
         </Viewbox>
         <ScrollViewer Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource CustomScrollViewerStyle}">
             <Grid x:Name="SelectTable">

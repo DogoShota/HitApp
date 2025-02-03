@@ -800,4 +800,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties config_4config_1json__JsonSchema="4" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

@@ -33,14 +33,13 @@ namespace HitApp
 
             display();
         }
-
+        
         private void display()
         {
             Config conf = new Config();
-            Dictionary<string, DateTime> test = conf.get_test_day();
-
-            testday.Text = test["testDay"].ToString("yyyy/MM/dd");
+            testday.Text = conf.show_test_day();
         }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

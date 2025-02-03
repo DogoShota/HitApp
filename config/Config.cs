@@ -11,7 +11,7 @@ namespace HitApp.config
 {
     internal class Config
     {
-        public Dictionary<string, DateTime> get_test_day()
+        private Dictionary<string, DateTime> get_test_day()
         {
             StreamReader raw = new StreamReader(@"config/config.json");
             string json = raw.ReadToEnd();
@@ -25,6 +25,25 @@ namespace HitApp.config
             }
 
             return jsonData;
+        }
+
+        public string show_test_day()
+        {
+            string text;
+            Dictionary<string, DateTime> test = get_test_day();
+
+            DateTime today = DateTime.Today;
+            if (test["testDay"] < today)
+            {
+                text = "設定ファイルから\n試験日を\n登録してください。";
+            }
+            else
+            {
+                TimeSpan delay = test["testDay"] - today;
+                text = "試験まであと\n" + (delay.Days).ToString() + "日";
+            }
+
+            return text;
         }
     }
 }

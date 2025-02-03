@@ -47,6 +47,10 @@
             <TextBlock x:Name="title" Text="医学・医療系" FontSize="24" FontWeight="Bold" Margin="10"/>
         </Viewbox>
 
+        <Viewbox Grid.Column="10" Stretch="Uniform">
+            <TextBlock x:Name="testday" FontSize="16" FontFamily="{StaticResource NotoSans}" TextAlignment="Center"/>
+        </Viewbox>
+
         <Button x:Name="問1" Grid.Row="2" Grid.Column="1" Click="selectButton" Style="{StaticResource SelectNumButton}">
             <Viewbox>
                 <Label Content="問1"/>
