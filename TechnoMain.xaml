@@ -47,10 +47,6 @@
             <TextBlock x:Name="title" Text="2023年度・情報処理技術系" FontSize="24" FontWeight="Bold" Margin="10"/>
         </Viewbox>
 
-        <Viewbox Grid.Column="9" Grid.ColumnSpan="2" Stretch="Uniform">
-            <TextBlock x:Name="testday" FontSize="16" FontFamily="{StaticResource NotoSans}" TextAlignment="Center"/>
-        </Viewbox>
-
         <Button x:Name="問1" Grid.Row="2" Grid.Column="1" Click="selectButton" Style="{StaticResource SelectNumButton}">
             <Viewbox>
                 <Label Content="問1"/>

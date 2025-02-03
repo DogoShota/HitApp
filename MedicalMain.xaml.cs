@@ -34,9 +34,6 @@ namespace HitApp
         private void display()
         {
             title.Text = year + "年度・" + bunnya;
-
-            Config conf = new Config();
-            testday.Text = conf.show_test_day();
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
