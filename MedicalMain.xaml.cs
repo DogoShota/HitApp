@@ -26,8 +26,14 @@ namespace HitApp
             InitializeComponent();
             this.year = year;
             this.bunnya = bunnya;
+
+            display();
         }
 
+        private void display()
+        {
+            title.Text = year + "年度・" + bunnya;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var selectMain = new SelectMain();

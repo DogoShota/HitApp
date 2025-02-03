@@ -41,11 +41,11 @@
             <ColumnDefinition Width="30"/>
         </Grid.ColumnDefinitions>
         <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="11" Grid.ColumnSpan="12" Source="image/doujou.png" Stretch="UniformToFill"/>
-        <Rectangle Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Fill=" #fff" Opacity="0.7"/>
+        <Rectangle Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Fill=" #fff" Opacity="0.7"/>
         <Rectangle Grid.Row="2" Grid.Column="1" Grid.RowSpan="6" Grid.ColumnSpan="10" Fill=" #fff" Opacity="0.7"/>
 
-        <Viewbox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Center">
-            <TextBlock Text="医療情報システム系" FontSize="24" FontWeight="Bold" Margin="10"/>
+        <Viewbox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" HorizontalAlignment="Center">
+            <TextBlock x:Name="title" Text="医療情報システム系" FontSize="24" FontWeight="Bold" Margin="10"/>
         </Viewbox>
 
         <Button x:Name="問1" Grid.Row="2" Grid.Column="1" Click="selectButton" Style="{StaticResource SelectNumButton}">
