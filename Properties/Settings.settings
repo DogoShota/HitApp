@@ -2,11 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HitApp.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="old_year" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">2009</Value>
-    </Setting>
-    <Setting Name="new_year" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">2023</Value>
+    <Setting Name="test_day" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2025-08-24</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -25,25 +25,13 @@ namespace HitApp.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2009")]
-        public int old_year {
+        [global::System.Configuration.DefaultSettingValueAttribute("2025-08-24")]
+        public global::System.DateTime test_day {
             get {
-                return ((int)(this["old_year"]));
+                return ((global::System.DateTime)(this["test_day"]));
             }
             set {
-                this["old_year"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2023")]
-        public int new_year {
-            get {
-                return ((int)(this["new_year"]));
-            }
-            set {
-                this["new_year"] = value;
+                this["test_day"] = value;
             }
         }
     }
