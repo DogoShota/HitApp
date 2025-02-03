@@ -49,7 +49,7 @@
         </Viewbox>
 
 
-        <Viewbox Grid.Column="10" Stretch="Uniform">
+        <Viewbox Grid.Column="9" Grid.ColumnSpan="2" Stretch="Uniform">
             <TextBlock x:Name="testday" FontSize="16" FontFamily="{StaticResource NotoSans}" TextAlignment="Center"/>
         </Viewbox>
 

@@ -29,7 +29,7 @@ namespace HitApp.config
             sw.Stop();
         }
 
-        private Dictionary<string, DateTime> get_test_day()
+        public Dictionary<string, DateTime> get_test_day()
         {
             StreamReader raw = new StreamReader(@"config/config.json");
             string json = raw.ReadToEnd();
@@ -58,7 +58,10 @@ namespace HitApp.config
             else
             {
                 TimeSpan delay = test["testDay"] - today;
-                text = "試験まであと\n" + (delay.Days).ToString() + "日";
+                string schedule_day = "試験日は" + test["testDay"].ToString("yyyy/MM/dd") + "です。";
+                string delay_day = "残り" + (delay.Days).ToString() + "日です。";
+
+                text = schedule_day + "\n" + delay_day;
             }
 
             return text;

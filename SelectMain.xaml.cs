@@ -37,6 +37,7 @@ namespace HitApp
         private void display()
         {
             Config conf = new Config();
+
             testday.Text = conf.show_test_day();
         }
 

@@ -23,7 +23,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.7*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.5*"/>
         </Grid.ColumnDefinitions>
         <Image Source="image/doujou.png" Grid.RowSpan="4" Grid.ColumnSpan="3" Stretch="UniformToFill"/>
         <Rectangle Fill="White" Opacity="0.6" Grid.RowSpan="4" Grid.ColumnSpan="3"/>
