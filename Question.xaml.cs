@@ -569,6 +569,7 @@ namespace HitApp
 
                 nextQues.IsEnabled = true;
                 expButton.IsEnabled = false;
+                backButton.IsEnabled = false;
 
             }
             finalAnsButton.IsEnabled = false;
@@ -670,6 +671,7 @@ namespace HitApp
                 selectButton4.IsEnabled = true;
                 selectButton5.IsEnabled = true;
                 finalAnsButton.IsEnabled = true;
+                backButton.IsEnabled = true;
 
                 // 次の問題にいくためのボタンを無効化
                 nextQues.IsEnabled = false;
@@ -740,6 +742,7 @@ namespace HitApp
             selectButton4.IsEnabled = false;
             selectButton5.IsEnabled = false;
             finalAnsButton.IsEnabled = false;
+            backButton.IsEnabled = false;
 
             // 次の問題に行くためのボタンを有効化
             nextQues.IsEnabled = true;
@@ -828,6 +831,7 @@ namespace HitApp
             selectButton4.IsEnabled = false;
             selectButton5.IsEnabled = false;
             finalAnsButton.IsEnabled = false;
+            backButton.IsEnabled = false;
 
             // 次の問題に行くためのボタンを有効化
             nextQues.IsEnabled = true;

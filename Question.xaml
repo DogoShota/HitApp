@@ -135,7 +135,7 @@
             </Viewbox>
             <Button Grid.Row="4" x:Name="nextQues" Content="次の問題" FontSize="20" Style="{StaticResource nextQuesButton}" Click="nextQuestion" IsEnabled="False"/>
             <Button Grid.Row="5" x:Name="expButton" Content="解説" FontSize="20" Style="{StaticResource QuesWinButton}" IsEnabled="False" Click="dispExp"/>
-            <Button Grid.Row="6" Content="戻る" FontSize="20" Style="{StaticResource QuesWinButton}" Click="backStart"/>
+            <Button Grid.Row="6" x:Name="backButton" Content="戻る" FontSize="20" Style="{StaticResource QuesWinButton}" Click="backStart"/>
         </Grid>
     </Grid>
 </Page>
