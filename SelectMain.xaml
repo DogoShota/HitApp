@@ -57,10 +57,6 @@
                     <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
                     <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
                     <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
-                    <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
-                    <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
-                    <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
-                    <RowDefinition Height="*" MaxHeight="40" MinHeight="20"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.5*" MinWidth="100"/>
