@@ -46,7 +46,7 @@ namespace HitApp
         // 正解数
         int rightCount = 0;
         // 正誤結果を格納するリスト
-        List<string> resList = new List<string>();
+        Dictionary<int, string> resList = new Dictionary<int, string>();
         // 選択した選択肢を格納
         List<string> selects = new List<string>();
         // 解答中の問題の正解を格納
@@ -797,13 +797,13 @@ namespace HitApp
                     rightCount++;
                     resText.Content = "正解";
                     resText.Foreground = Brushes.Lime;
-                    resList.Add("○");
+                    resList.Add(int.Parse(QList[calc(0)]), "○");
                 }
                 else
                 {
                     resText.Content = "不正解";
                     resText.Foreground = Brushes.Red;
-                    resList.Add("×");
+                    resList.Add(int.Parse(QList[calc(0)]), "×");
                 }
             }
             else if (ans.Length == 1)
@@ -813,13 +813,13 @@ namespace HitApp
                     rightCount++;
                     resText.Content = "正解";
                     resText.Foreground = Brushes.Lime;
-                    resList.Add("○");
+                    resList.Add(int.Parse(QList[calc(0)]), "○");
                 }
                 else
                 {
                     resText.Content = "不正解";
                     resText.Foreground = Brushes.Red;
-                    resList.Add("×");
+                    resList.Add(int.Parse(QList[calc(0)]), "×");
                 }
             }
             else
@@ -830,12 +830,12 @@ namespace HitApp
                 {
                     rightCount++;
                     resText.Content = "正解";
-                    resList.Add("○");
+                    resList.Add(int.Parse(QList[calc(0)]), "○");
                 }
                 else
                 {
                     resText.Content = "不正解";
-                    resList.Add("×");
+                    resList.Add(int.Parse(QList[calc(0)]), "×");
                 }
             }
         }
@@ -856,7 +856,7 @@ namespace HitApp
             expButton.IsEnabled = true;
 
             resText.Content = ans;
-            resList.Add("×");
+            resList.Add(int.Parse(QList[calc(0)]), "×");
         }
 
         private void end_click(object sender, RoutedEventArgs e)

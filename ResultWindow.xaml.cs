@@ -29,7 +29,7 @@ namespace HitApp
         // 正解率
         double ansPercentage;
         // 正誤結果を格納するリスト
-        List<string> resList = new List<string>();
+        Dictionary<int, string> resList = new Dictionary<int, string>();
         // 問題分、選択肢を格納するリスト
         List<string> AnsList = new List<string>();
         // ランダム出題がどうか
@@ -39,7 +39,7 @@ namespace HitApp
         // 解答時間を格納
         double time;
 
-        public ResultWindow(string year, string bunnya, int QCount, int rightCount, List<string> resList, List<string> AnsList, double time, bool randumMode = false, List<int> rumList = null)
+        public ResultWindow(string year, string bunnya, int QCount, int rightCount, Dictionary<int,string> resList, List<string> AnsList, double time, bool randumMode = false, List<int> rumList = null)
         {
             InitializeComponent();
             this.year = year;
@@ -159,21 +159,20 @@ namespace HitApp
             if (this.bunnya.Equals("医療情報システム系"))
                 question_count = 60;
 
+
             int first_question_num = question_count - resList.Count;
             int n = 0;
-            for (int i = first_question_num; i < question_count; i++)
+            foreach (int key in resList.Keys)
             {
                 var No = new Label();
-                if (randumMode)
-                    No.Content = rumList[i] + 1;
-                else
-                    No.Content = (i + 1).ToString();
+                No.Content = key;
+
                 No.FontSize = 24;
                 No.HorizontalAlignment = HorizontalAlignment.Center;
                 No.VerticalAlignment = VerticalAlignment.Center;
 
                 var ansRes = new Label();
-                ansRes.Content = resList[n];
+                ansRes.Content = resList[key];
                 ansRes.FontSize = 24;
                 if (ansRes.Content.Equals("○"))
                     ansRes.Foreground = Brushes.Lime;
@@ -189,9 +188,9 @@ namespace HitApp
                 var expButton = new Button();
                 expButton.Content = "解説";
                 if (randumMode)
-                    expButton.Name = "問" + (rumList[i] + 1).ToString();
+                    expButton.Name = "問" + key.ToString();
                 else
-                    expButton.Name = "問" + (i+1).ToString();
+                    expButton.Name = "問" + key.ToString();
                 expButton.Click += explanation;
                 expButton.Style = FindResource("QuesWinButton") as Style;
 
@@ -213,7 +212,7 @@ namespace HitApp
                 expButton.SetValue(Grid.ColumnProperty, 2);
 
                 dataGrid.Children.Add(border);
-                border.SetValue(Grid.RowProperty, n+1);
+                border.SetValue(Grid.RowProperty, n + 1);
                 border.SetValue(Grid.ColumnSpanProperty, 3);
 
                 n++;
