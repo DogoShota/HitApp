@@ -57,7 +57,7 @@ namespace HitApp
             display();
 
             addRowRowDefinitions();
-            testAdd();
+            addResult();
         }
 
         // 正解率の計算
@@ -67,15 +67,16 @@ namespace HitApp
             ansPercentage = Math.Round(buff, 1, MidpointRounding.AwayFromZero);
         }
 
-        // 画面表示
+        // 画面更新
         private void display()
         {
-            title.Content = year + "年度・" + bunnya;
+            showTitle.Content = year + "年度・" + bunnya;
             正解率.Text = "正解率：" + ansPercentage.ToString() + "%";
 
-            test.Text = "解答時間：" + calc_time();
+            showTime.Text = "解答時間：" + calc_time();
         }
 
+        // 解答時間を計算
         private string calc_time()
         {
             double minute = time / 60;
@@ -97,13 +98,13 @@ namespace HitApp
             return res;
         }
 
-        private void reSelect(object sender, RoutedEventArgs e)
+        private void backFirstClick(object sender, RoutedEventArgs e)
         {
             var selectMain = new SelectMain();
             NavigationService.Navigate(selectMain);
         }
 
-        private void retry(object sender, RoutedEventArgs e)
+        private void retryClick(object sender, RoutedEventArgs e)
         {
             switch (bunnya)
             {
@@ -130,6 +131,7 @@ namespace HitApp
             NavigationService.Navigate(exp);
         }
 
+        // 結果表示用のGridを作成
         private void addRowRowDefinitions()
         {
             RowDefinition first = new RowDefinition();
@@ -145,32 +147,32 @@ namespace HitApp
             }
         }
 
-        private void testAdd()
+
+        // 結果を表示
+        private void addResult()
         {
+            // 一番上のBorder
             Border firstBorder = new Border();
             firstBorder.BorderBrush = Brushes.Black;
-            firstBorder.BorderThickness = new Thickness(0, 0.5, 0, 0.5);
+            firstBorder.BorderThickness = new Thickness(0, 0.5, 0, 0);
 
             dataGrid.Children.Add(firstBorder);
             firstBorder.SetValue(Grid.RowProperty, 1);
             firstBorder.SetValue(Grid.ColumnSpanProperty, 3);
 
-            int question_count = 50;
-            if (this.bunnya.Equals("医療情報システム系"))
-                question_count = 60;
 
-
-            int first_question_num = question_count - resList.Count;
+            // 結果を一覧で表示
             int n = 0;
             foreach (int key in resList.Keys)
             {
+                // 問題番号
                 var No = new Label();
                 No.Content = key;
-
                 No.FontSize = 24;
                 No.HorizontalAlignment = HorizontalAlignment.Center;
                 No.VerticalAlignment = VerticalAlignment.Center;
 
+                // 正誤結果
                 var ansRes = new Label();
                 ansRes.Content = resList[key];
                 ansRes.FontSize = 24;
@@ -178,13 +180,13 @@ namespace HitApp
                     ansRes.Foreground = Brushes.Lime;
                 else
                 {
-                    ansRes.Foreground = Brushes.Red;
                     ansRes.Content = "✕";
+                    ansRes.Foreground = Brushes.Red;
                 }
                 ansRes.HorizontalAlignment = HorizontalAlignment.Center;
                 ansRes.VerticalAlignment = VerticalAlignment.Center;
 
-
+                // 解説表示のボタン
                 var expButton = new Button();
                 expButton.Content = "解説";
                 if (randumMode)
@@ -194,23 +196,21 @@ namespace HitApp
                 expButton.Click += explanation;
                 expButton.Style = FindResource("QuesWinButton") as Style;
 
+                // Border
                 Border border = new Border();
                 border.BorderBrush = Brushes.Black;
                 border.BorderThickness = new Thickness(0, 0, 0, 0.5);
 
-
+                // コントロールを追加
                 dataGrid.Children.Add(No);
                 No.SetValue(Grid.RowProperty, n + 1);
                 No.SetValue(Grid.ColumnProperty, 0);
-
                 dataGrid.Children.Add(ansRes);
                 ansRes.SetValue(Grid.RowProperty, n + 1);
                 ansRes.SetValue(Grid.ColumnProperty, 1);
-
                 dataGrid.Children.Add(expButton);
                 expButton.SetValue(Grid.RowProperty, n + 1);
                 expButton.SetValue(Grid.ColumnProperty, 2);
-
                 dataGrid.Children.Add(border);
                 border.SetValue(Grid.RowProperty, n + 1);
                 border.SetValue(Grid.ColumnSpanProperty, 3);

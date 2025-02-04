@@ -38,6 +38,7 @@
         <Viewbox Grid.Column="2" Stretch="Uniform">
             <TextBlock x:Name="testday" FontSize="16" FontFamily="{StaticResource NotoSans}" TextAlignment="Center"/>
         </Viewbox>
+        
         <ScrollViewer Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource CustomScrollViewerStyle}">
             <Grid x:Name="SelectTable">
                 <Grid.RowDefinitions>

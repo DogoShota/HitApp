@@ -21,6 +21,7 @@ namespace HitApp
     public partial class Explanation : Page
     {
         string year, bunnya;
+        // 表示する問題番号
         int QCount;
         // 問題分、選択肢を格納するリスト
         List<string> AnsList = new List<string>();
@@ -42,7 +43,6 @@ namespace HitApp
 
             ansText.Text = AnsList[QCount * 3 + 1];
             expText.Text = AnsList[QCount * 3 + 2];
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

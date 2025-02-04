@@ -69,7 +69,7 @@ namespace HitApp
 
             if (randumMode)
             {
-                randumQuestion();
+                createRandumQuestion();
             }
 
             getQuestionText();
@@ -540,52 +540,61 @@ namespace HitApp
             }
         }
 
-        // 取得した問題文、選択肢を画面に表示する
+        // 画面更新
         private void display()
         {
-            // 正解を取得
-            ans = AnsList[QCount * 3 + 1];
-
-            title.Text = year + "年度・" + bunnya;
-
-            Qnum.Text = " 問" + QList[calc(0)];
-            monndai.Text = QList[calc(1)];
-            selection1.Text = QList[calc(2)];
-            selection2.Text = QList[calc(3)];
-            selection3.Text = QList[calc(4)];
-            selection4.Text = QList[calc(5)];
-            selection5.Text = QList[calc(6)];
-
-            QcountNow.Content = (QCount + 1) + "/" + maxQCount;
+            resetWindow();
 
             if (resList.Count > 0)
             {
                 endButton.Content = "やめる";
             }
 
-            yourAns.Text = "";
-            resText.Foreground = Brushes.Black;
-
             // 削除問題の時、次の問題にいく操作だけできるようにする
-            if (monndai.Text.Equals("削除"))
-            {
-                // 選択肢ボタンの無効化
-                selectButton1.IsEnabled = false;
-                selectButton2.IsEnabled = false;
-                selectButton3.IsEnabled = false;
-                selectButton4.IsEnabled = false;
-                selectButton5.IsEnabled = false;
-                finalAnsButton.IsEnabled = false;
-
-
-                nextQues.IsEnabled = true;
-                expButton.IsEnabled = false;
-                endButton.IsEnabled = false;
-
-            }
-            finalAnsButton.IsEnabled = false;
+            if (showMonndai.Text.Equals("削除"))
+                deleteQustionPattern();
 
             // 画像表示
+            QImagePattern();
+        }
+
+        private void resetWindow()
+        {
+            // 正解を取得
+            ans = AnsList[QCount * 3 + 1];
+
+            showTitle.Text = year + "年度・" + bunnya;
+            showQnum.Text = " 問" + QList[calc(0)];
+            showMonndai.Text = QList[calc(1)];
+            showSelectText1.Text = QList[calc(2)];
+            showSelectText2.Text = QList[calc(3)];
+            showSelectText3.Text = QList[calc(4)];
+            showSelectText4.Text = QList[calc(5)];
+            showSelectText5.Text = QList[calc(6)];
+            showQcountNow.Content = (QCount + 1) + "/" + maxQCount;
+            showYourAns.Text = "";
+            showResText.Foreground = Brushes.Black;
+            finalAnsButton.IsEnabled = false;
+        }
+
+        private void deleteQustionPattern()
+        {
+            // 選択肢ボタンの無効化
+            selectButton1.IsEnabled = false;
+            selectButton2.IsEnabled = false;
+            selectButton3.IsEnabled = false;
+            selectButton4.IsEnabled = false;
+            selectButton5.IsEnabled = false;
+            finalAnsButton.IsEnabled = false;
+
+
+            nextQues.IsEnabled = true;
+            expButton.IsEnabled = false;
+            endButton.IsEnabled = false;
+        }
+
+        private void QImagePattern()
+        {
             string tes = "";
             switch (bunnya)
             {
@@ -599,23 +608,23 @@ namespace HitApp
                     tes = "II";
                     break;
             }
+
             try// 画像がある時
             {
                 if (int.Parse(QList[calc(0)]) < 10) // 問題番号が一桁のとき
                 {
-                    Qimage.Source = ImageList[@"\" + year + tes + ".Q" + QList[calc(0)].ToString() + ".png"];
+                    showQimage.Source = ImageList[@"\" + year + tes + ".Q" + QList[calc(0)].ToString() + ".png"];
                 }
                 else // 問題番号が二桁のとき
                 {
-                    Qimage.Source = ImageList[year + tes + ".Q" + QList[calc(0)].ToString() + ".png"];
+                    showQimage.Source = ImageList[year + tes + ".Q" + QList[calc(0)].ToString() + ".png"];
                 }
 
             }
             catch// 画像がないとき
             {
-                Qimage.Source = null;
+                showQimage.Source = null;
             }
-
         }
 
         // 指定した問題文、選択肢を表示するための引数の計算
@@ -629,8 +638,8 @@ namespace HitApp
             return res;
         }
 
-        // ランダムモードのとき、次の問題を選択する
-        private void randumQuestion()
+        // ランダムモードのとき、問題の順番を作成する
+        private void createRandumQuestion()
         {
 
             // 連番のリストを作成
@@ -678,8 +687,8 @@ namespace HitApp
                 nextQues.IsEnabled = false;
                 expButton.IsEnabled = false;
 
-                resText.Content = "";
-                yourAns.Text = "";
+                showResText.Content = "";
+                showYourAns.Text = "";
 
                 selectButton1.IsChecked = false;
                 selectButton2.IsChecked = false;
@@ -690,11 +699,12 @@ namespace HitApp
                 selects.Clear();
                 display();
             }
-
         }
 
+        // 結果画面に遷移
         private void resultWindow()
         {
+            // 解答時間を取得
             double time = conf.sw.Elapsed.TotalSeconds;
 
             ResultWindow resWindow;
@@ -747,13 +757,13 @@ namespace HitApp
                 }
             }
 
-
+            // 解答ボタンを押下できるように変更
             finalAnsButton.IsEnabled = true;
         }
 
-        private void finalAns(object sender, RoutedEventArgs e)
+        private void finalAnsClikck(object sender, RoutedEventArgs e)
         {
-            // 選択肢ボタンの無効化
+            // 選択肢ボタンを無効化
             selectButton1.IsEnabled = false;
             selectButton2.IsEnabled = false;
             selectButton3.IsEnabled = false;
@@ -766,7 +776,7 @@ namespace HitApp
             nextQues.IsEnabled = true;
             expButton.IsEnabled = true;
 
-            // 選んだ選択肢をリストに格納
+            // 選んだ選択肢を取得、リストに格納
             if ((bool)selectButton1.IsChecked)
                 selects.Add("1");
             if ((bool)selectButton2.IsChecked)
@@ -784,63 +794,59 @@ namespace HitApp
             {
                 selectAns += ", " + selects[i];
             }
-            yourAns.Text = selectAns;
+            showYourAns.Text = selectAns;
 
             // 正誤判定
             if (ans.Length == 3)// 複数回答
             {
-                string ans1 = ans.Substring(0, 1);
-                string ans2 = ans.Substring(2);
-
-                if (selects.Contains(ans1) && selects.Contains(ans2))
-                {
-                    rightCount++;
-                    resText.Content = "正解";
-                    resText.Foreground = Brushes.Lime;
-                    resList.Add(int.Parse(QList[calc(0)]), "○");
-                }
-                else
-                {
-                    resText.Content = "不正解";
-                    resText.Foreground = Brushes.Red;
-                    resList.Add(int.Parse(QList[calc(0)]), "×");
-                }
+                multiAnswerCheck();
             }
             else if (ans.Length == 1)
             {
-                if (selects.Contains(ans))
-                {
-                    rightCount++;
-                    resText.Content = "正解";
-                    resText.Foreground = Brushes.Lime;
-                    resList.Add(int.Parse(QList[calc(0)]), "○");
-                }
-                else
-                {
-                    resText.Content = "不正解";
-                    resText.Foreground = Brushes.Red;
-                    resList.Add(int.Parse(QList[calc(0)]), "×");
-                }
-            }
-            else
-            {
-                string ans1 = ans.Substring(0, 1);
-                string ans2 = ans.Substring(4);
-                if (selects.Contains(ans1) || selects.Contains(ans2))
-                {
-                    rightCount++;
-                    resText.Content = "正解";
-                    resList.Add(int.Parse(QList[calc(0)]), "○");
-                }
-                else
-                {
-                    resText.Content = "不正解";
-                    resList.Add(int.Parse(QList[calc(0)]), "×");
-                }
+                singleAnswerCheck();
             }
         }
 
-        private void ansDisp(object sender, RoutedEventArgs e)
+        // 一つ解答時の正誤判定
+        private void singleAnswerCheck()
+        {
+            if (selects.Contains(ans))
+            {
+                rightCount++;
+                showResText.Content = "正解";
+                showResText.Foreground = Brushes.Lime;
+                resList.Add(int.Parse(QList[calc(0)]), "○");
+            }
+            else
+            {
+                showResText.Content = "不正解";
+                showResText.Foreground = Brushes.Red;
+                resList.Add(int.Parse(QList[calc(0)]), "×");
+            }
+        }
+        
+        // 複数解答時の正誤判定
+        private void multiAnswerCheck()
+        {
+            string ans1 = ans.Substring(0, 1);
+            string ans2 = ans.Substring(2);
+
+            if (selects.Contains(ans1) && selects.Contains(ans2))
+            {
+                rightCount++;
+                showResText.Content = "正解";
+                showResText.Foreground = Brushes.Lime;
+                resList.Add(int.Parse(QList[calc(0)]), "○");
+            }
+            else
+            {
+                showResText.Content = "不正解";
+                showResText.Foreground = Brushes.Red;
+                resList.Add(int.Parse(QList[calc(0)]), "×");
+            }
+        }
+
+        private void showAnsClick(object sender, RoutedEventArgs e)
         {
             // 選択肢ボタンの無効化
             selectButton1.IsEnabled = false;
@@ -855,7 +861,7 @@ namespace HitApp
             nextQues.IsEnabled = true;
             expButton.IsEnabled = true;
 
-            resText.Content = ans;
+            showResText.Content = ans;
             resList.Add(int.Parse(QList[calc(0)]), "×");
         }
 

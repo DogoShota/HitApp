@@ -26,11 +26,11 @@
         </Grid.ColumnDefinitions>
 
         <Rectangle Grid.Row="0" Grid.Column="0" Grid.RowSpan="9" Grid.ColumnSpan="5" Fill="#fffeed"/>
-        <TextBlock x:Name="Qnum" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="30" FontFamily="{StaticResource NotoSans}" Text="問１"/>
-        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" x:Name="title" HorizontalAlignment="Right" Margin="0,10,25,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontFamily="{StaticResource NotoSans}"><Run Text="2023年度"/><Run Language="ja-jp" Text="・"/><Run Text="医学医療"/></TextBlock>
+        <TextBlock x:Name="showQnum" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" FontSize="30" FontFamily="{StaticResource NotoSans}" Text="問１"/>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" x:Name="showTitle" HorizontalAlignment="Right" Margin="0,10,25,0" TextAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" FontFamily="{StaticResource NotoSans}"><Run Text="2023年度"/><Run Language="ja-jp" Text="・"/><Run Text="医学医療"/></TextBlock>
         
         <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource CustomScrollViewerStyle}">
-             <TextBlock x:Name="monndai" Margin="20,0,0,0" FontSize="16" FontFamily="{StaticResource NotoSans}" TextWrapping="Wrap" Text="第二次予防にあたるのはどれですか。"/>
+             <TextBlock x:Name="showMonndai" Margin="20,0,0,0" FontSize="16" FontFamily="{StaticResource NotoSans}" TextWrapping="Wrap" Text="第二次予防にあたるのはどれですか。"/>
         </ScrollViewer>
         
         <Grid Grid.Row="2" Grid.Column="0">
@@ -82,31 +82,31 @@
                     <Label x:Name="select5" Content="(5)"/>
                 </Viewbox>
             </ToggleButton>
-            <Button Grid.Row="7" Grid.Column="0" x:Name="finalAnsButton" FontSize="15" Style="{StaticResource QuesWinButton}" Click="finalAns">
+            <Button Grid.Row="7" Grid.Column="0" x:Name="finalAnsButton" FontSize="15" Style="{StaticResource QuesWinButton}" Click="finalAnsClikck">
                 <Viewbox>
                     <Label Content="解答"/>
                 </Viewbox>
             </Button>
 
             <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="1" Margin="10,0,0,0" HorizontalAlignment="Left">
-                <TextBlock x:Name="selection1" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="事故予防"/>
+                <TextBlock x:Name="showSelectText1" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="事故予防"/>
             </Viewbox>
             <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="1" Margin="10,0,0,0"  HorizontalAlignment="Left">
-                <TextBlock x:Name="selection2" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="健康増進"/>
+                <TextBlock x:Name="showSelectText2" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="健康増進"/>
             </Viewbox>
             <Viewbox Stretch="Uniform" Grid.Row="3" Grid.Column="1" Margin="10,0,0,0"  HorizontalAlignment="Left">
-                <TextBlock x:Name="selection3" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="疾病予防"/>
+                <TextBlock x:Name="showSelectText3" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="疾病予防"/>
             </Viewbox>
             <Viewbox Stretch="Uniform" Grid.Row="4" Grid.Column="1" Margin="10,0,0,0"  HorizontalAlignment="Left">
-                <TextBlock x:Name="selection4" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="早期発見"/>
+                <TextBlock x:Name="showSelectText4" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="早期発見"/>
             </Viewbox>
             <Viewbox Stretch="Uniform" Grid.Row="5" Grid.Column="1" Margin="10,0,0,0"  HorizontalAlignment="Left">
-                <TextBlock x:Name="selection5" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="リハビリテーション"/>
+                <TextBlock x:Name="showSelectText5" Margin="0,10" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="リハビリテーション"/>
             </Viewbox>
 
-            <Image x:Name="Qimage" Grid.Row="0" Grid.Column="2" Grid.RowSpan="5" Stretch="Fill"/>
+            <Image x:Name="showQimage" Grid.Row="0" Grid.Column="2" Grid.RowSpan="5" Stretch="Fill"/>
 
-            <Label x:Name="QcountNow" Grid.Row="8" Content="12/50"/>
+            <Label x:Name="showQcountNow" Grid.Row="8" Content="12/50"/>
         </Grid>
         
         <Grid Grid.Row="2" Grid.Column="1">
@@ -123,15 +123,15 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="0.1*"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="1" Content="正解表示" FontSize="20" Margin="2,5" Style="{StaticResource QuesWinButton}" Click="ansDisp"/>
+            <Button Grid.Row="1" Content="正解表示" FontSize="20" Margin="2,5" Style="{StaticResource QuesWinButton}" Click="showAnsClick"/>
             <Viewbox Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Top" >
                 <TextBlock FontSize="15" FontFamily="{StaticResource NotoSans}" Text="あなたの回答"/>
             </Viewbox>
             <Viewbox Grid.Row="2" Margin="0,25,0,0" HorizontalAlignment="Center">
-                <TextBlock x:Name="yourAns" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="ア"/>
+                <TextBlock x:Name="showYourAns" FontSize="15" FontFamily="{StaticResource NotoSans}" Text="ア"/>
             </Viewbox>
             <Viewbox Grid.Row="3" Margin="5">
-                <Label x:Name="resText" Content=""  FontSize="20" FontFamily="{StaticResource NotoSans}"/>
+                <Label x:Name="showResText" Content=""  FontSize="20" FontFamily="{StaticResource NotoSans}"/>
             </Viewbox>
             <Button Grid.Row="4" x:Name="nextQues" Content="次の問題" FontSize="20" Style="{StaticResource nextQuesButton}" Click="nextQuestion" IsEnabled="False"/>
             <Button Grid.Row="5" x:Name="expButton" Content="解説" FontSize="20" Style="{StaticResource QuesWinButton}" IsEnabled="False" Click="dispExp"/>
