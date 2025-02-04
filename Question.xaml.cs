@@ -887,7 +887,7 @@ namespace HitApp
 
             showResText.Content = ans;
 
-            if (resList.ContainsKey(calc(0)))
+            if (!(resList.ContainsKey(int.Parse(QList[calc(0)]))))
                 resList.Add(int.Parse(QList[calc(0)]), "×");
         }
 
