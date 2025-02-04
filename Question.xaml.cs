@@ -862,7 +862,8 @@ namespace HitApp
             expButton.IsEnabled = true;
 
             showResText.Content = ans;
-            resList.Add(int.Parse(QList[calc(0)]), "×");
+            if (resList.ContainsKey(calc(0)))
+                resList.Add(int.Parse(QList[calc(0)]), "×");
         }
 
         private void end_click(object sender, RoutedEventArgs e)
