@@ -920,11 +920,13 @@ namespace HitApp
 
         private void dispExp(object sender, RoutedEventArgs e)
         {
-            Explanation expWindow;
+            int showExpQnum = QCount;
             if (randumMode)
-                expWindow = new Explanation(year, bunnya, rumList[QCount], AnsList);
-            else
-                expWindow = new Explanation(year, bunnya, QCount, AnsList);
+                showExpQnum = rumList[QCount];
+            if (retryList != null)
+                showExpQnum = int.Parse(QList[calc(0)]) - 1;
+
+            Explanation expWindow = new Explanation(year, bunnya, showExpQnum, AnsList);
             NavigationService.Navigate(expWindow);
         }
     }
