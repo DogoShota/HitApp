@@ -60,13 +60,6 @@ namespace HitApp
             addResult();
         }
 
-        // 正解率の計算
-        private void calc()
-        {
-            double buff = (rightCount / resList.Count) * 100;
-            ansPercentage = Math.Round(buff, 1, MidpointRounding.AwayFromZero);
-        }
-
         // 画面更新
         private void display()
         {
@@ -74,6 +67,18 @@ namespace HitApp
             正解率.Text = "正解率：" + ansPercentage.ToString() + "%";
 
             showTime.Text = "解答時間：" + calc_time();
+
+            if (!checkMiss())
+            {
+                retryButton.IsEnabled = false;
+            }
+        }
+
+        // 正解率の計算
+        private void calc()
+        {
+            double buff = (rightCount / resList.Count) * 100;
+            ansPercentage = Math.Round(buff, 1, MidpointRounding.AwayFromZero);
         }
 
         // 解答時間を計算
@@ -98,6 +103,19 @@ namespace HitApp
             return res;
         }
 
+        // 間違えた問題があるか確認
+        // あったらtrue
+        private bool checkMiss()
+        {
+            bool flag = false;
+            foreach (int key in resList.Keys)
+            {
+                if (resList[key].Equals("×"))
+                    flag = true;
+            }
+            
+            return flag;
+        }
         private void backFirstClick(object sender, RoutedEventArgs e)
         {
             var selectMain = new SelectMain();
@@ -106,22 +124,16 @@ namespace HitApp
 
         private void retryClick(object sender, RoutedEventArgs e)
         {
-            switch (bunnya)
+            List<int> retryList = new List<int>();
+            foreach (int key in resList.Keys)
             {
-                case "情報処理技術系":
-                    var TechWindow = new TechnoMain(year, "情報処理技術系");
-                    NavigationService.Navigate(TechWindow);
-                    break;
-                case "医療情報システム系":
-                    var IJWindow = new SystemMain(year, "医療情報システム系");
-                    NavigationService.Navigate(IJWindow);
-                    break;
-                case "医学・医療系":
-                    var IIWindow = new MedicalMain(year, "医学・医療系");
-                    NavigationService.Navigate(IIWindow);
-                    break;
+                if (resList[key].Equals("×"))
+                    retryList.Add(key);
             }
+            Question QWindow = new Question(year, bunnya, 1, false, retryList);
+            NavigationService.Navigate(QWindow);
         }
+
         private void explanation(object sender, RoutedEventArgs e)
         {
             Button btn = (Button)sender;

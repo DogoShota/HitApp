@@ -46,7 +46,7 @@ namespace HitApp
             Button btn = (Button)sender;
             if (btn.Name.Equals("randum"))
             {
-                var randumWindow = new Question(this.year, this.bunnya, 1, 60, true);
+                var randumWindow = new Question(this.year, this.bunnya, 1, true);
                 NavigationService.Navigate(randumWindow);
             }
             else
@@ -54,7 +54,7 @@ namespace HitApp
                 string Qnum = btn.Name.ToString().Substring(1);
 
                 int intQnum = int.Parse(Qnum);
-                var QWindow = new Question(this.year, this.bunnya, intQnum, 60);
+                var QWindow = new Question(this.year, this.bunnya, intQnum);
                 NavigationService.Navigate(QWindow);
             }
         }

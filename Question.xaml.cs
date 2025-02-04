@@ -53,20 +53,23 @@ namespace HitApp
         string ans;
         // ランダム出題がどうか
         bool randumMode;
+        // リトライ時の問題番号の一覧
+        List<int> retryList;
         // ランダム時、月に出題する問題番号を格納
         List<int> rumList = new List<int>();
         // コンフィグクラスのインスタンス
         Config conf;
 
-        public Question(string year, string bunnya, int QCount, int maxQCount, bool randumMode = false)
+        public Question(string year, string bunnya, int QCount, bool randumMode = false, List<int> retryList = null)
         {
             InitializeComponent();
             this.year = year;
             this.bunnya = bunnya;
             this.QCount = QCount - 1;
-            this.maxQCount = maxQCount;
             this.randumMode = randumMode;
+            this.retryList = retryList;
 
+            calc_maxQCount();
             if (randumMode)
             {
                 createRandumQuestion();
@@ -562,6 +565,10 @@ namespace HitApp
         {
             // 正解を取得
             ans = AnsList[QCount * 3 + 1];
+            if (retryList != null)
+            {
+                ans = AnsList[retryList[QCount] * 3 + 1 -3];
+            }
 
             showTitle.Text = year + "年度・" + bunnya;
             showQnum.Text = " 問" + QList[calc(0)];
@@ -635,8 +642,25 @@ namespace HitApp
             {
                 res = rumList[QCount] * 7 + num;
             }
+            if (retryList != null)
+            {
+                res = retryList[QCount] * 7 + num - 7;
+            }
             return res;
         }
+
+        // 問題数を計算
+        private void calc_maxQCount()
+        {
+            maxQCount = 50;
+            if (bunnya.Equals("医療情報システム系"))
+                maxQCount = 60;
+            if (retryList != null)
+            {
+                maxQCount = retryList.Count;
+            }
+        }
+
 
         // ランダムモードのとき、問題の順番を作成する
         private void createRandumQuestion()
@@ -862,6 +886,7 @@ namespace HitApp
             expButton.IsEnabled = true;
 
             showResText.Content = ans;
+
             if (resList.ContainsKey(calc(0)))
                 resList.Add(int.Parse(QList[calc(0)]), "×");
         }

@@ -54,9 +54,9 @@
                     <Label Content="最初に戻る"/>
                 </Viewbox>
             </Button>
-            <Button Grid.Row="5" Grid.Column="3" Margin="10" Style="{StaticResource MainButton}" FontFamily="{StaticResource YujiSyuku}" Click="retryClick" Background="LightBlue">
+            <Button Grid.Row="5" Grid.Column="3" x:Name="retryButton" Margin="10" Style="{StaticResource MainButton}" FontFamily="{StaticResource YujiSyuku}" Click="retryClick" Background="LightBlue">
                 <Viewbox Stretch="Uniform">
-                    <Label Content="もう一度"/>
+                    <Label Content="やり直す"/>
                 </Viewbox>
             </Button>
 
