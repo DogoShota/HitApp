@@ -558,6 +558,11 @@ namespace HitApp
 
             QcountNow.Content = (QCount + 1) + "/" + maxQCount;
 
+            if (resList.Count > 0)
+            {
+                endButton.Content = "やめる";
+            }
+
             yourAns.Text = "";
             resText.Foreground = Brushes.Black;
 
@@ -575,7 +580,7 @@ namespace HitApp
 
                 nextQues.IsEnabled = true;
                 expButton.IsEnabled = false;
-                backButton.IsEnabled = false;
+                endButton.IsEnabled = false;
 
             }
             finalAnsButton.IsEnabled = false;
@@ -656,19 +661,7 @@ namespace HitApp
             // リザルトに移動させる
             if (QCount == maxQCount)
             {
-                double time = conf.sw.Elapsed.TotalSeconds;
-
-                ResultWindow resWindow;
-                if (randumMode)
-                {
-                    resWindow = new ResultWindow(year, bunnya, QCount, rightCount, resList, AnsList, time, randumMode, rumList);
-                }
-                else
-                {
-                    resWindow = new ResultWindow(year, bunnya, QCount, rightCount, resList, AnsList, time);
-
-                }
-                NavigationService.Navigate(resWindow);
+                resultWindow();
             }
             else
             {
@@ -679,7 +672,7 @@ namespace HitApp
                 selectButton4.IsEnabled = true;
                 selectButton5.IsEnabled = true;
                 finalAnsButton.IsEnabled = true;
-                backButton.IsEnabled = true;
+                endButton.IsEnabled = true;
 
                 // 次の問題にいくためのボタンを無効化
                 nextQues.IsEnabled = false;
@@ -698,6 +691,23 @@ namespace HitApp
                 display();
             }
 
+        }
+
+        private void resultWindow()
+        {
+            double time = conf.sw.Elapsed.TotalSeconds;
+
+            ResultWindow resWindow;
+            if (randumMode)
+            {
+                resWindow = new ResultWindow(year, bunnya, QCount, rightCount, resList, AnsList, time, randumMode, rumList);
+            }
+            else
+            {
+                resWindow = new ResultWindow(year, bunnya, QCount, rightCount, resList, AnsList, time);
+
+            }
+            NavigationService.Navigate(resWindow);
         }
 
         // 別のボタンを押せないようにし、正誤判定、画面に表示する
@@ -750,7 +760,7 @@ namespace HitApp
             selectButton4.IsEnabled = false;
             selectButton5.IsEnabled = false;
             finalAnsButton.IsEnabled = false;
-            backButton.IsEnabled = false;
+            endButton.IsEnabled = false;
 
             // 次の問題に行くためのボタンを有効化
             nextQues.IsEnabled = true;
@@ -839,7 +849,7 @@ namespace HitApp
             selectButton4.IsEnabled = false;
             selectButton5.IsEnabled = false;
             finalAnsButton.IsEnabled = false;
-            backButton.IsEnabled = false;
+            endButton.IsEnabled = false;
 
             // 次の問題に行くためのボタンを有効化
             nextQues.IsEnabled = true;
@@ -849,23 +859,31 @@ namespace HitApp
             resList.Add("×");
         }
 
-        private void backStart(object sender, RoutedEventArgs e)
+        private void end_click(object sender, RoutedEventArgs e)
         {
-            switch (bunnya)
+            if (resList.Count == 0)// １問も解いてなかったら
             {
-                case "情報処理技術系":
-                    var TechWindow = new TechnoMain(year, "情報処理技術系");
-                    NavigationService.Navigate(TechWindow);
-                    break;
-                case "医療情報システム系":
-                    var IJWindow = new SystemMain(year, "医療情報システム系");
-                    NavigationService.Navigate(IJWindow);
-                    break;
-                case "医学・医療系":
-                    var IIWindow = new MedicalMain(year, "医学・医療系");
-                    NavigationService.Navigate(IIWindow);
-                    break;
+                switch (bunnya)
+                {
+                    case "情報処理技術系":
+                        var TechWindow = new TechnoMain(year, "情報処理技術系");
+                        NavigationService.Navigate(TechWindow);
+                        break;
+                    case "医療情報システム系":
+                        var IJWindow = new SystemMain(year, "医療情報システム系");
+                        NavigationService.Navigate(IJWindow);
+                        break;
+                    case "医学・医療系":
+                        var IIWindow = new MedicalMain(year, "医学・医療系");
+                        NavigationService.Navigate(IIWindow);
+                        break;
+                }
             }
+            else// １問でも解いてたら
+            {
+                resultWindow();
+            }
+            
         }
 
         private void dispExp(object sender, RoutedEventArgs e)
