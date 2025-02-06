@@ -618,6 +618,9 @@
     <Content Include="image\2021\2021JS.Q18.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="image\2021\2021JS.Q19.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="image\2021\2021JS.Q22.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -631,6 +634,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="image\2021\2021JS.Q9.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="image\2022\2022II.Q16.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="image\2022\2022II.Q47.png">
