@@ -33,7 +33,7 @@ namespace HitApp
 
             display();
         }
-        
+
         private void display()
         {
             Config conf = new Config();
@@ -370,90 +370,6 @@ namespace HitApp
                     NavigationService.Navigate(IIWindow);
                     break;
             }
-        }
-        private void Button_Click_2007(object sender, RoutedEventArgs e)
-        {
-            // 過去問が追加されたらコメントアウト消す
-            /*Button btn = (Button)sender;
-            string bunnya = btn.Content.ToString();
-            switch (bunnya)
-            {
-                case "情報処理技術系":
-                    var TechWindow = new TechnoMain("2007", "情報処理技術系");
-                    NavigationService.Navigate(TechWindow);
-                    break;
-                case "医療情報システム系":
-                    var IJWindow = new SystemMain("2007", "医療情報システム系");
-                    NavigationService.Navigate(IJWindow);
-                    break;
-                case "医学・医療系":
-                    var IIWindow = new MedicalMain("2007", "医学・医療系");
-                    NavigationService.Navigate(IIWindow);
-                    break;
-            }*/
-        }
-        private void Button_Click_2006(object sender, RoutedEventArgs e)
-        {
-            // 過去問が追加されたらコメントアウト消す
-            /*Button btn = (Button)sender;
-            string bunnya = btn.Content.ToString();
-            switch (bunnya)
-            {
-                case "情報処理技術系":
-                    var TechWindow = new TechnoMain("2006", "情報処理技術系");
-                    NavigationService.Navigate(TechWindow);
-                    break;
-                case "医療情報システム系":
-                    var IJWindow = new SystemMain("2006", "医療情報システム系");
-                    NavigationService.Navigate(IJWindow);
-                    break;
-                case "医学・医療系":
-                    var IIWindow = new MedicalMain("2006", "医学・医療系");
-                    NavigationService.Navigate(IIWindow);
-                    break;
-            }*/
-        }
-        private void Button_Click_2005(object sender, RoutedEventArgs e)
-        {
-            // 過去問が追加されたらコメントアウト消す
-            /*Button btn = (Button)sender;
-            string bunnya = btn.Content.ToString();
-            switch (bunnya)
-            {
-                case "情報処理技術系":
-                    var TechWindow = new TechnoMain("2005", "情報処理技術系");
-                    NavigationService.Navigate(TechWindow);
-                    break;
-                case "医療情報システム系":
-                    var IJWindow = new SystemMain("2005", "医療情報システム系");
-                    NavigationService.Navigate(IJWindow);
-                    break;
-                case "医学・医療系":
-                    var IIWindow = new MedicalMain("2005", "医学・医療系");
-                    NavigationService.Navigate(IIWindow);
-                    break;
-            }*/
-        }
-        private void Button_Click_2004(object sender, RoutedEventArgs e)
-        {
-            // 過去問が追加されたらコメントアウト消す
-            /*Button btn = (Button)sender;
-            string bunnya = btn.Content.ToString();
-            switch (bunnya)
-            {
-                case "情報処理技術系":
-                    var TechWindow = new TechnoMain("2004", "情報処理技術系");
-                    NavigationService.Navigate(TechWindow);
-                    break;
-                case "医療情報システム系":
-                    var IJWindow = new SystemMain("2004", "医療情報システム系");
-                    NavigationService.Navigate(IJWindow);
-                    break;
-                case "医学・医療系":
-                    var IIWindow = new MedicalMain("2004", "医学・医療系");
-                    NavigationService.Navigate(IIWindow);
-                    break;
-            }*/
         }
     }
 }
