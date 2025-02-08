@@ -504,6 +504,9 @@
     <Content Include="image\2015\2015JS.Q27.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="image\2015\2015JS.Q28.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="image\2015\2015JS.Q3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
